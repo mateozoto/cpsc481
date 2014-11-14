@@ -24,5 +24,45 @@ namespace Browser
         {
             InitializeComponent();
         }
+
+        private void games_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void videos_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void music_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void learning_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void home_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void urlbar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void go_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void settings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
