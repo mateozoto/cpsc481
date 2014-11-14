@@ -10,3 +10,16 @@
 \\CS-fs01\Profiles\ug\mzoto\Documents\Visual Studio 2013\Projects\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
 \\CS-fs01\Profiles\ug\mzoto\Documents\Visual Studio 2013\Projects\Browser\Browser\obj\Debug\Browser.exe
 \\CS-fs01\Profiles\ug\mzoto\Documents\Visual Studio 2013\Projects\Browser\Browser\obj\Debug\Browser.pdb
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\bin\Debug\Browser.exe.config
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.exe
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.pdb
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\bin\Debug\Browser.exe
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\bin\Debug\Browser.pdb
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.csprojResolveAssemblyReference.cache
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\MainWindow.baml
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\MainWindow.g.cs
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\App.g.cs
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser_MarkupCompile.cache
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.g.resources
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
