@@ -6,20 +6,39 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="0,216.06,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
-        <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="0,301.06,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
-        <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Margin="0,386.06,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
-        <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="0,131.06,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
-        <TextBlock x:Name="welcome" Margin="216.619,169.803,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46.257" HorizontalAlignment="Left" Width="159.435"><Run FontSize="29.333" Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-        <TextBlock x:Name="message1" Height="46.57" Margin="288.47,254.49,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="387.194"/>
-        <TextBox x:Name="urlbar" HorizontalAlignment="Left" Margin="119.742,0,0,18.239" TextWrapping="Wrap" Width="782.619" FontSize="33.333" Height="50.942" VerticalAlignment="Bottom"/>
-        <Button x:Name="go" Content="Go" Margin="859.293,0,0,18.239" HorizontalAlignment="Left" Width="49.719" Height="50.942" VerticalAlignment="Bottom"/>
-        <Rectangle x:Name="bookmarksrectangle" Fill="#FFF4F4F5" Height="42.189" VerticalAlignment="Top"/>
-        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="19.951" Width="119.291" FontSize="16"/>
-        <Button x:Name="home" Content="home" HorizontalAlignment="Left" Margin="26.611,0,0,18.239" VerticalAlignment="Bottom" Width="53.347" Height="50.942" BorderThickness="0" Background="#FF174CFF"/>
-        <Button x:Name="settings" Content="Settings" HorizontalAlignment="Left" Height="50.942" Margin="928.698,0,0,18.239" VerticalAlignment="Bottom" Width="53.347" RenderTransformOrigin="0.949,0.522" BorderThickness="0" Background="#FF28B1FF"/>
-        <Rectangle x:Name="recentplacesrectangle" Fill="#FFF4F4F5" Height="360.623" VerticalAlignment="Top" Margin="0,110.437,0,0" HorizontalAlignment="Right" Width="60"/>
-        <TextBlock x:Name="norecent" Margin="0,193.83,7.338,226.244" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Right" Width="43.948"><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><Run Text=""/><LineBreak/><Run Text="Recent"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
+        <TextBox x:Name="urlbar" HorizontalAlignment="Left" Margin="130,0,0,18" TextWrapping="Wrap" Width="614" FontSize="33.333" Height="51" VerticalAlignment="Bottom" Text="Search or enter a URL here" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown"/>
+        <Button x:Name="go" Content="Go" Margin="744,0,0,18" HorizontalAlignment="Left" Width="50" Height="51" VerticalAlignment="Bottom" Click="go_Click_1"/>
+        <Rectangle x:Name="bookmarksrectangle" Fill="#FFF4F4F5" Height="42" VerticalAlignment="Top" Margin="130,0,0,0"/>
+        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="142,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
+        <Button x:Name="settings" Content="Settings" HorizontalAlignment="Left" Height="51" Margin="947,0,0,18" VerticalAlignment="Bottom" Width="53" RenderTransformOrigin="0.949,0.522" BorderThickness="0" Background="{x:Null}"/>
+        <Button Content="Back" HorizontalAlignment="Left" Height="51" Margin="39,0,0,18" VerticalAlignment="Bottom" Width="55"/>
+        <Button Content="Refresh" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="44" Margin="820,0,0,18" Height="51"/>
+        <Button Content="STAR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="885,0,0,0" Height="42"/>
+        <Button Content="Forward" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="38" Margin="885,0,0,18" Height="51"/>
 
+        <ScrollViewer x:Name="browserScroll" HorizontalAlignment="Left" Height="493" VerticalAlignment="Top" Width="1007" Margin="0,42,0,0" Visibility="Collapsed">
+            <WebBrowser x:Name="browser" Height="473" Width="1007" Visibility="Collapsed" Navigating="browser_Navigating"/>
+        </ScrollViewer>
+
+        <Button x:Name="home" Content="home" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Top" Width="84" Height="42" BorderThickness="0" Background="#FF174CFF" Click="home_Click_1" Visibility="Collapsed"/>
+
+        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007">
+            <TextBlock x:Name="welcome" Margin="244,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" HorizontalAlignment="Left" Width="160"><Run FontSize="29.333" Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="message1" Height="47" Margin="354,245,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="388"/>
+            <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
+            <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="0,192,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
+            <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="0,277,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
+            <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Margin="0,362,0,0" VerticalAlignment="Top" Width="60" Height="85"/>
+            <Rectangle x:Name="recentplacesrectangle" Fill="#FFF4F4F5" Height="361" VerticalAlignment="Top" Margin="0,107,0,0" HorizontalAlignment="Right" Width="60"/>
+            <TextBlock x:Name="norecent" Margin="0,195,10,130" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Right" Width="44"><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><Run Text=""/><LineBreak/><Run Text="Recent"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
+        </Grid>
+        <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed"/>
+        <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed"/>
+        <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,314,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed"/>
+        <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="545,314,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed"/>
+        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Background="{x:Null}" Opacity="100" Visibility="Collapsed" Click="tab1but_Click"/>
+        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,92,0,0" Height="200" Background="{x:Null}" Opacity="0" Visibility="Collapsed"/>
+        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,314,0,0" Height="200" Background="{x:Null}" Opacity="0" Visibility="Collapsed"/>
+        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="545,314,0,0" Height="200" Background="{x:Null}" Opacity="0" Visibility="Collapsed"/>
     </Grid>
 </Window>
