@@ -23,3 +23,16 @@
 \\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.g.resources
 \\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
 \\cs-fs01\Profiles\ug\ekpitout\Desktop\HCIBrowser\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\bin\Debug\Browser.exe.config
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.exe
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.pdb
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\bin\Debug\Browser.exe
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\bin\Debug\Browser.pdb
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.csprojResolveAssemblyReference.cache
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\MainWindow.baml
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\MainWindow.g.cs
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\App.g.cs
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser_MarkupCompile.cache
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.g.resources
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache

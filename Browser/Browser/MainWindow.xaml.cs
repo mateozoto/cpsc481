@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Browser
 {
@@ -21,13 +22,35 @@ namespace Browser
     /// 
     public partial class MainWindow : Window
     {
-
+        int currentTab = 0;
         int openTab = 1;
-        WebBrowser curTab;
+        int bookmarkcount = 0;
         string curUrl = "";
+        String homepage = "http://google.ca";
+
         public MainWindow()
         {
             InitializeComponent();
+            string[] lines = System.IO.File.ReadAllLines("bookmarks.txt");
+            if (lines.Length != 0)
+            {
+                foreach (string line in lines)
+                {
+                    String bookmark = urlbar.Text;
+                    Button newBookmark = new Button();
+                    newBookmark.Height = 30;
+                    newBookmark.Width = 100;
+                    newBookmark.Content = line;
+                    newBookmark.Click += newBookmark_Click;
+                    nobookmarks.Text = "";
+                    newBookmark.VerticalAlignment = VerticalAlignment.Top;
+                    newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
+                    int bookmarkplace = (bookmarkcount * 101) + 5;
+                    newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                    welcomeScreen.Children.Add(newBookmark);
+                    bookmarkcount++;
+                }
+            }
         }
 
         private void games_Click(object sender, RoutedEventArgs e)
@@ -60,17 +83,12 @@ namespace Browser
 
         }
 
-        private void go_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void settings_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void go_Click_1(object sender, RoutedEventArgs e)
+        private void go_Click(object sender, RoutedEventArgs e)
         {
             if (welcomeScreen.IsVisible)
             {
@@ -81,18 +99,34 @@ namespace Browser
                 //open the tab
                 if (openTab == 1)
                 {
-                    tab1.Visibility = Visibility.Visible;
-                    tab1.Navigate(urlbar.Text);
-                    tab1.Width = 1007;
-                    tab1.Height = 473;
-                    tab1.Margin = new Thickness(0, 42, 0, 0);
+                    String query = urlbar.Text;
+                    if ((!(query.StartsWith("http://")) || (!(query.StartsWith("https://")))))
+                    {
+                        query = "http://" + query;
+                        urlbar.Text = query;
+                    }
+                    try
+                    {
+                        tab1.Visibility = Visibility.Visible;
+                        tab1.Navigate(urlbar.Text);
+                        tab1.Width = 1007;
+                        tab1.Height = 473;
+                        tab1.Margin = new Thickness(0, 42, 0, 0);
+                    }
+                    catch (System.UriFormatException)
+                    {
+                        return;
+                    }
                 }
             }
         }
 
         private void urlbar_GotFocus(object sender, RoutedEventArgs e)
         {
-            urlbar.Text = "";
+            if (urlbar.Text == "Search or enter a URL here")
+            {
+                urlbar.Text = "";
+            }
         }
 
         private void urlbar_LostFocus(object sender, RoutedEventArgs e)
@@ -102,7 +136,60 @@ namespace Browser
 
         private void urlbar_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.Enter)
+            {
+                String query = urlbar.Text;
+                if ((!(query.StartsWith("http://")) || (!(query.StartsWith("https://")))))
+                {
+                    query = "http://" + query;
+                    urlbar.Text = query;
+                }
+                try
+                {
+                    if (welcomeScreen.IsVisible)
+                    {
+                        welcomeScreen.Visibility = Visibility.Collapsed;
+                        //browserScroll.Visibility = Visibility.Visible;
+                        home.Visibility = Visibility.Visible;
 
+                        //open the tab
+                        if (openTab == 1)
+                        {
+                            tab1.Visibility = Visibility.Visible;
+                            tab1.Navigate(urlbar.Text);
+                            tab1.Width = 1007;
+                            tab1.Height = 473;
+                            tab1.Margin = new Thickness(0, 42, 0, 0);
+                        }
+                    }
+                }
+                catch (System.UriFormatException)
+                {
+                    return;
+                }
+            }
+        }
+
+        void newBookmark_Click(object sender, RoutedEventArgs e)
+        {
+            Button clicked = (Button)sender;
+            if (welcomeScreen.IsVisible)
+            {
+                welcomeScreen.Visibility = Visibility.Collapsed;
+                //browserScroll.Visibility = Visibility.Visible;
+                home.Visibility = Visibility.Visible;
+
+                //open the tab
+                if (openTab == 1)
+                {
+                    tab1.Visibility = Visibility.Visible;
+                    tab1.Width = 1007;
+                    tab1.Height = 473;
+                    tab1.Margin = new Thickness(0, 42, 0, 0);
+                    tab1.Navigate((String)clicked.Content);
+
+                }
+            }
         }
 
         private void home_Click_1(object sender, RoutedEventArgs e)
@@ -132,12 +219,64 @@ namespace Browser
 
         private void tab1but_Click(object sender, RoutedEventArgs e)
         {
+            currentTab = 1;
             welcomeScreen.Visibility = Visibility.Collapsed;
             home.Visibility = Visibility.Visible;
 
             tab1.Width = 1007;
             tab1.Height = 473;
             tab1.Margin = new Thickness(0, 42, 0, 0);
+        }
+
+        private void bookmark_Click(object sender, RoutedEventArgs e)
+        {
+            if (urlbar.Text == "")
+            {
+                //do nothing
+            }
+            else
+            {
+                String bookmark = urlbar.Text;
+                Button newBookmark = new Button();
+                newBookmark.Height = 30;
+                newBookmark.Width = 100;
+                newBookmark.Content = urlbar.Text;
+                newBookmark.Click += newBookmark_Click;
+                nobookmarks.Text = "";
+                newBookmark.VerticalAlignment = VerticalAlignment.Top;
+                newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
+                int bookmarkplace = (bookmarkcount * 101) + 5;
+                newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                welcomeScreen.Children.Add(newBookmark);
+                using (StreamWriter writer = new StreamWriter("bookmarks.txt", true))
+                {
+                    writer.WriteLine(newBookmark.Content);
+                }
+                bookmarkcount++;
+            }
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            if (tab1.CanGoBack == true)
+            {
+                tab1.GoBack();
+            }
+        }
+
+        private void forward_Click(object sender, RoutedEventArgs e)
+        {
+            //left it as tab1 for now until etienne gets tabs 100%
+            if (tab1.CanGoForward == true)
+            {
+                tab1.GoForward();
+            }
+        }
+
+        private void refresh_Click(object sender, RoutedEventArgs e)
+        {
+            //crashes if there is no webpage open
+            tab1.Refresh();
         }
     }
 }
