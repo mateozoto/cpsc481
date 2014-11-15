@@ -14,13 +14,13 @@
         <Button Name ="back" Content="Back" HorizontalAlignment="Left" Height="51" Margin="38,0,0,18" VerticalAlignment="Bottom" Width="46" Click="back_Click"/>
         <Button Name ="refresh" Content="Refresh" VerticalAlignment="Bottom" Margin="0,0,169.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="refresh_Click"/>
         <Button Name ="bookmark" Content="Bookmark" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click"/>
-        <Button Name= "forward" Content="Forward" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="46" Margin="84,0,0,18" Height="51" Click="forward_Click"/>
+        <Button Name = "forward" Content="Forward" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="46" Margin="84,0,0,18" Height="51" Click="forward_Click"/>
+        <Button Name ="home" Content="home" VerticalAlignment="Bottom" Margin="0,0,89,18" Height="51" HorizontalAlignment="Right" Width="46" Click="home_Click_1" Background="#FF0F9DFF" Visibility="Collapsed"/>
 
         <ScrollViewer x:Name="browserScroll" HorizontalAlignment="Left" Height="493" VerticalAlignment="Top" Width="1007" Margin="0,42,0,0" Visibility="Collapsed">
             <WebBrowser x:Name="browser" Height="473" Width="1007" Visibility="Collapsed" Navigating="browser_Navigating"/>
         </ScrollViewer>
 
-        <Button x:Name="home" Content="home" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Top" Width="84" Height="42" BorderThickness="0" Background="#FF174CFF" Click="home_Click_1" Visibility="Collapsed"/>
 
         <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007">
             <Grid.ColumnDefinitions>

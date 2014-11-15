@@ -31,26 +31,26 @@ namespace Browser
         public MainWindow()
         {
             InitializeComponent();
-            string[] lines = System.IO.File.ReadAllLines("bookmarks.txt");
-            if (lines.Length != 0)
-            {
-                foreach (string line in lines)
-                {
-                    String bookmark = urlbar.Text;
-                    Button newBookmark = new Button();
-                    newBookmark.Height = 30;
-                    newBookmark.Width = 100;
-                    newBookmark.Content = line;
-                    newBookmark.Click += newBookmark_Click;
-                    nobookmarks.Text = "";
-                    newBookmark.VerticalAlignment = VerticalAlignment.Top;
-                    newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
-                    int bookmarkplace = (bookmarkcount * 101) + 5;
-                    newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
-                    welcomeScreen.Children.Add(newBookmark);
-                    bookmarkcount++;
-                }
-            }
+        //    string[] lines = System.IO.File.ReadAllLines("bookmarks.txt");
+        //    if (lines.Length != 0)
+        //    {
+        //        foreach (string line in lines)
+        //        {
+        //            String bookmark = urlbar.Text;
+        //            Button newBookmark = new Button();
+        //            newBookmark.Height = 30;
+        //            newBookmark.Width = 100;
+        //            newBookmark.Content = line;
+        //            newBookmark.Click += newBookmark_Click;
+        //            nobookmarks.Text = "";
+        //            newBookmark.VerticalAlignment = VerticalAlignment.Top;
+        //            newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
+        //            int bookmarkplace = (bookmarkcount * 101) + 5;
+        //            newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+        //            welcomeScreen.Children.Add(newBookmark);
+        //            bookmarkcount++;
+        //        }
+        //    }
         }
 
         private void games_Click(object sender, RoutedEventArgs e)

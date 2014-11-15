@@ -36,3 +36,16 @@ C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser_MarkupComp
 C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.g.resources
 C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
 C:\Users\Mateo\Desktop\browse\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\bin\Debug\Browser.exe.config
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser.exe
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser.pdb
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\bin\Debug\Browser.exe
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\bin\Debug\Browser.pdb
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser.csprojResolveAssemblyReference.cache
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\MainWindow.baml
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\MainWindow.g.cs
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\App.g.cs
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser_MarkupCompile.cache
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser.g.resources
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
