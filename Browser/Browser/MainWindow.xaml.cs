@@ -276,7 +276,32 @@ namespace Browser
         private void refresh_Click(object sender, RoutedEventArgs e)
         {
             //crashes if there is no webpage open
-            tab1.Refresh();
+            if (welcomeScreen.IsVisible){
+            }
+            else
+            {
+                tab1.Refresh();
+            }
+        }
+
+        private void tab1_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            urlbar.Text = (String)e.Uri.OriginalString;
+        }
+
+        private void tab2_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            urlbar.Text = (String)e.Uri.OriginalString;
+        }
+
+        private void tab3_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            urlbar.Text = (String)e.Uri.OriginalString;
+        }
+
+        private void tab4_LoadCompleted(object sender, NavigationEventArgs e)
+        {
+            urlbar.Text = (String)e.Uri.OriginalString;
         }
     }
 }
