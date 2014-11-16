@@ -1,0 +1,12 @@
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\bin\Release\Browser.exe.config
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\bin\Release\Browser.exe
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\bin\Release\Browser.pdb
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\MainWindow.baml
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\MainWindow.g.cs
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\App.g.cs
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\Browser_MarkupCompile.cache
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\Browser.g.resources
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\Browser.Properties.Resources.resources
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\Browser.csproj.GenerateResource.Cache
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\Browser.exe
+D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\Release\Browser.pdb

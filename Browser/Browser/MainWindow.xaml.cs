@@ -95,29 +95,30 @@ namespace Browser
                 welcomeScreen.Visibility = Visibility.Collapsed;
                 //browserScroll.Visibility = Visibility.Visible;
                 home.Visibility = Visibility.Visible;
+            }
+            //open the tab
+            if (openTab == 1)
+            {
+                String query = urlbar.Text;
 
-                //open the tab
-                if (openTab == 1)
+                if (!(query.Contains(".com") || query.Contains(".ca") || query.Contains(".net") || query.Contains(".org") || query.Contains(".tv")))
                 {
-                    String query = urlbar.Text;
-                    if ((!(query.StartsWith("http://")) || (!(query.StartsWith("https://")))))
-                    {
-                        query = "http://" + query;
-                        urlbar.Text = query;
-                    }
-                    try
-                    {
-                        tab1.Visibility = Visibility.Visible;
-                        tab1.Navigate(urlbar.Text);
-                        tab1.Width = 1007;
-                        tab1.Height = 473;
-                        tab1.Margin = new Thickness(0, 42, 0, 0);
-                    }
-                    catch (System.UriFormatException)
-                    {
-                        return;
-                    }
+                    query = "https://www.google.ca/#q=" + query;
+                    urlbar.Text = query;
                 }
+
+                else if ((!(query.StartsWith("http://")) || (!(query.StartsWith("https://")))))
+                {
+                    query = "http://" + query;
+                    urlbar.Text = query;
+                }
+                                      
+                tab1.Visibility = Visibility.Visible;
+                tab1.Navigate(urlbar.Text);
+                tab1.Width = 1007;
+                tab1.Height = 473;
+                tab1.Margin = new Thickness(0, 42, 0, 0);
+               
             }
         }
 
@@ -137,37 +138,7 @@ namespace Browser
         private void urlbar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
-            {
-                String query = urlbar.Text;
-                if ((!(query.StartsWith("http://")) || (!(query.StartsWith("https://")))))
-                {
-                    query = "http://" + query;
-                    urlbar.Text = query;
-                }
-                try
-                {
-                    if (welcomeScreen.IsVisible)
-                    {
-                        welcomeScreen.Visibility = Visibility.Collapsed;
-                        //browserScroll.Visibility = Visibility.Visible;
-                        home.Visibility = Visibility.Visible;
-
-                        //open the tab
-                        if (openTab == 1)
-                        {
-                            tab1.Visibility = Visibility.Visible;
-                            tab1.Navigate(urlbar.Text);
-                            tab1.Width = 1007;
-                            tab1.Height = 473;
-                            tab1.Margin = new Thickness(0, 42, 0, 0);
-                        }
-                    }
-                }
-                catch (System.UriFormatException)
-                {
-                    return;
-                }
-            }
+                go_Click(sender, e);
         }
 
         void newBookmark_Click(object sender, RoutedEventArgs e)
