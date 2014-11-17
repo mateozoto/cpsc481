@@ -85,7 +85,8 @@ namespace Browser
 
         private void settings_Click(object sender, RoutedEventArgs e)
         {
-
+            settingsGrid.Visibility = Visibility.Visible;
+          
         }
 
         private void go_Click(object sender, RoutedEventArgs e)
@@ -274,5 +275,20 @@ namespace Browser
         {
             urlbar.Text = (String)e.Uri.OriginalString;
         }
+
+        private void settingsBack_Click(object sender, RoutedEventArgs e)
+        {
+            settingsGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void passwordEnter_Click(object sender, RoutedEventArgs e)
+        {
+            if (passwordEntryBox.Password == "password")
+            {
+                settingsGrid.Visibility = Visibility.Collapsed;
+                settingsGrid2.Visibility = Visibility.Visible;
+            }
+        }
     }
+
 }
