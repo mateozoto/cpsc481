@@ -3,11 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Meow Cats Playground Web Browser" Height="640" Width="1014.686">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="bin/x64/Debug/gear.jpg"/>
+        </Grid.Background>
         <TextBox x:Name="urlbar" Margin="130,0,265.5,18" TextWrapping="Wrap" FontSize="33.333" Height="51" VerticalAlignment="Bottom" Text="Search or enter a URL here" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown"/>
         <Button x:Name="go" Content="Go" Margin="0,0,215.5,18" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="50"/>
         <Rectangle x:Name="bookmarksrectangle" Fill="#FFF4F4F5" Height="42" VerticalAlignment="Top" Margin="0,0,-0.5,0"/>
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
-        <Button x:Name="settings" Content="Settings" Height="51" Margin="0,0,9.5,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" Background="{x:Null}" HorizontalAlignment="Right" Width="53"/>
+        <Button x:Name="settings" Content="Settings" Height="51" Margin="0,0,9.5,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="53" Background="{x:Null}"/>
         <Button Name ="back" Content="Back" HorizontalAlignment="Left" Height="51" Margin="38,0,0,18" VerticalAlignment="Bottom" Width="46" Click="back_Click"/>
         <Button Name ="refresh" Content="Refresh" VerticalAlignment="Bottom" Margin="0,0,169.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="refresh_Click"/>
         <Button Name ="bookmark" Content="Bookmark" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click"/>
@@ -29,8 +32,8 @@
             <Rectangle x:Name="recentplacesrectangle" Fill="#FFF4F4F5" Height="361" VerticalAlignment="Bottom" Margin="0,0,-2,46" Grid.ColumnSpan="3" HorizontalAlignment="Right" Width="60"/>
             <TextBlock x:Name="norecent" Margin="0,0,5,130" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Right" Width="44" Grid.ColumnSpan="3" Height="189" VerticalAlignment="Bottom"><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><Run Text=""/><LineBreak/><Run Text="Recent"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
         </Grid>
-        
-        
+
+
         <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab1_LoadCompleted"/>
         <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted"/>
         <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,314,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted"/>
