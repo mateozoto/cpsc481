@@ -11,3 +11,16 @@ D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\x64\Debug\Bro
 D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\x64\Debug\Browser.csproj.GenerateResource.Cache
 D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\x64\Debug\Browser.exe
 D:\Local Disk\Documents\CPSC 481\Project\trunk\Browser\Browser\obj\x64\Debug\Browser.pdb
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\bin\x64\Debug\Browser.exe.config
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser.exe
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser.pdb
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\bin\x64\Debug\Browser.exe
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\bin\x64\Debug\Browser.pdb
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser.csprojResolveAssemblyReference.cache
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\MainWindow.baml
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\MainWindow.g.cs
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\App.g.cs
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser_MarkupCompile.cache
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser.g.resources
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser.Properties.Resources.resources
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\KidFriendly\trunk\Browser\Browser\obj\x64\Debug\Browser.csproj.GenerateResource.Cache

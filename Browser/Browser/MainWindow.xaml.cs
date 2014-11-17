@@ -31,26 +31,26 @@ namespace Browser
         public MainWindow()
         {
             InitializeComponent();
-        //    string[] lines = System.IO.File.ReadAllLines("bookmarks.txt");
-        //    if (lines.Length != 0)
-        //    {
-        //        foreach (string line in lines)
-        //        {
-        //            String bookmark = urlbar.Text;
-        //            Button newBookmark = new Button();
-        //            newBookmark.Height = 30;
-        //            newBookmark.Width = 100;
-        //            newBookmark.Content = line;
-        //            newBookmark.Click += newBookmark_Click;
-        //            nobookmarks.Text = "";
-        //            newBookmark.VerticalAlignment = VerticalAlignment.Top;
-        //            newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
-        //            int bookmarkplace = (bookmarkcount * 101) + 5;
-        //            newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
-        //            welcomeScreen.Children.Add(newBookmark);
-        //            bookmarkcount++;
-        //        }
-        //    }
+            string[] lines = System.IO.File.ReadAllLines("bookmarks.txt");
+            if (lines.Length != 0)
+            {
+                foreach (string line in lines)
+                {
+                    String bookmark = urlbar.Text;
+                    Button newBookmark = new Button();
+                    newBookmark.Height = 30;
+                    newBookmark.Width = 100;
+                    newBookmark.Content = line;
+                    newBookmark.Click += newBookmark_Click;
+                    nobookmarks.Text = "";
+                    newBookmark.VerticalAlignment = VerticalAlignment.Top;
+                    newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
+                    int bookmarkplace = (bookmarkcount * 101) + 5;
+                    newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                    welcomeScreen.Children.Add(newBookmark);
+                    bookmarkcount++;
+                }
+            }
         }
 
         private void games_Click(object sender, RoutedEventArgs e)
@@ -167,7 +167,6 @@ namespace Browser
         {
             welcomeScreen.Visibility = Visibility.Visible;
             //browser.Visibility = Visibility.Collapsed;
-            browserScroll.Visibility = Visibility.Collapsed;
             home.Visibility = Visibility.Collapsed;
             tab1but.Visibility = Visibility.Visible;
 
@@ -175,6 +174,8 @@ namespace Browser
             {
                 welcome.Visibility = Visibility.Collapsed;
                 message1.Visibility = Visibility.Collapsed;
+
+                tab1.IsEnabled = false;
 
                 tab1.Margin = new Thickness(139, 92, 0, 0);
                 tab1.Height = 200;
@@ -197,6 +198,7 @@ namespace Browser
             tab1.Width = 1007;
             tab1.Height = 473;
             tab1.Margin = new Thickness(0, 42, 0, 0);
+            tab1.IsEnabled = true;
         }
 
         private void bookmark_Click(object sender, RoutedEventArgs e)
