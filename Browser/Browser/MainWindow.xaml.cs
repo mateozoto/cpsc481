@@ -107,7 +107,7 @@ namespace Browser
                     urlbar.Text = query;
                 }
 
-                else if ((!(query.StartsWith("http://")) || (!(query.StartsWith("https://")))))
+                else if (!(query.StartsWith("http://") || query.StartsWith("https://")))
                 {
                     query = "http://" + query;
                     urlbar.Text = query;
@@ -132,7 +132,7 @@ namespace Browser
 
         private void urlbar_LostFocus(object sender, RoutedEventArgs e)
         {
-            //urlbar.Text = "Search or enter a URL here";
+            urlbar.Text = "Search or enter a URL here";
         }
 
         private void urlbar_KeyDown(object sender, KeyEventArgs e)
