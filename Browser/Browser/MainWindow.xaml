@@ -3,16 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Meow Cats Playground Web Browser" Height="640" Width="1014.686">
     <Grid>
+        <Grid x:Name ="settingsGrid2" HorizontalAlignment="Left" Height="267" Margin="240.686,122.803,0,0" VerticalAlignment="Top" Width="513.5" Background="Gray" Visibility="Collapsed">
+        	<Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="10,82.197,0,0" VerticalAlignment="Top" Width="75"/>
+        	<Button Content="Button" HorizontalAlignment="Left" Margin="10,109.157,0,0" VerticalAlignment="Top" Width="75"/>
+        	<Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="0,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
+        </Grid>
+        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" Margin="240.686,122.803,0,0" VerticalAlignment="Top" Width="519" Background="Gray" Visibility="Collapsed">
+
+        	<Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="268,140.466,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
+        	<Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
+        	<TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="149,45.05,0,0" TextWrapping="Wrap" Text="Enter Password to Continue..." VerticalAlignment="Top" Height="25.96" Width="181.503" FontSize="13.333"/>
+        	<PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="149,112.333,0,0" VerticalAlignment="Top" Width="194" Height="23.133"/>
+        </Grid>
         <TextBox x:Name="urlbar" Margin="130,0,265.5,18" TextWrapping="Wrap" FontSize="33.333" Height="51" VerticalAlignment="Bottom" Text="Search or enter a URL here" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown"/>
         <Button x:Name="go" Content="Go" Margin="0,0,215.5,18" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="50"/>
         <Rectangle x:Name="bookmarksrectangle" Fill="#FFF4F4F5" Height="42" VerticalAlignment="Top" Margin="0,0,-0.5,0"/>
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
-        <Button x:Name="settings" Content="Settings" Height="51" Margin="0,0,9.5,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="53" Background="{x:Null}"/>
-        <Button Name ="back" Content="Back" HorizontalAlignment="Left" Height="51" Margin="38,0,0,18" VerticalAlignment="Bottom" Width="46" Click="back_Click"/>
-        <Button Name ="refresh" Content="Refresh" VerticalAlignment="Bottom" Margin="0,0,169.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="refresh_Click"/>
-        <Button Name ="bookmark" Content="Bookmark" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click"/>
-        <Button Name = "forward" Content="Forward" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="46" Margin="84,0,0,18" Height="51" Click="forward_Click"/>
-        <Button Name ="home" Content="home" VerticalAlignment="Bottom" Margin="0,0,89,18" Height="51" HorizontalAlignment="Right" Width="46" Click="home_Click_1" Background="#FF0F9DFF" Visibility="Collapsed"/>
+        <Button x:Name="settings" Content="Settings" Height="51" Margin="0,0,9.5,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="53" Background="{x:Null}" Click="settings_Click"/>
+        <Button x:Name ="back" Content="Back" HorizontalAlignment="Left" Height="51" Margin="38,0,0,18" VerticalAlignment="Bottom" Width="46" Click="back_Click"/>
+        <Button x:Name ="refresh" Content="Refresh" VerticalAlignment="Bottom" Margin="0,0,169.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="refresh_Click"/>
+        <Button x:Name ="bookmark" Content="Bookmark" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click"/>
+        <Button x:Name = "forward" Content="Forward" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="46" Margin="84,0,0,18" Height="51" Click="forward_Click"/>
+        <Button x:Name ="home" Content="home" VerticalAlignment="Bottom" Margin="0,0,89,18" Height="51" HorizontalAlignment="Right" Width="46" Click="home_Click_1" Background="#FF0F9DFF" Visibility="Collapsed"/>
 
         <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007">
             <Grid.ColumnDefinitions>

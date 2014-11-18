@@ -83,11 +83,6 @@ namespace Browser
 
         }
 
-        private void settings_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void go_Click(object sender, RoutedEventArgs e)
         {
             if (welcomeScreen.IsVisible)
@@ -275,6 +270,35 @@ namespace Browser
         private void tab4_LoadCompleted(object sender, NavigationEventArgs e)
         {
             urlbar.Text = (String)e.Uri.OriginalString;
+        }
+        private void settings_Click(object sender, RoutedEventArgs e)
+        {
+            settingsGrid.Visibility = Visibility.Visible;
+        }
+        private void settingsBack_Click(object sender, RoutedEventArgs e)
+        {
+            settingsGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void passwordEnter_Click(object sender, RoutedEventArgs e)
+        {
+            if (passwordEntryBox.Password == "password")
+            {
+                settingsGrid.Visibility = Visibility.Collapsed;
+                settingsGrid2.Visibility = Visibility.Visible;
+                passwordEntryBox.Password = "";
+                settingsEnterPassword.Text = "Enter password to continue...";
+            }
+            else
+            {
+                settingsEnterPassword.Text = "Incorrect Password!";
+            }
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            settingsGrid2.Visibility = Visibility.Collapsed;
+
         }
     }
 }
