@@ -1,1 +1,2 @@
-https://www.google.ca/
+https://www.google.ca/#q=google
+https://www.google.ca/#q=dfdfs

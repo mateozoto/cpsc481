@@ -25,32 +25,82 @@ namespace Browser
         int currentTab = 0;
         int openTab = 1;
         int bookmarkcount = 0;
+        int recentPlaceNum = 0;
         string curUrl = "";
         String homepage = "http://google.ca";
+        String bookmarksFile = "bookmarks.cfg";
+        String recentPlacesFile = "recentplaces.cfg";
 
         public MainWindow()
         {
             InitializeComponent();
-            string[] lines = System.IO.File.ReadAllLines("bookmarks.txt");
-            if (lines.Length != 0)
+            if (!System.IO.File.Exists(bookmarksFile))
+                System.IO.File.Create(bookmarksFile);
+            else
             {
-                foreach (string line in lines)
+                string[] lines = System.IO.File.ReadAllLines(bookmarksFile);
+                if (lines.Length != 0)
                 {
-                    String bookmark = urlbar.Text;
-                    Button newBookmark = new Button();
-                    newBookmark.Height = 30;
-                    newBookmark.Width = 100;
-                    newBookmark.Content = line;
-                    newBookmark.Click += newBookmark_Click;
                     nobookmarks.Text = "";
-                    newBookmark.VerticalAlignment = VerticalAlignment.Top;
-                    newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
-                    int bookmarkplace = (bookmarkcount * 101) + 5;
-                    newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
-                    welcomeScreen.Children.Add(newBookmark);
-                    bookmarkcount++;
+                    foreach (string line in lines)
+                    {
+                        String bookmark = urlbar.Text;
+                        Button newBookmark = new Button();
+                        SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
+                        mySolidColorBrush.Opacity = 0.1;
+                        newBookmark.Background = mySolidColorBrush;
+                        newBookmark.Height = 30;
+                        newBookmark.Width = 100;
+                        newBookmark.Content = line;
+                        newBookmark.Click += newBookmark_Click;
+                        newBookmark.VerticalAlignment = VerticalAlignment.Top;
+                        newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
+                        int bookmarkplace = (bookmarkcount * 101) + 5;
+                        newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                        mainGrid.Children.Add(newBookmark);
+                        bookmarkcount++;
+                    }
                 }
             }
+
+
+            if (!System.IO.File.Exists(recentPlacesFile))
+                System.IO.File.Create(recentPlacesFile);
+            else
+            {
+                string[] lines = System.IO.File.ReadAllLines(recentPlacesFile);
+                if (lines.Length != 0)
+                {
+                    norecent.Text = "";                    
+                    foreach (string line in lines)
+                    {
+                        String recentPlace = urlbar.Text;
+                        Button newRecentPlace = new Button();
+                        SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
+                        mySolidColorBrush.Opacity = 0.1;
+                        newRecentPlace.Background = mySolidColorBrush;
+                        newRecentPlace.Height = 85;
+                        newRecentPlace.Width = 55;
+                        newRecentPlace.Content = line;
+                        newRecentPlace.Click += newRecentPlace_Click;
+                        newRecentPlace.VerticalAlignment = VerticalAlignment.Top;
+                        newRecentPlace.HorizontalAlignment = HorizontalAlignment.Left;
+                        int recentPlacePlace = recentPlaceNum * 85 + 103;
+                        newRecentPlace.Margin = new Thickness(942, recentPlacePlace, 0, 0);
+                        mainGrid.Children.Add(newRecentPlace);
+                        recentPlaceNum++;
+                    }
+                }
+            }
+
+
+        }
+
+        void newRecentPlace_Click(object sender, RoutedEventArgs e)
+        {
+            Button clicked = (Button)sender;
+            urlbar.Text = (String)clicked.Content;
+            go_Click(sender, e);
         }
 
         private void games_Click(object sender, RoutedEventArgs e)
@@ -112,7 +162,36 @@ namespace Browser
                     query = "http://" + query;
                     urlbar.Text = query;
                 }
-                                      
+
+                // add recent place             
+                String recentPlace = urlbar.Text;
+                if (urlbar.Text.StartsWith("http://www."))
+                    recentPlace = recentPlace.Remove(0, 11);
+                if (urlbar.Text.StartsWith("https://www."))
+                    recentPlace = recentPlace.Remove(0, 12);
+                Button newRecentPlace = new Button();
+                SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
+                mySolidColorBrush.Opacity = 0.1;
+                newRecentPlace.Background = mySolidColorBrush;
+                newRecentPlace.Height = 85;
+                newRecentPlace.Width = 55;
+                newRecentPlace.Content = recentPlace;
+                newRecentPlace.Click += newRecentPlace_Click;
+                newRecentPlace.VerticalAlignment = VerticalAlignment.Top;
+                newRecentPlace.HorizontalAlignment = HorizontalAlignment.Left;
+                if (recentPlaceNum >= 4)
+                    recentPlaceNum %= 4;
+                int recentPlacePlace = recentPlaceNum * 85 + 103;
+                newRecentPlace.Margin = new Thickness(942, recentPlacePlace, 0, 0);
+                mainGrid.Children.Add(newRecentPlace);
+                using (StreamWriter writer = new StreamWriter(recentPlacesFile, true))
+                {
+                    writer.WriteLine(newRecentPlace.Content);
+                }
+                bookmarkcount++;
+                
+
+                // navigate
                 tab1.Visibility = Visibility.Visible;
                 tab1.Navigate(urlbar.Text);
                 tab1.Width = 1007;
@@ -132,7 +211,7 @@ namespace Browser
 
         private void urlbar_LostFocus(object sender, RoutedEventArgs e)
         {
-            urlbar.Text = "Search or enter a URL here";
+            //urlbar.Text = "Search or enter a URL here";
         }
 
         private void urlbar_KeyDown(object sender, KeyEventArgs e)
@@ -144,23 +223,8 @@ namespace Browser
         void newBookmark_Click(object sender, RoutedEventArgs e)
         {
             Button clicked = (Button)sender;
-            if (welcomeScreen.IsVisible && !(settingsGrid.IsVisible))
-            {
-                welcomeScreen.Visibility = Visibility.Collapsed;
-                //browserScroll.Visibility = Visibility.Visible;
-                home.Visibility = Visibility.Visible;
-
-                //open the tab
-                if (openTab == 1)
-                {
-                    tab1.Visibility = Visibility.Visible;
-                    tab1.Width = 1007;
-                    tab1.Height = 473;
-                    tab1.Margin = new Thickness(0, 42, 0, 0);
-                    tab1.Navigate((String)clicked.Content);
-
-                }
-            }
+            urlbar.Text = (String)clicked.Content;
+            go_Click(sender, e);
         }
 
         private void home_Click_1(object sender, RoutedEventArgs e)
@@ -213,25 +277,32 @@ namespace Browser
 
         private void bookmark_Click(object sender, RoutedEventArgs e)
         {
-            if (urlbar.Text == "")
+            if (urlbar.Text == "" || urlbar.Text == "Search or enter a URL here" || !(urlbar.Text.StartsWith("http://") || urlbar.Text.StartsWith("https://")) || !(urlbar.Text.Contains(".com") || urlbar.Text.Contains(".ca") || urlbar.Text.Contains(".net") || urlbar.Text.Contains(".org") || urlbar.Text.Contains(".tv")))
             {
                 //do nothing
             }
             else
             {
                 String bookmark = urlbar.Text;
+                 if (urlbar.Text.StartsWith("http://www."))
+                    bookmark = bookmark.Remove(0,11);
+                 if (urlbar.Text.StartsWith("https://www."))
+                    bookmark = bookmark.Remove(0, 12);
                 Button newBookmark = new Button();
                 newBookmark.Height = 30;
                 newBookmark.Width = 100;
-                newBookmark.Content = urlbar.Text;
+                SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
+                mySolidColorBrush.Opacity = 0.1;
+                newBookmark.Background = mySolidColorBrush;
+                newBookmark.Content = bookmark;
                 newBookmark.Click += newBookmark_Click;
                 nobookmarks.Text = "";
                 newBookmark.VerticalAlignment = VerticalAlignment.Top;
                 newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
                 int bookmarkplace = (bookmarkcount * 101) + 5;
                 newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
-                welcomeScreen.Children.Add(newBookmark);
-                using (StreamWriter writer = new StreamWriter("bookmarks.txt", true))
+                mainGrid.Children.Add(newBookmark);
+                using (StreamWriter writer = new StreamWriter(bookmarksFile, true))
                 {
                     writer.WriteLine(newBookmark.Content);
                 }

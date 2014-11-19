@@ -87,7 +87,7 @@
             <BeginStoryboard Storyboard="{StaticResource Welcome}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="92*"/>
             <RowDefinition Height="113*"/>
@@ -116,8 +116,8 @@
         <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24"/>
         <Button x:Name = "forward" Content="⇨" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,18" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Segoe Marker" Grid.Row="1" Visibility="Collapsed"/>
         <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,18" Height="51" Click="home_Click_1" Background="#FF0F9DFF" BorderThickness="0" Grid.Row="1" Visibility="Collapsed"/>
-        <Rectangle x:Name="recentplacesrectangle" Fill="#FF8BD3DF" Height="361" VerticalAlignment="Bottom" Margin="0,0,-4.5,147" HorizontalAlignment="Right" Width="60" Grid.RowSpan="2"/>
-        <TextBlock x:Name="norecent" Margin="0,0,2.5,242" TextWrapping="Wrap" TextAlignment="Center" Height="189" VerticalAlignment="Bottom" Grid.RowSpan="2" HorizontalAlignment="Right" Width="46"><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><Run Text=""/><LineBreak/><Run Text="Recent"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
+        <Rectangle x:Name="recentplacesrectangle" Fill="#FF8BD3DF" Height="336" VerticalAlignment="Bottom" Margin="0,0,0,165" HorizontalAlignment="Right" Width="60" Grid.RowSpan="2"/>
+        <TextBlock x:Name="norecent" Margin="0,0,-1,165" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" Grid.RowSpan="2" FontSize="16"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text="Recent"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
         <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="317*"/>
