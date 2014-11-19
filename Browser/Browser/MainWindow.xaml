@@ -6,26 +6,23 @@
 		<Storyboard x:Key="Welcome">
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="welcome">
 				<EasingDoubleKeyFrame KeyTime="0" Value="-340.598"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-210.391"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-51.494"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-51.494"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="28.69"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="welcome">
 				<EasingDoubleKeyFrame KeyTime="0" Value="-5.885"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-0.736"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-0.736"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="welcome">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0.1"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.2"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.5"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.5"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="message1">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
 				<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-				<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
 			</DoubleAnimationUsingKeyFrames>
 			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="games">
 				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
