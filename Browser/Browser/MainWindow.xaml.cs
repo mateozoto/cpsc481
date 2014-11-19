@@ -161,7 +161,6 @@ namespace Browser
         private void home_Click_1(object sender, RoutedEventArgs e)
         {
             welcomeScreen.Visibility = Visibility.Visible;
-            //browser.Visibility = Visibility.Collapsed;
             home.Visibility = Visibility.Collapsed;
             tab1but.Visibility = Visibility.Visible;
 
@@ -175,6 +174,9 @@ namespace Browser
                 tab1.Margin = new Thickness(139, 92, 0, 0);
                 tab1.Height = 200;
                 tab1.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab1.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+
             }
         }
 
@@ -189,7 +191,8 @@ namespace Browser
             currentTab = 1;
             welcomeScreen.Visibility = Visibility.Collapsed;
             home.Visibility = Visibility.Visible;
-
+            string script = "document.body.style.overflow ='visible'";
+            tab1.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             tab1.Width = 1007;
             tab1.Height = 473;
             tab1.Margin = new Thickness(0, 42, 0, 0);
