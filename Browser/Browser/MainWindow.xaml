@@ -110,7 +110,7 @@
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
         <Button x:Name="settings"  Height="51" Margin="0,0,9.5,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="53" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
             <StackPanel>
-                <Image Source="http://www.presentation-process.com/images/powerpoint-gear-2010-tutorial.jpg" />
+                <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" />
             </StackPanel>
         </Button>
         <Button x:Name ="back" Content="⇦" HorizontalAlignment="Left" Height="51" Margin="9,0,0,18" VerticalAlignment="Bottom" Width="46" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe Marker" FontSize="36" Grid.Row="1"/>
