@@ -50,3 +50,16 @@ C:\Users\Ronald\Documents\GitHub\cpsc481\Browser\Browser\obj\x64\Debug\Browser_M
 C:\Users\Ronald\Documents\GitHub\cpsc481\Browser\Browser\obj\x64\Debug\Browser.g.resources
 C:\Users\Ronald\Documents\GitHub\cpsc481\Browser\Browser\obj\x64\Debug\Browser.Properties.Resources.resources
 C:\Users\Ronald\Documents\GitHub\cpsc481\Browser\Browser\obj\x64\Debug\Browser.csproj.GenerateResource.Cache
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\bin\x64\Debug\Browser.exe.config
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser.exe
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser.pdb
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\bin\x64\Debug\Browser.exe
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\bin\x64\Debug\Browser.pdb
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser.csprojResolveAssemblyReference.cache
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\MainWindow.baml
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\MainWindow.g.cs
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\App.g.cs
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser_MarkupCompile.cache
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser.g.resources
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser.Properties.Resources.resources
+C:\Users\Mateo\Desktop\browser\trunk\Browser\Browser\obj\x64\Debug\Browser.csproj.GenerateResource.Cache

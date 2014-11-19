@@ -139,7 +139,7 @@ namespace Browser
         void newBookmark_Click(object sender, RoutedEventArgs e)
         {
             Button clicked = (Button)sender;
-            if (welcomeScreen.IsVisible)
+            if (welcomeScreen.IsVisible && !(settingsGrid.IsVisible))
             {
                 welcomeScreen.Visibility = Visibility.Collapsed;
                 //browserScroll.Visibility = Visibility.Visible;
@@ -274,10 +274,26 @@ namespace Browser
         private void settings_Click(object sender, RoutedEventArgs e)
         {
             settingsGrid.Visibility = Visibility.Visible;
+            welcomeScreen.Visibility = Visibility.Collapsed;
+            urlbar.Visibility = Visibility.Collapsed;
+            go.Visibility = Visibility.Collapsed;
+            back.Visibility = Visibility.Collapsed;
+            forward.Visibility = Visibility.Collapsed;
+            refresh.Visibility = Visibility.Collapsed;
+            bookmark.Visibility = Visibility.Collapsed;
+
         }
         private void settingsBack_Click(object sender, RoutedEventArgs e)
         {
-            settingsGrid.Visibility = Visibility.Hidden;
+            settingsGrid.Visibility = Visibility.Collapsed;
+            welcomeScreen.Visibility = Visibility.Visible;
+            urlbar.Visibility = Visibility.Visible;
+            go.Visibility = Visibility.Visible;
+            back.Visibility = Visibility.Visible;
+            forward.Visibility = Visibility.Visible;
+            refresh.Visibility = Visibility.Visible;
+            bookmark.Visibility = Visibility.Visible;
+
         }
 
         private void passwordEnter_Click(object sender, RoutedEventArgs e)
