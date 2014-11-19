@@ -24,3 +24,16 @@ C:\Users\Ronald\Documents\Computer Science\CPSC481\cpsc481\Browser\Browser\obj\x
 C:\Users\Ronald\Documents\Computer Science\CPSC481\cpsc481\Browser\Browser\obj\x64\Debug\Browser.g.resources
 C:\Users\Ronald\Documents\Computer Science\CPSC481\cpsc481\Browser\Browser\obj\x64\Debug\Browser.Properties.Resources.resources
 C:\Users\Ronald\Documents\Computer Science\CPSC481\cpsc481\Browser\Browser\obj\x64\Debug\Browser.csproj.GenerateResource.Cache
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\bin\x64\Debug\Browser.exe.config
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser.exe
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser.pdb
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\bin\x64\Debug\Browser.exe
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\bin\x64\Debug\Browser.pdb
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser.csprojResolveAssemblyReference.cache
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\MainWindow.baml
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\MainWindow.g.cs
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\App.g.cs
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser_MarkupCompile.cache
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser.g.resources
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser.Properties.Resources.resources
+D:\Local Disk\Documents\CPSC 481\Project\branches\branch1\Browser\Browser\obj\x64\Debug\Browser.csproj.GenerateResource.Cache
