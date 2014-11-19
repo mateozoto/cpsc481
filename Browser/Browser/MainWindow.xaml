@@ -29,7 +29,7 @@
             </StackPanel>
         </Button>
         <Button x:Name ="back" Content="⇦" HorizontalAlignment="Left" Height="51" Margin="9,0,0,18" VerticalAlignment="Bottom" Width="46" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe Marker" FontSize="36" Grid.Row="1"/>
-        <Button x:Name ="refresh" Content="Refresh" VerticalAlignment="Bottom" Margin="0,0,155.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1"/>
+        <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,155.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontSize="24"/>
         <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24"/>
         <Button x:Name = "forward" Content="⇨" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="46" Margin="68,0,0,18" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Segoe Marker" Grid.Row="1"/>
         <Button x:Name ="home" Content="home" VerticalAlignment="Bottom" Margin="0,0,89.5,18" Height="51" HorizontalAlignment="Right" Width="46" Click="home_Click_1" Background="#FF0F9DFF" Visibility="Collapsed" Grid.Row="1"/>
