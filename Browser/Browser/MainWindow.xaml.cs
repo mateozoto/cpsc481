@@ -90,6 +90,11 @@ namespace Browser
                 welcomeScreen.Visibility = Visibility.Collapsed;
                 //browserScroll.Visibility = Visibility.Visible;
                 home.Visibility = Visibility.Visible;
+                back.Visibility = Visibility.Visible;
+                forward.Visibility = Visibility.Visible;
+                refresh.Visibility = Visibility.Visible;
+                urlbar.Margin = new Thickness(181, 0, 232, 18);
+                go.Margin = new Thickness(0, 0, 175, 18);
             }
             //open the tab
             if (openTab == 1)
@@ -161,7 +166,14 @@ namespace Browser
         private void home_Click_1(object sender, RoutedEventArgs e)
         {
             welcomeScreen.Visibility = Visibility.Visible;
+
             home.Visibility = Visibility.Collapsed;
+            back.Visibility = Visibility.Collapsed;
+            forward.Visibility = Visibility.Collapsed;
+            refresh.Visibility = Visibility.Collapsed;
+            urlbar.Margin = new Thickness(10, 0, 123, 18);
+            go.Margin = new Thickness(0, 0, 66, 18);
+
             tab1but.Visibility = Visibility.Visible;
 
             if (tab1.IsVisible)
