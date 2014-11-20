@@ -457,6 +457,13 @@ namespace Browser
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             settingsGrid2.Visibility = Visibility.Collapsed;
+            welcomeScreen.Visibility = Visibility.Visible;
+            urlbar.Visibility = Visibility.Visible;
+            go.Visibility = Visibility.Visible;
+            back.Visibility = Visibility.Visible;
+            forward.Visibility = Visibility.Visible;
+            refresh.Visibility = Visibility.Visible;
+            bookmark.Visibility = Visibility.Visible;
 
         }
     }
