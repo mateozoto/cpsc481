@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,10 +30,22 @@ namespace Browser
         String homepage = "http://google.ca";
         String bookmarksFile = "bookmarks.cfg";
         String recentPlacesFile = "recentplaces.cfg";
+        ContextMenu menudel;
+        ArrayList bookmarks;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            bookmarks = new ArrayList();
+
+            menudel = new ContextMenu();
+            MenuItem itemdel = new MenuItem();
+            itemdel.Header = "Delete";
+            itemdel.Click += itemdel_Click;
+            menudel.Items.Add(itemdel);
+
+
             if (!System.IO.File.Exists(bookmarksFile))
                 System.IO.File.Create(bookmarksFile);
             else
@@ -50,17 +63,20 @@ namespace Browser
                         newBookmark.Height = 30;
                         newBookmark.Width = 100;
                         newBookmark.Content = line;
+                        newBookmark.ToolTip = line;
+                        newBookmark.ContextMenu = menudel;
                         newBookmark.Click += newBookmark_Click;
                         newBookmark.VerticalAlignment = VerticalAlignment.Top;
                         newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
                         int bookmarkplace = (bookmarkcount * 101) + 5;
                         newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
                         mainGrid.Children.Add(newBookmark);
+                        bookmarks.Add(newBookmark);
                         bookmarkcount++;
                     }
                 }
             }
-       
+
             if (!System.IO.File.Exists(recentPlacesFile))
                 System.IO.File.Create(recentPlacesFile);
             else
@@ -75,29 +91,97 @@ namespace Browser
                         if (recentPlaceNum == 0)
                         {
                             recentButton1.Content = line;
+                            recentButton1.ToolTip = line;
                             recentButton1.Visibility = Visibility.Visible;
                         }
                         else if (recentPlaceNum == 1)
                         {
                             recentButton2.Content = line;
+                            recentButton2.ToolTip = line;
                             recentButton2.Visibility = Visibility.Visible;
                         }
                         else if (recentPlaceNum == 2)
                         {
                             recentButton3.Content = line;
+                            recentButton3.ToolTip = line;
                             recentButton3.Visibility = Visibility.Visible;
                         }
                         else if (recentPlaceNum == 3)
                         {
                             recentButton4.Content = line;
+                            recentButton4.ToolTip = line;
                             recentButton4.Visibility = Visibility.Visible;
                         }
-                       
+
                         recentPlaceNum++;
                     }
                 }
             }
 
+
+        }
+
+        void itemdel_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem item = (MenuItem)sender;
+            ContextMenu owner = (ContextMenu)item.Parent;
+            Button clicked = (Button)owner.PlacementTarget;
+
+            string[] lines = System.IO.File.ReadAllLines(bookmarksFile);
+            int index = 0;
+            foreach (string line in lines)
+            {
+                if (line.Equals((String)clicked.Content))
+                    break;
+                index++;
+            }
+            for (int i = index; i < lines.Length - 1; i++)
+            {
+                lines[i] = lines[i + 1];
+            }
+            using (StreamWriter writer = new StreamWriter(bookmarksFile, false))
+            {
+                for (int i = 0; i < lines.Length - 1; i++)
+                {
+                    writer.WriteLine(lines[i]);
+                }
+            }
+
+
+
+            foreach (Button b in bookmarks)
+            {
+                mainGrid.Children.Remove(b);
+            }
+            bookmarks = new ArrayList();
+
+            bookmarkcount = 0;
+
+            if (lines.Length != 0)
+            {
+                nobookmarks.Text = "";
+                for (int i = 0; i < lines.Length - 1; i++)
+                {
+                    string line = lines[i];
+                    Button newBookmark = new Button();
+                    SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
+                    mySolidColorBrush.Opacity = 0.1;
+                    newBookmark.Background = mySolidColorBrush;
+                    newBookmark.Height = 30;
+                    newBookmark.Width = 100;
+                    newBookmark.Content = line;
+                    newBookmark.ToolTip = line;
+                    newBookmark.ContextMenu = menudel;
+                    newBookmark.Click += newBookmark_Click;
+                    newBookmark.VerticalAlignment = VerticalAlignment.Top;
+                    newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
+                    int bookmarkplace = (bookmarkcount * 101) + 5;
+                    newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                    mainGrid.Children.Add(newBookmark);
+                    bookmarks.Add(newBookmark);
+                    bookmarkcount++;
+                }
+            }
 
         }
 
@@ -184,7 +268,7 @@ namespace Browser
                 bool skip = false;
                 foreach (string line in lines)
                 {
-                    if (recentPlace.Contains(line) || line.Contains(recentPlace))
+                    if (recentPlace.Equals(line))
                     {
                         skip = true;
                         break;
@@ -200,9 +284,13 @@ namespace Browser
                         lines[3] = recentPlace;
 
                         recentButton1.Content = recentButton2.Content;
+                        recentButton1.ToolTip = recentButton2.Content;
                         recentButton2.Content = recentButton3.Content;
+                        recentButton2.ToolTip = recentButton3.Content;
                         recentButton3.Content = recentButton4.Content;
+                        recentButton3.ToolTip = recentButton4.Content;
                         recentButton4.Content = recentPlace;
+                        recentButton4.ToolTip = recentPlace;
 
                         using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
                         {
@@ -217,21 +305,25 @@ namespace Browser
                         if (lines.Length == 0)
                         {
                             recentButton1.Content = recentPlace;
+                            recentButton1.ToolTip = recentPlace;
                             recentButton1.Visibility = Visibility.Visible;
                         }
                         else if (lines.Length == 1)
                         {
                             recentButton2.Content = recentPlace;
+                            recentButton2.ToolTip = recentPlace;
                             recentButton2.Visibility = Visibility.Visible;
                         }
                         else if (lines.Length == 2)
                         {
                             recentButton3.Content = recentPlace;
+                            recentButton3.ToolTip = recentPlace;
                             recentButton3.Visibility = Visibility.Visible;
                         }
                         else if (lines.Length == 3)
                         {
                             recentButton4.Content = recentPlace;
+                            recentButton4.ToolTip = recentPlace;
                             recentButton4.Visibility = Visibility.Visible;
                         }
 
@@ -341,9 +433,9 @@ namespace Browser
             else
             {
                 String bookmark = urlbar.Text;
-                 if (urlbar.Text.StartsWith("http://www."))
-                    bookmark = bookmark.Remove(0,11);
-                 if (urlbar.Text.StartsWith("https://www."))
+                if (urlbar.Text.StartsWith("http://www."))
+                    bookmark = bookmark.Remove(0, 11);
+                if (urlbar.Text.StartsWith("https://www."))
                     bookmark = bookmark.Remove(0, 12);
                 Button newBookmark = new Button();
                 newBookmark.Height = 30;
@@ -352,6 +444,8 @@ namespace Browser
                 mySolidColorBrush.Opacity = 0.1;
                 newBookmark.Background = mySolidColorBrush;
                 newBookmark.Content = bookmark;
+                newBookmark.ToolTip = bookmark;
+                newBookmark.ContextMenu = menudel;
                 newBookmark.Click += newBookmark_Click;
                 nobookmarks.Text = "";
                 newBookmark.VerticalAlignment = VerticalAlignment.Top;
@@ -359,6 +453,7 @@ namespace Browser
                 int bookmarkplace = (bookmarkcount * 101) + 5;
                 newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
                 mainGrid.Children.Add(newBookmark);
+                bookmarks.Add(newBookmark);
                 using (StreamWriter writer = new StreamWriter(bookmarksFile, true))
                 {
                     writer.WriteLine(newBookmark.Content);
