@@ -122,11 +122,11 @@
         <Button x:Name="settings"  Height="51" Margin="0,0,3,7" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
             <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" RenderTransformOrigin="0.525,0.579" />
         </Button>
-        <Button x:Name ="back" Content="⇦" HorizontalAlignment="Left" Height="51" Margin="67,0,0,18" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe Marker" FontSize="36" Grid.Row="1" Visibility="Collapsed"/>
-        <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,118,18" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontSize="24" Visibility="Collapsed"/>
+        <Button x:Name ="back" Content="←" HorizontalAlignment="Left" Height="51" Margin="69,0,0,11" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Grid.Row="1" Visibility="Collapsed"/>
+        <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,117.5,15" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontSize="24" Visibility="Collapsed"/>
         <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,1,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Opacity="0.7"/>
-        <Button x:Name = "forward" Content="⇨" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,18" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Segoe Marker" Grid.Row="1" Visibility="Collapsed"/>
-        <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,18" Height="51" Click="home_Click_1" Background="#FF0F9DFF" BorderThickness="0" Grid.Row="1" Visibility="Collapsed"/>
+        <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,11" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Grid.Row="1" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725"/>
+        <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,11" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Grid.Row="1" Visibility="Collapsed" FontFamily="Segoe UI Light"/>
         <Rectangle x:Name="recentplacesrectangle_Copy" Height="199.135" VerticalAlignment="Bottom" Margin="939.388,0,0.297,313.029" Grid.Row="1" Width="70">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

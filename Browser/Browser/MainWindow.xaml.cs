@@ -149,7 +149,7 @@ namespace Browser
                 forward.Visibility = Visibility.Visible;
                 refresh.Visibility = Visibility.Visible;
                 urlbar.Margin = new Thickness(181, 0, 232, 18);
-                go.Margin = new Thickness(0, 0, 175, 18);
+                go.Margin = new Thickness(0, 0, 175, 13);
             }
             //open the tab
             if (openTab == 1)
@@ -325,6 +325,11 @@ namespace Browser
             tab1.Height = 473;
             tab1.Margin = new Thickness(0, 42, 0, 0);
             tab1.IsEnabled = true;
+            back.Visibility = Visibility.Visible;
+            forward.Visibility = Visibility.Visible;
+            refresh.Visibility = Visibility.Visible;
+            urlbar.Margin = new Thickness(181, 0, 232, 18);
+            go.Margin = new Thickness(0, 0, 175, 13);
         }
 
         private void bookmark_Click(object sender, RoutedEventArgs e)
