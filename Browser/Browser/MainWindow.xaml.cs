@@ -58,7 +58,7 @@ namespace Browser
                     {
                         Button newBookmark = new Button();
                         SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                        mySolidColorBrush.Opacity = 0.1;
+                        mySolidColorBrush.Opacity = 0.0;
                         newBookmark.Background = mySolidColorBrush;
                         newBookmark.Height = 30;
                         newBookmark.Width = 100;
@@ -69,7 +69,7 @@ namespace Browser
                         newBookmark.VerticalAlignment = VerticalAlignment.Top;
                         newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
                         int bookmarkplace = (bookmarkcount * 101) + 5;
-                        newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                        newBookmark.Margin = new Thickness(bookmarkplace, 30, 0, 0);
                         mainGrid.Children.Add(newBookmark);
                         bookmarks.Add(newBookmark);
                         bookmarkcount++;
@@ -165,7 +165,7 @@ namespace Browser
                     string line = lines[i];
                     Button newBookmark = new Button();
                     SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                    mySolidColorBrush.Opacity = 0.1;
+                    mySolidColorBrush.Opacity = 0.0;
                     newBookmark.Background = mySolidColorBrush;
                     newBookmark.Height = 30;
                     newBookmark.Width = 100;
@@ -176,7 +176,7 @@ namespace Browser
                     newBookmark.VerticalAlignment = VerticalAlignment.Top;
                     newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
                     int bookmarkplace = (bookmarkcount * 101) + 5;
-                    newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                    newBookmark.Margin = new Thickness(bookmarkplace, 30, 0, 0);
                     mainGrid.Children.Add(newBookmark);
                     bookmarks.Add(newBookmark);
                     bookmarkcount++;
@@ -230,6 +230,8 @@ namespace Browser
             if (welcomeScreen.IsVisible)
             {
                 welcomeScreen.Visibility = Visibility.Collapsed;
+                tab1but.Visibility = Visibility.Collapsed;
+                tab1.IsEnabled = true;
                 //browserScroll.Visibility = Visibility.Visible;
                 home.Visibility = Visibility.Visible;
                 back.Visibility = Visibility.Visible;
@@ -237,6 +239,7 @@ namespace Browser
                 refresh.Visibility = Visibility.Visible;
                 urlbar.Margin = new Thickness(181, 0, 232, 18);
                 go.Margin = new Thickness(0, 0, 175, 13);
+                
             }
             //open the tab
             if (openTab == 1)
@@ -374,9 +377,9 @@ namespace Browser
                 // navigate
                 tab1.Visibility = Visibility.Visible;
                 tab1.Navigate(urlbar.Text);
-                tab1.Width = 999;
+                tab1.Width = 1015;
                 tab1.Height = 473;
-                tab1.Margin = new Thickness(0, 42, 0, 0);
+                tab1.Margin = new Thickness(0, 100, 0, 0);
                
             }
         }
@@ -455,7 +458,7 @@ namespace Browser
             tab1.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             tab1.Width = 1007;
             tab1.Height = 473;
-            tab1.Margin = new Thickness(0, 42, 0, 0);
+            tab1.Margin = new Thickness(0, 100, 0, 0);
             tab1.IsEnabled = true;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
@@ -466,22 +469,34 @@ namespace Browser
 
         private void bookmark_Click(object sender, RoutedEventArgs e)
         {
+            bool skip = false;
             if (urlbar.Text == "" || urlbar.Text == "Search or enter a URL here" || !(urlbar.Text.StartsWith("http://") || urlbar.Text.StartsWith("https://")) || !(urlbar.Text.Contains(".com") || urlbar.Text.Contains(".ca") || urlbar.Text.Contains(".net") || urlbar.Text.Contains(".org") || urlbar.Text.Contains(".tv")))
             {
-                //do nothing
+                skip=true;
             }
-            else
+
+            String bookmark = urlbar.Text;
+            if (urlbar.Text.StartsWith("http://www."))
+                bookmark = bookmark.Remove(0, 11);
+            if (urlbar.Text.StartsWith("https://www."))
+                bookmark = bookmark.Remove(0, 12);
+
+            string[] lines = System.IO.File.ReadAllLines(bookmarksFile);            
+            foreach (string line in lines) {
+                if (line.Equals(bookmark))
+                {
+                    skip = true;
+                    break;
+                }
+            }
+
+            if (!skip)
             {
-                String bookmark = urlbar.Text;
-                if (urlbar.Text.StartsWith("http://www."))
-                    bookmark = bookmark.Remove(0, 11);
-                if (urlbar.Text.StartsWith("https://www."))
-                    bookmark = bookmark.Remove(0, 12);
                 Button newBookmark = new Button();
                 newBookmark.Height = 30;
                 newBookmark.Width = 100;
                 SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                mySolidColorBrush.Opacity = 0.1;
+                mySolidColorBrush.Opacity = 0.0;
                 newBookmark.Background = mySolidColorBrush;
                 newBookmark.Content = bookmark;
                 newBookmark.ToolTip = bookmark;
@@ -491,7 +506,7 @@ namespace Browser
                 newBookmark.VerticalAlignment = VerticalAlignment.Top;
                 newBookmark.HorizontalAlignment = HorizontalAlignment.Left;
                 int bookmarkplace = (bookmarkcount * 101) + 5;
-                newBookmark.Margin = new Thickness(bookmarkplace, 5, 0, 0);
+                newBookmark.Margin = new Thickness(bookmarkplace, 30, 0, 0);
                 mainGrid.Children.Add(newBookmark);
                 bookmarks.Add(newBookmark);
                 using (StreamWriter writer = new StreamWriter(bookmarksFile, true))
@@ -593,6 +608,21 @@ namespace Browser
         {
             settingsGrid2.Visibility = Visibility.Collapsed;
 
+        }
+
+        private void ExitButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void HeaderGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
