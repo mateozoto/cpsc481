@@ -89,15 +89,15 @@
     </Window.Triggers>
     <Grid Name="mainGrid">
         <Grid.RowDefinitions>
-            <RowDefinition Height="92*"/>
-            <RowDefinition Height="113*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="254*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name ="settingsGrid2" HorizontalAlignment="Left" Height="267" Margin="241,123,0,0" VerticalAlignment="Top" Width="513" Background="Gray" Visibility="Collapsed" Grid.RowSpan="2">
+        <Grid x:Name ="settingsGrid2" HorizontalAlignment="Left" Height="267" Margin="241,1,0,0" VerticalAlignment="Top" Width="513" Background="Gray" Visibility="Collapsed" Grid.Row="1">
             <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="10,82.197,0,0" VerticalAlignment="Top" Width="75"/>
             <Button Content="Button" HorizontalAlignment="Left" Margin="10,109.157,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="0,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
         </Grid>
-        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" Margin="241,123,0,0" VerticalAlignment="Top" Width="519" Background="Gray" Visibility="Collapsed" Grid.RowSpan="2">
+        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" Margin="241,1,0,0" VerticalAlignment="Top" Width="519" Background="Gray" Visibility="Collapsed" Grid.Row="1">
 
             <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="268,140.466,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
             <Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
@@ -106,19 +106,39 @@
         </Grid>
         <TextBox x:Name="urlbar" Margin="10,0,123,18" TextWrapping="Wrap" FontSize="33.333" Height="51" VerticalAlignment="Bottom" Text="Search or enter a URL here" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" Grid.Row="1"/>
         <Button x:Name="go" Content="Go" Margin="0,0,66,18" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" Grid.Row="1"/>
-        <Rectangle x:Name="bookmarksrectangle" Fill="#FFE1E469" Height="42" VerticalAlignment="Top" Margin="0,0,-0.5,0"/>
+        <Rectangle x:Name="bookmarksrectangle" Fill="#FFE1E469" Height="42" VerticalAlignment="Top" Margin="0,0,-1,0"/>
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
         <Button x:Name="settings"  Height="51" Margin="0,0,3,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
             <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" />
         </Button>
         <Button x:Name ="back" Content="⇦" HorizontalAlignment="Left" Height="51" Margin="67,0,0,18" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe Marker" FontSize="36" Grid.Row="1" Visibility="Collapsed"/>
         <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,118,18" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontSize="24" Visibility="Collapsed"/>
-        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,0.5,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24"/>
+        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,1,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24"/>
         <Button x:Name = "forward" Content="⇨" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,18" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Segoe Marker" Grid.Row="1" Visibility="Collapsed"/>
         <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,18" Height="51" Click="home_Click_1" Background="#FF0F9DFF" BorderThickness="0" Grid.Row="1" Visibility="Collapsed"/>
-        <Rectangle x:Name="recentplacesrectangle" Fill="#FF8BD3DF" Height="336" VerticalAlignment="Bottom" Margin="0,0,0,165" HorizontalAlignment="Right" Width="60" Grid.RowSpan="2"/>
-        <TextBlock x:Name="norecent" Margin="0,0,-1,165" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" Grid.RowSpan="2" FontSize="16"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text="Recent"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
-        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2">
+        <Rectangle x:Name="recentplacesrectangle" Fill="#FF8BD3DF" Height="336" VerticalAlignment="Bottom" Margin="0,0,0,165" HorizontalAlignment="Right" Width="60" Grid.Row="1"/>
+        <TextBlock x:Name="norecent" Margin="0,0,-1,165" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" Grid.Row="1"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text="Recent"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
+        <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,3,413" VerticalAlignment="Bottom" Width="54" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#196D6D6D"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,2,331" VerticalAlignment="Bottom" Width="55" Height="82" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#196D6D6D"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,3,249" VerticalAlignment="Bottom" Width="54" Height="82" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#196D6D6D"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2,167" VerticalAlignment="Bottom" Width="55" Height="82" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#196D6D6D"/>
+            </Button.Background>
+        </Button>
+        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2" Margin="1,-2,-1,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="317*"/>
                 <RowDefinition Height="198*"/>
@@ -152,16 +172,17 @@
             <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="0,277,0,0" VerticalAlignment="Top" Width="60" Height="85" Background="#FFF169BD" Grid.RowSpan="2" FontSize="14" BorderThickness="0"/>
             <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Margin="0,45.5,0,0" VerticalAlignment="Top" Width="60" Height="85" Background="#FFCEC035" Grid.Row="1" FontSize="14" BorderThickness="0"/>
 
+
         </Grid>
 
 
         <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab1_LoadCompleted" Grid.RowSpan="2"/>
         <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" Grid.RowSpan="2"/>
-        <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,38.195,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" Grid.Row="1"/>
-        <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="545,38.195,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" Grid.Row="1"/>
+        <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,38,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" Grid.Row="1"/>
+        <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="545,38,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" Grid.Row="1"/>
         <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" Grid.RowSpan="2"/>
         <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,92,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.RowSpan="2"/>
-        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,38.195,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1"/>
-        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="545,38.195,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1"/>
+        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,38,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1"/>
+        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="545,38,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1"/>
     </Grid>
 </Window>

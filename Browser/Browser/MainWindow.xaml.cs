@@ -25,7 +25,6 @@ namespace Browser
         int currentTab = 0;
         int openTab = 1;
         int bookmarkcount = 0;
-        int recentPlaceNum = 0;
         string curUrl = "";
         String homepage = "http://google.ca";
         String bookmarksFile = "bookmarks.cfg";
@@ -44,7 +43,6 @@ namespace Browser
                     nobookmarks.Text = "";
                     foreach (string line in lines)
                     {
-                        String bookmark = urlbar.Text;
                         Button newBookmark = new Button();
                         SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
                         mySolidColorBrush.Opacity = 0.1;
@@ -62,8 +60,7 @@ namespace Browser
                     }
                 }
             }
-
-
+       
             if (!System.IO.File.Exists(recentPlacesFile))
                 System.IO.File.Create(recentPlacesFile);
             else
@@ -71,23 +68,31 @@ namespace Browser
                 string[] lines = System.IO.File.ReadAllLines(recentPlacesFile);
                 if (lines.Length != 0)
                 {
-                    norecent.Text = "";                    
+                    norecent.Text = "";
+                    int recentPlaceNum = 0;
                     foreach (string line in lines)
                     {
-                        String recentPlace = urlbar.Text;
-                        Button newRecentPlace = new Button();
-                        SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                        mySolidColorBrush.Opacity = 0.1;
-                        newRecentPlace.Background = mySolidColorBrush;
-                        newRecentPlace.Height = 85;
-                        newRecentPlace.Width = 55;
-                        newRecentPlace.Content = line;
-                        newRecentPlace.Click += newRecentPlace_Click;
-                        newRecentPlace.VerticalAlignment = VerticalAlignment.Top;
-                        newRecentPlace.HorizontalAlignment = HorizontalAlignment.Left;
-                        int recentPlacePlace = recentPlaceNum * 85 + 103;
-                        newRecentPlace.Margin = new Thickness(942, recentPlacePlace, 0, 0);
-                        mainGrid.Children.Add(newRecentPlace);
+                        if (recentPlaceNum == 0)
+                        {
+                            recentButton1.Content = line;
+                            recentButton1.Visibility = Visibility.Visible;
+                        }
+                        else if (recentPlaceNum == 1)
+                        {
+                            recentButton2.Content = line;
+                            recentButton2.Visibility = Visibility.Visible;
+                        }
+                        else if (recentPlaceNum == 2)
+                        {
+                            recentButton3.Content = line;
+                            recentButton3.Visibility = Visibility.Visible;
+                        }
+                        else if (recentPlaceNum == 3)
+                        {
+                            recentButton4.Content = line;
+                            recentButton4.Visibility = Visibility.Visible;
+                        }
+                       
                         recentPlaceNum++;
                     }
                 }
@@ -96,7 +101,7 @@ namespace Browser
 
         }
 
-        void newRecentPlace_Click(object sender, RoutedEventArgs e)
+        void recentPlace_Click(object sender, RoutedEventArgs e)
         {
             Button clicked = (Button)sender;
             urlbar.Text = (String)clicked.Content;
@@ -163,38 +168,84 @@ namespace Browser
                     urlbar.Text = query;
                 }
 
-                // add recent place             
+                // add recent place
+                norecent.Text = "";
                 String recentPlace = urlbar.Text;
                 if (urlbar.Text.StartsWith("http://www."))
                     recentPlace = recentPlace.Remove(0, 11);
-                if (urlbar.Text.StartsWith("https://www."))
+                else if (urlbar.Text.StartsWith("https://www."))
                     recentPlace = recentPlace.Remove(0, 12);
-                Button newRecentPlace = new Button();
-                SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                mySolidColorBrush.Opacity = 0.1;
-                newRecentPlace.Background = mySolidColorBrush;
-                newRecentPlace.Height = 85;
-                newRecentPlace.Width = 55;
-                newRecentPlace.Content = recentPlace;
-                newRecentPlace.Click += newRecentPlace_Click;
-                newRecentPlace.VerticalAlignment = VerticalAlignment.Top;
-                newRecentPlace.HorizontalAlignment = HorizontalAlignment.Left;
-                if (recentPlaceNum >= 4)
-                    recentPlaceNum %= 4;
-                int recentPlacePlace = recentPlaceNum * 85 + 103;
-                newRecentPlace.Margin = new Thickness(942, recentPlacePlace, 0, 0);
-                mainGrid.Children.Add(newRecentPlace);
-                using (StreamWriter writer = new StreamWriter(recentPlacesFile, true))
+                else if (urlbar.Text.StartsWith("https://"))
+                    recentPlace = recentPlace.Remove(0, 8);
+                else if (urlbar.Text.StartsWith("http://"))
+                    recentPlace = recentPlace.Remove(0, 7);
+
+                string[] lines = System.IO.File.ReadAllLines(recentPlacesFile);
+                bool skip = false;
+                foreach (string line in lines)
                 {
-                    writer.WriteLine(newRecentPlace.Content);
+                    if (recentPlace.Contains(line) || line.Contains(recentPlace))
+                    {
+                        skip = true;
+                        break;
+                    }
                 }
-                bookmarkcount++;
-                
+                if (!skip)
+                {
+                    if (lines.Length >= 4)
+                    {
+                        lines[0] = lines[1];
+                        lines[1] = lines[2];
+                        lines[2] = lines[3];
+                        lines[3] = recentPlace;
+
+                        recentButton1.Content = recentButton2.Content;
+                        recentButton2.Content = recentButton3.Content;
+                        recentButton3.Content = recentButton4.Content;
+                        recentButton4.Content = recentPlace;
+
+                        using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
+                        {
+                            for (int i = 0; i < lines.Length; i++)
+                            {
+                                writer.WriteLine(lines[i]);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (lines.Length == 0)
+                        {
+                            recentButton1.Content = recentPlace;
+                            recentButton1.Visibility = Visibility.Visible;
+                        }
+                        else if (lines.Length == 1)
+                        {
+                            recentButton2.Content = recentPlace;
+                            recentButton2.Visibility = Visibility.Visible;
+                        }
+                        else if (lines.Length == 2)
+                        {
+                            recentButton3.Content = recentPlace;
+                            recentButton3.Visibility = Visibility.Visible;
+                        }
+                        else if (lines.Length == 3)
+                        {
+                            recentButton4.Content = recentPlace;
+                            recentButton4.Visibility = Visibility.Visible;
+                        }
+
+                        using (StreamWriter writer = new StreamWriter(recentPlacesFile, true))
+                        {
+                            writer.WriteLine(recentPlace);
+                        }
+                    }
+                }
 
                 // navigate
                 tab1.Visibility = Visibility.Visible;
                 tab1.Navigate(urlbar.Text);
-                tab1.Width = 1007;
+                tab1.Width = 999;
                 tab1.Height = 473;
                 tab1.Margin = new Thickness(0, 42, 0, 0);
                
@@ -230,6 +281,7 @@ namespace Browser
         private void home_Click_1(object sender, RoutedEventArgs e)
         {
             welcomeScreen.Visibility = Visibility.Visible;
+            urlbar.Text = "Search or enter a URL here";
 
             home.Visibility = Visibility.Collapsed;
             back.Visibility = Visibility.Collapsed;
