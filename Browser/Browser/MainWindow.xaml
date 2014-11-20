@@ -104,20 +104,41 @@
             <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="149,45.05,0,0" TextWrapping="Wrap" Text="Enter Password to Continue..." VerticalAlignment="Top" Height="25.96" Width="181.503" FontSize="13.333"/>
             <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="149,112.333,0,0" VerticalAlignment="Top" Width="194" Height="23.133"/>
         </Grid>
-        <TextBox x:Name="urlbar" Margin="10,0,123,18" TextWrapping="Wrap" FontSize="33.333" Height="51" VerticalAlignment="Bottom" Text="Search or enter a URL here" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" Grid.Row="1"/>
-        <Button x:Name="go" Content="Go" Margin="0,0,66,18" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" Grid.Row="1"/>
-        <Rectangle x:Name="bookmarksrectangle" Fill="#FFE1E469" Height="42" VerticalAlignment="Top" Margin="0,0,-1,0"/>
-        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="16"/>
-        <Button x:Name="settings"  Height="51" Margin="0,0,3,18" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
-            <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" />
+        <TextBox x:Name="urlbar" Margin="10,0,123.5,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" Text="Search or enter a URL here" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" Grid.Row="1" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}"/>
+        <Button x:Name="go" Content="Go" Margin="0,0,66.5,10" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontFamily="Segoe UI Light" FontSize="13.333"/>
+        <Rectangle x:Name="bookmarksrectangle" Height="42" VerticalAlignment="Top" Margin="0,0,-1,0">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FFE2E557" Offset="0"/>
+        			<GradientStop Color="White" Offset="1"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
+        <Button x:Name="settings"  Height="51" Margin="0,0,3,7" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
+            <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" RenderTransformOrigin="0.525,0.579" />
         </Button>
         <Button x:Name ="back" Content="⇦" HorizontalAlignment="Left" Height="51" Margin="67,0,0,18" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe Marker" FontSize="36" Grid.Row="1" Visibility="Collapsed"/>
         <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,118,18" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontSize="24" Visibility="Collapsed"/>
-        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,1,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24"/>
+        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,1,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Opacity="0.7"/>
         <Button x:Name = "forward" Content="⇨" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,18" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Segoe Marker" Grid.Row="1" Visibility="Collapsed"/>
         <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,18" Height="51" Click="home_Click_1" Background="#FF0F9DFF" BorderThickness="0" Grid.Row="1" Visibility="Collapsed"/>
         <Rectangle x:Name="recentplacesrectangle" Fill="#FF8BD3DF" Height="336" VerticalAlignment="Bottom" Margin="0,0,0,165" HorizontalAlignment="Right" Width="60" Grid.Row="1"/>
-        <TextBlock x:Name="norecent" Margin="0,0,-1,165" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" Grid.Row="1"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="No"/><LineBreak/><Run/><LineBreak/><LineBreak/><Run Text="Recent"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Places"/></TextBlock>
+        <TextBlock x:Name="norecent" Margin="0,0,0.471,165" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" Grid.Row="1" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5">
+        	<TextBlock.Background>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<LinearGradientBrush.RelativeTransform>
+        				<TransformGroup>
+        					<ScaleTransform ScaleY="1" ScaleX="1"/>
+        					<SkewTransform AngleY="0" AngleX="0"/>
+        					<RotateTransform Angle="0"/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</LinearGradientBrush.RelativeTransform>
+        			<GradientStop Color="#FFFEFEFE" Offset="1"/>
+        			<GradientStop Color="#FF22F6DE" Offset="0.502"/>
+        		</LinearGradientBrush>
+        	</TextBlock.Background><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
         <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,3,413" VerticalAlignment="Bottom" Width="54" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
             <Button.Background>
                 <SolidColorBrush Color="#196D6D6D"/>
@@ -148,7 +169,7 @@
                 <ColumnDefinition Width="0*"/>
                 <ColumnDefinition Width="30*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="welcome" Margin="244,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="47" HorizontalAlignment="Left" Width="160" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="welcome" Margin="244,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" HorizontalAlignment="Left" Width="282.115" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light" FontSize="48">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -156,8 +177,8 @@
                         <RotateTransform/>
                         <TranslateTransform/>
                     </TransformGroup>
-                </TextBlock.RenderTransform><Run FontSize="29.333" Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-            <TextBlock x:Name="message1" Height="47" Margin="354,245,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="388" RenderTransformOrigin="0.5,0.5">
+                </TextBlock.RenderTransform><Run Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+            <TextBlock x:Name="message1" Height="47" Margin="392.988,269.384,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="388" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -167,10 +188,38 @@
                     </TransformGroup>
                 </TextBlock.RenderTransform>
             </TextBlock>
-            <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Width="60" Height="85" Background="#FF4A6BFF" FontSize="14" BorderThickness="0"/>
-            <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="0,192,0,0" VerticalAlignment="Top" Width="60" Height="85" Background="#FF13AD13" FontSize="14" BorderThickness="0"/>
-            <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="0,277,0,0" VerticalAlignment="Top" Width="60" Height="85" Background="#FFF169BD" Grid.RowSpan="2" FontSize="14" BorderThickness="0"/>
-            <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Margin="0,45.5,0,0" VerticalAlignment="Top" Width="60" Height="85" Background="#FFCEC035" Grid.Row="1" FontSize="14" BorderThickness="0"/>
+            <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="-4.413,107,0,0" VerticalAlignment="Top" Width="70" Height="85" FontSize="14.667" BorderThickness="0" Opacity="0.9" FontFamily="Segoe UI Light">
+            	<Button.Background>
+            		<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            			<GradientStop Color="White" Offset="0"/>
+            			<GradientStop Color="#FF49FEAC" Offset="1"/>
+            		</LinearGradientBrush>
+            	</Button.Background>
+            </Button>
+            <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="-4.413,192,0,0" VerticalAlignment="Top" Width="70" Height="85" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light">
+            	<Button.Background>
+            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            			<GradientStop Color="#FF49FEAC" Offset="0"/>
+            			<GradientStop Color="#FF25F5F8" Offset="1"/>
+            		</LinearGradientBrush>
+            	</Button.Background>
+            </Button>
+            <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="-4.413,277,0,0" VerticalAlignment="Top" Width="70" Height="85" Grid.RowSpan="2" FontSize="14" BorderThickness="0" FontFamily="Segoe UI Light">
+            	<Button.Background>
+            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            			<GradientStop Color="#FF25F5F8" Offset="0"/>
+            			<GradientStop Color="#FFF19DF3" Offset="1"/>
+            		</LinearGradientBrush>
+            	</Button.Background>
+            </Button>
+            <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Margin="-4.413,45.5,0,0" VerticalAlignment="Top" Width="70" Height="85" Grid.Row="1" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light">
+            	<Button.Background>
+            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            			<GradientStop Color="#FFF19DF3" Offset="0.019"/>
+            			<GradientStop Color="White" Offset="1"/>
+            		</LinearGradientBrush>
+            	</Button.Background>
+            </Button>
 
 
         </Grid>
