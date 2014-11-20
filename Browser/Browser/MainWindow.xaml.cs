@@ -269,11 +269,45 @@ namespace Browser
 
                 string[] lines = System.IO.File.ReadAllLines(recentPlacesFile);
                 bool skip = false;
-                foreach (string line in lines)
+                for (int i = 0; i < lines.Length; i++)
                 {
+                    string line = lines[i];
                     if (recentPlace.Equals(line))
                     {
                         skip = true;
+                        for (int j = i; j < lines.Length - 1; j++)
+                        {
+                            string temp = lines[j + 1];
+                            lines[j + 1] = lines[j];
+                            lines[j] = temp;
+                        }
+                        using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
+                        {
+                            for (int j = 0; j < lines.Length; j++)
+                            {
+                                writer.WriteLine(lines[j]);
+                            }
+                        }
+                        if (lines.Length >= 1)
+                        {
+                            recentButton1.Content = lines[0];
+                            recentButton1.ToolTip = lines[0];
+                        }
+                        if (lines.Length >= 2)
+                        {
+                            recentButton2.Content = lines[1];
+                            recentButton2.ToolTip = lines[1];
+                        }
+                        if (lines.Length >= 3)
+                        {
+                            recentButton3.Content = lines[2];
+                            recentButton3.ToolTip = lines[2];
+                        }
+                        if (lines.Length >= 4)
+                        {
+                            recentButton4.Content = lines[3];
+                            recentButton4.ToolTip = lines[3];
+                        }
                         break;
                     }
                 }
@@ -386,7 +420,7 @@ namespace Browser
             forward.Visibility = Visibility.Collapsed;
             refresh.Visibility = Visibility.Collapsed;
             urlbar.Margin = new Thickness(10, 0, 123, 18);
-            go.Margin = new Thickness(0, 0, 66, 18);
+            go.Margin = new Thickness(0, 0, 66, 13);
 
             tab1but.Visibility = Visibility.Visible;
 
