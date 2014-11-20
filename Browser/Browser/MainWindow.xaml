@@ -127,7 +127,7 @@
         <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,1,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Opacity="0.7"/>
         <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,11" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Grid.Row="1" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725"/>
         <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,11" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Grid.Row="1" Visibility="Collapsed" FontFamily="Segoe UI Light"/>
-        <Rectangle x:Name="recentplacesrectangle_Copy" Height="199.135" VerticalAlignment="Bottom" Margin="939.388,0,0.297,313.029" Grid.Row="1" Width="70">
+        <Rectangle x:Name="recentplacesrectangle_Copy" Height="199" VerticalAlignment="Bottom" Margin="0,0,0.5,313" Grid.Row="1" Width="70" HorizontalAlignment="Right">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0.002"/>
@@ -135,7 +135,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="recentplacesrectangle" Height="157.983" VerticalAlignment="Bottom" Margin="939.388,0,0.297,155.431" Grid.Row="1" Width="70">
+        <Rectangle x:Name="recentplacesrectangle" Height="158" VerticalAlignment="Bottom" Margin="0,0,0.5,155" Grid.Row="1" Width="70" HorizontalAlignment="Right">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF49FEAC"/>
@@ -144,12 +144,12 @@
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock x:Name="norecent" Margin="0,0,3.5,155" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Grid.Row="1"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
-        <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,3,413" VerticalAlignment="Bottom" Width="55" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderBrush="#FF4BB7C9" BorderThickness="0" FontFamily="Segoe UI Light"/>
-        <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,2,331" VerticalAlignment="Bottom" Width="55" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light">
+        <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,5,413" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderBrush="#FF4BB7C9" BorderThickness="0" FontFamily="Segoe UI Light"/>
+        <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,5,331" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light">
         </Button>
-        <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,3,249" VerticalAlignment="Bottom" Width="55" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" BorderThickness="0" FontFamily="Segoe UI Light"> 
+        <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,5,249" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light">
         </Button>
-        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2,169.942" VerticalAlignment="Bottom" Width="55" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light">
+        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,5,169.942" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light">
         </Button>
         <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2" Margin="1,-2,-1,0">
             <Grid.RowDefinitions>

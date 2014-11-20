@@ -182,6 +182,9 @@ namespace Browser
                     bookmarkcount++;
                 }
             }
+            if (bookmarkcount == 0) {
+                nobookmarks.Text = "No bookmarks";
+            }
 
         }
 
@@ -354,7 +357,10 @@ namespace Browser
 
         private void urlbar_LostFocus(object sender, RoutedEventArgs e)
         {
-            //urlbar.Text = "Search or enter a URL here";
+            if (urlbar.Text == "")
+            {
+                urlbar.Text = "Search or enter a URL here";
+            }
         }
 
         private void urlbar_KeyDown(object sender, KeyEventArgs e)
