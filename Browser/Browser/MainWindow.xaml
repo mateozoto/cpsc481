@@ -80,6 +80,10 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -109,7 +113,7 @@
         <Rectangle x:Name="bookmarksrectangle" Height="42" VerticalAlignment="Top" Margin="0,0,-1,0">
         	<Rectangle.Fill>
         		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-        			<GradientStop Color="#FFE2E557" Offset="0"/>
+        			<GradientStop Color="#FF49FEAC" Offset="0"/>
         			<GradientStop Color="White" Offset="1"/>
         		</LinearGradientBrush>
         	</Rectangle.Fill>
@@ -123,22 +127,22 @@
         <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="62" Margin="0,0,1,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Opacity="0.7"/>
         <Button x:Name = "forward" Content="⇨" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,18" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Segoe Marker" Grid.Row="1" Visibility="Collapsed"/>
         <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,18" Height="51" Click="home_Click_1" Background="#FF0F9DFF" BorderThickness="0" Grid.Row="1" Visibility="Collapsed"/>
-        <Rectangle x:Name="recentplacesrectangle" Fill="#FF8BD3DF" Height="336" VerticalAlignment="Bottom" Margin="0,0,0,165" HorizontalAlignment="Right" Width="60" Grid.Row="1"/>
-        <TextBlock x:Name="norecent" Margin="0,0,0.471,165" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" Grid.Row="1" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5">
-        	<TextBlock.Background>
+        <Rectangle x:Name="recentplacesrectangle_Copy" Height="199.135" VerticalAlignment="Bottom" Margin="939.388,0,0.297,313.029" Grid.Row="1" Width="70">
+        	<Rectangle.Fill>
         		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-        			<LinearGradientBrush.RelativeTransform>
-        				<TransformGroup>
-        					<ScaleTransform ScaleY="1" ScaleX="1"/>
-        					<SkewTransform AngleY="0" AngleX="0"/>
-        					<RotateTransform Angle="0"/>
-        					<TranslateTransform/>
-        				</TransformGroup>
-        			</LinearGradientBrush.RelativeTransform>
-        			<GradientStop Color="#FFFEFEFE" Offset="1"/>
-        			<GradientStop Color="#FF22F6DE" Offset="0.502"/>
+        			<GradientStop Color="White" Offset="0.002"/>
+        			<GradientStop Color="#FF49FEAC" Offset="0.998"/>
         		</LinearGradientBrush>
-        	</TextBlock.Background><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
+        	</Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="recentplacesrectangle" Height="157.983" VerticalAlignment="Bottom" Margin="939.388,0,0.297,155.431" Grid.Row="1" Width="70">
+        	<Rectangle.Fill>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="#FF49FEAC"/>
+        			<GradientStop Color="White" Offset="1"/>
+        		</LinearGradientBrush>
+        	</Rectangle.Fill>
+        </Rectangle>
         <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,3,413" VerticalAlignment="Bottom" Width="54" Height="83" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
             <Button.Background>
                 <SolidColorBrush Color="#196D6D6D"/>
@@ -154,11 +158,12 @@
                 <SolidColorBrush Color="#196D6D6D"/>
             </Button.Background>
         </Button>
-        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2,167" VerticalAlignment="Bottom" Width="55" Height="82" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
+        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2,169.942" VerticalAlignment="Bottom" Width="55" Height="82" Grid.Row="1" Visibility="Collapsed" Click="recentPlace_Click">
             <Button.Background>
                 <SolidColorBrush Color="#196D6D6D"/>
             </Button.Background>
         </Button>
+        <TextBlock x:Name="norecent" Margin="0,0,4.116,155.431" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Grid.Row="1"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
         <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2" Margin="1,-2,-1,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="317*"/>
@@ -178,7 +183,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </TextBlock.RenderTransform><Run Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-            <TextBlock x:Name="message1" Height="47" Margin="392.988,269.384,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="388" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light">
+            <TextBlock x:Name="message1" Height="47" Margin="392.988,269.384,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="209.241" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
