@@ -753,13 +753,26 @@ namespace Browser
             refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Collapsed;
 
+            tab1URL = tab1.Source;
+            tab2URL = tab2.Source;
+            tab3URL = tab3.Source;
+            tab4URL = tab4.Source;
+
+            tab1.Visibility = Visibility.Collapsed;
+            tab1but.Visibility = Visibility.Collapsed;
+            tab2.Visibility = Visibility.Collapsed;
+            tab2but.Visibility = Visibility.Collapsed;
+            tab3.Visibility = Visibility.Collapsed;
+            tab3but.Visibility = Visibility.Collapsed;
+            tab4.Visibility = Visibility.Collapsed;
+            tab4but.Visibility = Visibility.Collapsed;
+
         }
         private void settingsBack_Click(object sender, RoutedEventArgs e)
         {
             settingsGrid.Visibility = Visibility.Visible;
             passwordEntry.Visibility = Visibility.Collapsed;
             settingsRectangle.Visibility = Visibility.Visible;
-
         }
 
         private void passwordEnter_Click(object sender, RoutedEventArgs e)
@@ -788,6 +801,7 @@ namespace Browser
             forward.Visibility = Visibility.Collapsed;
             refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Visible;
+
 
         }
 

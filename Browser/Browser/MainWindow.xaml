@@ -276,5 +276,6 @@
             <Button x:Name="ExitButton" Content="X" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Close"/>
             <Button x:Name="MinimizeButton" Content="_" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Minimize"/>
         </Grid>
+        <InkCanvas HorizontalAlignment="Left" Height="344.638" VerticalAlignment="Top" Width="655.362" Margin="147,39,0,0" Grid.Row="1"/>
     </Grid>
 </Window>
