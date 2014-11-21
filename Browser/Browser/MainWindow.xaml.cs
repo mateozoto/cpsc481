@@ -381,33 +381,33 @@ namespace Browser
                 {
                     tab1.Visibility = Visibility.Visible;
                     tab1.Navigate(urlbar.Text);
-                    tab1.Width = 999;
-                    tab1.Height = 473;
-                    tab1.Margin = new Thickness(0, 42, 0, 0);
+                    tab1.Width = 1015;
+                    tab1.Height = 500;
+                    tab1.Margin = new Thickness(0, 65, 0, 0);
                 }
                 else if (currentTab == 2)
                 {
                     tab2.Visibility = Visibility.Visible;
                     tab2.Navigate(urlbar.Text);
-                    tab2.Width = 999;
-                    tab2.Height = 473;
-                    tab2.Margin = new Thickness(0, 42, 0, 0);
+                    tab2.Width = 1015;
+                    tab2.Height = 500;
+                    tab2.Margin = new Thickness(0, 65, 0, 0);
                 }
                 else if (currentTab == 3)
                 {
                     tab3.Visibility = Visibility.Visible;
                     tab3.Navigate(urlbar.Text);
-                    tab3.Width = 999;
-                    tab3.Height = 473;
-                    tab3.Margin = new Thickness(0, 42, 0, 0);
+                    tab3.Width = 1015;
+                    tab3.Height = 500;
+                    tab3.Margin = new Thickness(0, 65, 0, 0);
                 }
                 else if (currentTab == 4)
                 {
                     tab4.Visibility = Visibility.Visible;
                     tab4.Navigate(urlbar.Text);
-                    tab4.Width = 999;
-                    tab4.Height = 473;
-                    tab4.Margin = new Thickness(0, 42, 0, 0);
+                    tab4.Width = 1015;
+                    tab4.Height = 500;
+                    tab4.Margin = new Thickness(0, 65, 0, 0);
                 }
             }
         }
@@ -517,9 +517,9 @@ namespace Browser
             home.Visibility = Visibility.Visible;
             string script = "document.body.style.overflow ='visible'";
             tab1.InvokeScript("execScript", new Object[] { script, "JavaScript" });
-            tab1.Width = 1007;
-            tab1.Height = 473;
-            tab1.Margin = new Thickness(0, 100, 0, 0);
+            tab1.Width = 1015;
+            tab1.Height = 500;
+            tab1.Margin = new Thickness(0, 65, 0, 0);
             tab1.IsEnabled = true;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
@@ -534,9 +534,9 @@ namespace Browser
             home.Visibility = Visibility.Visible;
             string script = "document.body.style.overflow ='visible'";
             tab2.InvokeScript("execScript", new Object[] { script, "JavaScript" });
-            tab2.Width = 1007;
-            tab2.Height = 473;
-            tab2.Margin = new Thickness(0, 100, 0, 0);
+            tab2.Width = 1015;
+            tab2.Height = 500;
+            tab2.Margin = new Thickness(0, 65, 0, 0);
             tab2.IsEnabled = true;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
@@ -551,9 +551,9 @@ namespace Browser
             home.Visibility = Visibility.Visible;
             string script = "document.body.style.overflow ='visible'";
             tab3.InvokeScript("execScript", new Object[] { script, "JavaScript" });
-            tab3.Width = 1007;
-            tab3.Height = 473;
-            tab3.Margin = new Thickness(0, 100, 0, 0);
+            tab3.Width = 1015;
+            tab3.Height = 500;
+            tab3.Margin = new Thickness(0, 65, 0, 0);
             tab3.IsEnabled = true;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
@@ -568,9 +568,9 @@ namespace Browser
             home.Visibility = Visibility.Visible;
             string script = "document.body.style.overflow ='visible'";
             tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
-            tab4.Width = 1007;
-            tab4.Height = 473;
-            tab4.Margin = new Thickness(0, 100, 0, 0);
+            tab4.Width = 1015;
+            tab4.Height = 500;
+            tab4.Margin = new Thickness(0, 65, 0, 0);
             tab4.IsEnabled = true;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
