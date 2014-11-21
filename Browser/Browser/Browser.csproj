@@ -120,6 +120,15 @@
   <ItemGroup>
     <Resource Include="Resources\powerpoint-gear-2010-tutorial.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1416621578_685082-Search-128.png" />
+    <Resource Include="Resources\1416621613_photos.png" />
+    <Resource Include="Resources\1416621648_ic_history_48px-128.png" />
+    <Resource Include="Resources\1416621667_Live_Messenger.png" />
+    <Resource Include="Resources\bookmark_bookmarks_favorite_favorites_star-512.png" />
+    <Resource Include="Resources\printer.png" />
+    <Resource Include="Resources\Question_mark.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

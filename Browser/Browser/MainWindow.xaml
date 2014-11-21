@@ -106,12 +106,24 @@
             </Rectangle.Fill>
         </Rectangle>
         <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,39,0,0" Grid.Row="1" Visibility="Collapsed">
-            <Button Name ="printButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
-            <Button Name="accessButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
-            <Button Name="backgroundButton" Content="Button" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
-            <Button Name="bookmarksButton" Content="Button" VerticalAlignment="Bottom" Width="75" Margin="0,0,363,40" Height="75" HorizontalAlignment="Right" Click="bookmarksButton_Click" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
-            <Button Name="historyButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="222,0,0,40" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
-            <Button Name="parentalSettings" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="76" Margin="363,0,0,40" Height="74" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="parentalSettings_Click"/>
+            <Button Name ="printButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Source="Resources/printer.png" Width="65" Height="75"/>
+            </Button>
+            <Button Name="accessButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Height="75" Width="75" Source="Resources/1416621578_685082-Search-128.png"/>
+            </Button>
+            <Button Name="backgroundButton" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Height="75" Width="75" Source="Resources/1416621613_photos.png"/>
+            </Button>
+            <Button Name="bookmarksButton" VerticalAlignment="Bottom" Width="75" Margin="0,0,363,40" Height="75" HorizontalAlignment="Right" Click="bookmarksButton_Click" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Height="75" Width="65" Source="Resources/bookmark_bookmarks_favorite_favorites_star-512.png"/>
+            </Button>
+            <Button Name="historyButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="222,0,0,40" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Height="75" Width="65" Source="Resources/1416621648_ic_history_48px-128.png"/>
+            </Button>
+            <Button Name="parentalSettings" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="76" Margin="363,0,0,40" Height="74" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="parentalSettings_Click">
+                <Image Height="74" Width="76" Source="Resources/1416621667_Live_Messenger.png"/>
+            </Button>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="363,120,0,0" Width="75" FontWeight="Bold" Text="Parental Controls" TextAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="222,131,0,0" Width="75" TextAlignment="Center"><Run FontWeight="Bold" Text="History"/></TextBlock>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bookmarks" VerticalAlignment="Top" Margin="75,131,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>

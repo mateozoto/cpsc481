@@ -691,16 +691,9 @@ namespace Browser
         }
         private void settingsBack_Click(object sender, RoutedEventArgs e)
         {
-            settingsGrid.Visibility = Visibility.Collapsed;
+            settingsGrid.Visibility = Visibility.Visible;
             passwordEntry.Visibility = Visibility.Collapsed;
-            settingsRectangle.Visibility = Visibility.Collapsed;
-            welcomeScreen.Visibility = Visibility.Visible;
-            urlbar.Visibility = Visibility.Visible;
-            go.Visibility = Visibility.Visible;
-            back.Visibility = Visibility.Collapsed;
-            forward.Visibility = Visibility.Collapsed;
-            refresh.Visibility = Visibility.Collapsed;
-            bookmark.Visibility = Visibility.Visible;
+            settingsRectangle.Visibility = Visibility.Visible;
 
         }
 
