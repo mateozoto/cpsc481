@@ -781,6 +781,11 @@ namespace Browser
 
         private void bookmarksButton_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void parentalSettings_Click(object sender, RoutedEventArgs e)
+        {
             passwordEntry.Visibility = Visibility.Visible;
             settingsGrid.Visibility = Visibility.Collapsed;
         }
