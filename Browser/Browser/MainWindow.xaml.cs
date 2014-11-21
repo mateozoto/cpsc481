@@ -33,6 +33,11 @@ namespace Browser
         ContextMenu menudel;
         ArrayList bookmarks;
 
+        System.Uri tab1URL;
+        System.Uri tab2URL;
+        System.Uri tab3URL;
+        System.Uri tab4URL;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -460,8 +465,11 @@ namespace Browser
                 welcome.Visibility = Visibility.Collapsed;
                 message1.Visibility = Visibility.Collapsed;
 
-                tab1.IsEnabled = false;
+                tab1.Visibility = Visibility.Visible;
+                if(tab1URL != null)
+                    tab1.Source = tab1URL;
                 tab1but.Visibility = Visibility.Visible;
+                tab1.IsEnabled = false;
 
                 tab1.Margin = new Thickness(139, 92, 0, 0);
                 tab1.Height = 200;
@@ -472,6 +480,9 @@ namespace Browser
             if (openTabs >= 2)
             {
                 tab2.IsEnabled = false;
+                tab2.Visibility = Visibility.Visible;
+                if (tab2URL != null)
+                    tab2.Source = tab2URL;
                 tab2but.Visibility = Visibility.Visible;
 
                 tab2.Margin = new Thickness(546, 92, 0, 0);
@@ -483,6 +494,9 @@ namespace Browser
             if (openTabs >= 3)
             {
                 tab3.IsEnabled = false;
+                tab3.Visibility = Visibility.Visible;
+                if (tab3URL != null)
+                    tab3.Source = tab3URL;
                 tab3but.Visibility = Visibility.Visible;
 
                 tab3.Margin = new Thickness(139, 310, 0, 0);
@@ -494,6 +508,9 @@ namespace Browser
             if (openTabs >= 4)
             {
                 tab4.IsEnabled = false;
+                tab4.Visibility = Visibility.Visible;
+                if (tab4URL != null)
+                    tab4.Source = tab4URL;
                 tab4but.Visibility = Visibility.Visible;
 
                 tab4.Margin = new Thickness(546, 310, 0, 0);
@@ -526,6 +543,18 @@ namespace Browser
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
+
+            tab2URL = tab2.Source;
+            tab2.Visibility = Visibility.Collapsed;
+            tab2but.Visibility = Visibility.Collapsed;
+
+            tab3URL = tab3.Source;
+            tab3.Visibility = Visibility.Collapsed;
+            tab3but.Visibility = Visibility.Collapsed;
+
+            tab4URL = tab4.Source;
+            tab4.Visibility = Visibility.Collapsed;
+            tab4but.Visibility = Visibility.Collapsed;
         }
         private void tab2but_Click(object sender, RoutedEventArgs e)
         {
@@ -543,6 +572,18 @@ namespace Browser
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
+
+            tab1URL = tab1.Source;
+            tab1.Visibility = Visibility.Collapsed;
+            tab1but.Visibility = Visibility.Collapsed;
+
+            tab3URL = tab3.Source;
+            tab3.Visibility = Visibility.Collapsed;
+            tab3but.Visibility = Visibility.Collapsed;
+
+            tab4URL = tab4.Source;
+            tab4.Visibility = Visibility.Collapsed;
+            tab4but.Visibility = Visibility.Collapsed;
         }
         private void tab3but_Click(object sender, RoutedEventArgs e)
         {
@@ -560,6 +601,18 @@ namespace Browser
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
+
+            tab1URL = tab1.Source;
+            tab1.Visibility = Visibility.Collapsed;
+            tab1but.Visibility = Visibility.Collapsed;
+
+            tab2URL = tab2.Source;
+            tab2.Visibility = Visibility.Collapsed;
+            tab2but.Visibility = Visibility.Collapsed;
+
+            tab4URL = tab4.Source;
+            tab4.Visibility = Visibility.Collapsed;
+            tab4but.Visibility = Visibility.Collapsed;
         }
         private void tab4but_Click(object sender, RoutedEventArgs e)
         {
@@ -577,6 +630,18 @@ namespace Browser
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
+
+            tab1URL = tab2.Source;
+            tab1.Visibility = Visibility.Collapsed;
+            tab1but.Visibility = Visibility.Collapsed;
+
+            tab2URL = tab2.Source;
+            tab2.Visibility = Visibility.Collapsed;
+            tab2but.Visibility = Visibility.Collapsed;
+
+            tab3URL = tab2.Source;
+            tab3.Visibility = Visibility.Collapsed;
+            tab3but.Visibility = Visibility.Collapsed;
         }
 
         private void bookmark_Click(object sender, RoutedEventArgs e)
