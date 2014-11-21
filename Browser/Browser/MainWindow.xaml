@@ -249,11 +249,11 @@
         <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" />
         <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" />
         <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="546,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" />
-        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Visible" Click="tab1but_Click" Grid.RowSpan="2"/>
-        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Visible" Click="tab2but_Click" Grid.RowSpan="2"/>
-        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,210,0,0" Height="200"  Opacity="0" Visibility="Visible" Grid.Row="1" Click="tab3but_Click" />
-        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,210,0,0" Height="200" Opacity="0" Visibility="Visible" Grid.Row="1" Click="tab4but_Click"/>
-        <Button Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078"/>
+        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" Grid.RowSpan="2" MouseEnter="tab1but_MouseEnter" MouseLeave="tab1but_MouseLeave"/>
+        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" Grid.RowSpan="2"/>
+        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,210,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab3but_Click" />
+        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,210,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab4but_Click"/>
+        <Button Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave"/>
         <Button Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed"/>
         <Button Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed"/>
         <Button Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed"/>

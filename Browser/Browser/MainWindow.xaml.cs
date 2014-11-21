@@ -462,7 +462,6 @@ namespace Browser
 
                 tab1.IsEnabled = false;
                 tab1but.Visibility = Visibility.Visible;
-                tab1X.Visibility = Visibility.Visible;
 
                 tab1.Margin = new Thickness(139, 92, 0, 0);
                 tab1.Height = 200;
@@ -474,7 +473,6 @@ namespace Browser
             {
                 tab2.IsEnabled = false;
                 tab2but.Visibility = Visibility.Visible;
-                tab2X.Visibility = Visibility.Visible;
 
                 tab2.Margin = new Thickness(546, 92, 0, 0);
                 tab2.Height = 200;
@@ -486,7 +484,6 @@ namespace Browser
             {
                 tab3.IsEnabled = false;
                 tab3but.Visibility = Visibility.Visible;
-                tab3X.Visibility = Visibility.Visible;
 
                 tab3.Margin = new Thickness(139, 310, 0, 0);
                 tab3.Height = 200;
@@ -498,7 +495,6 @@ namespace Browser
             {
                 tab4.IsEnabled = false;
                 tab4but.Visibility = Visibility.Visible;
-                tab4X.Visibility = Visibility.Visible;
 
                 tab4.Margin = new Thickness(546, 310, 0, 0);
                 tab4.Height = 200;
@@ -788,6 +784,26 @@ namespace Browser
         {
             passwordEntry.Visibility = Visibility.Visible;
             settingsGrid.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab1but_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab1X.Visibility = Visibility.Visible;
+        }
+
+        private void tab1but_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab1X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab1X_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab1X.Visibility = Visibility.Visible;
+        }
+
+        private void tab1X_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab1X.Visibility = Visibility.Collapsed;
         }
     }
 }
