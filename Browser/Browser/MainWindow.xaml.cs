@@ -798,5 +798,146 @@ namespace Browser
         {
             tab1X.Visibility = Visibility.Collapsed;
         }
+
+        private void tab2but_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab2X.Visibility = Visibility.Visible;
+        }
+
+        private void tab2but_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab2X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab2X_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab2X.Visibility = Visibility.Visible;
+        }
+
+        private void tab2X_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab2X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab3but_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab3X.Visibility = Visibility.Visible;
+        }
+
+        private void tab3but_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab3X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab3X_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab3X.Visibility = Visibility.Visible;
+        }
+
+        private void tab3X_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab3X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab4but_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab4X.Visibility = Visibility.Visible;
+        }
+
+        private void tab4but_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab4X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab4X_MouseEnter(object sender, MouseEventArgs e)
+        {
+            tab4X.Visibility = Visibility.Visible;
+        }
+
+        private void tab4X_MouseLeave(object sender, MouseEventArgs e)
+        {
+            tab4X.Visibility = Visibility.Collapsed;
+        }
+
+        private void tab1X_Click(object sender, RoutedEventArgs e)
+        {
+            if (openTabs == 1)
+            {
+                tab1.Visibility = Visibility.Collapsed;
+                tab1but.Visibility = Visibility.Collapsed;
+            }
+            else if (openTabs == 2)
+            {
+                tab1.Source = tab2.Source;
+                tab2.Visibility = Visibility.Collapsed;
+                tab2but.Visibility = Visibility.Collapsed;
+            }
+            else if (openTabs == 3)
+            {
+                tab1.Source = tab2.Source;
+                tab2.Source = tab3.Source;
+                tab3.Visibility = Visibility.Collapsed;
+                tab3but.Visibility = Visibility.Collapsed;
+            }
+            else if (openTabs == 4)
+            {
+                tab1.Source = tab2.Source;
+                tab2.Source = tab3.Source;
+                tab3.Source = tab4.Source;
+                tab4.Visibility = Visibility.Collapsed;
+                tab4but.Visibility = Visibility.Collapsed;
+            }
+
+            openTabs--;
+        }
+
+        private void tab2X_Click(object sender, RoutedEventArgs e)
+        {
+            if (openTabs == 2)
+            {
+                tab2.Visibility = Visibility.Collapsed;
+                tab2but.Visibility = Visibility.Collapsed;
+            }
+            else if (openTabs == 3)
+            {
+                tab2.Source = tab3.Source;
+                tab3.Visibility = Visibility.Collapsed;
+                tab3but.Visibility = Visibility.Collapsed;
+            }
+            else if (openTabs == 4)
+            {
+                tab2.Source = tab3.Source;
+                tab3.Source = tab4.Source;
+                tab4.Visibility = Visibility.Collapsed;
+                tab4but.Visibility = Visibility.Collapsed;
+            }
+
+            openTabs--;
+        }
+
+        private void tab3X_Click(object sender, RoutedEventArgs e)
+        {
+            if (openTabs == 3)
+            {
+                tab3.Visibility = Visibility.Collapsed;
+                tab3but.Visibility = Visibility.Collapsed;
+            }
+            else if (openTabs == 4)
+            {
+                tab3.Source = tab4.Source;
+                tab4.Visibility = Visibility.Collapsed;
+                tab4but.Visibility = Visibility.Collapsed;
+            }
+
+            openTabs--;
+        }
+
+        private void tab4X_Click(object sender, RoutedEventArgs e)
+        {
+            tab4.Visibility = Visibility.Collapsed;
+            tab4but.Visibility = Visibility.Collapsed;
+
+            openTabs--;
+        }
     }
 }

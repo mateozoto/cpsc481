@@ -262,13 +262,15 @@
         <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" />
         <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="546,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" />
         <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" Grid.RowSpan="2" MouseEnter="tab1but_MouseEnter" MouseLeave="tab1but_MouseLeave"/>
-        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" Grid.RowSpan="2"/>
-        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,210,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab3but_Click" />
-        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,210,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab4but_Click"/>
-        <Button Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave"/>
-        <Button Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed"/>
-        <Button Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed"/>
-        <Button Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed"/>
+        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" Grid.RowSpan="2" MouseEnter="tab2but_MouseEnter" MouseLeave="tab2but_MouseLeave"/>
+        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,210,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab3but_Click" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" />
+        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,210,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab4but_Click" MouseEnter="tab4but_MouseEnter" MouseLeave="tab4but_MouseLeave"/>
+        <Button Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave" Click="tab1X_Click"/>
+        <Button Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed" Click="tab2X_Click" MouseEnter="tab2X_MouseEnter" MouseLeave="tab2X_MouseLeave"/>
+        <Button Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" Click="tab3X_Click"/>
+        <Button Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed" MouseEnter="tab4X_MouseEnter" MouseLeave="tab4X_MouseLeave" Click="tab4X_Click"/>
+        
+        
         <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown">
 
             <Button x:Name="ExitButton" Content="X" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Close"/>
