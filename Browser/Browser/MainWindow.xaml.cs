@@ -23,8 +23,8 @@ namespace Browser
     /// 
     public partial class MainWindow : Window
     {
-        int currentTab = 0;
-        int openTab = 1;
+        int currentTab = -1;
+        int openTabs = 0;
         int bookmarkcount = 0;
         string curUrl = "";
         String homepage = "http://google.ca";
@@ -239,10 +239,12 @@ namespace Browser
                 refresh.Visibility = Visibility.Visible;
                 urlbar.Margin = new Thickness(181, 0, 232, 18);
                 go.Margin = new Thickness(0, 0, 175, 13);
-                
+
+                openTabs++;
+                currentTab = openTabs;
             }
             //open the tab
-            if (openTab == 1)
+            if (openTabs >= 1)
             {
                 String query = urlbar.Text;
 
@@ -375,12 +377,38 @@ namespace Browser
                 }
 
                 // navigate
-                tab1.Visibility = Visibility.Visible;
-                tab1.Navigate(urlbar.Text);
-                tab1.Width = 1015;
-                tab1.Height = 473;
-                tab1.Margin = new Thickness(0, 100, 0, 0);
-               
+                if (currentTab == 1)
+                {
+                    tab1.Visibility = Visibility.Visible;
+                    tab1.Navigate(urlbar.Text);
+                    tab1.Width = 999;
+                    tab1.Height = 473;
+                    tab1.Margin = new Thickness(0, 42, 0, 0);
+                }
+                else if (currentTab == 2)
+                {
+                    tab2.Visibility = Visibility.Visible;
+                    tab2.Navigate(urlbar.Text);
+                    tab2.Width = 999;
+                    tab2.Height = 473;
+                    tab2.Margin = new Thickness(0, 42, 0, 0);
+                }
+                else if (currentTab == 3)
+                {
+                    tab3.Visibility = Visibility.Visible;
+                    tab3.Navigate(urlbar.Text);
+                    tab3.Width = 999;
+                    tab3.Height = 473;
+                    tab3.Margin = new Thickness(0, 42, 0, 0);
+                }
+                else if (currentTab == 4)
+                {
+                    tab4.Visibility = Visibility.Visible;
+                    tab4.Navigate(urlbar.Text);
+                    tab4.Width = 999;
+                    tab4.Height = 473;
+                    tab4.Margin = new Thickness(0, 42, 0, 0);
+                }
             }
         }
 
@@ -425,21 +453,54 @@ namespace Browser
             urlbar.Margin = new Thickness(10, 0, 123, 18);
             go.Margin = new Thickness(0, 0, 66, 13);
 
-            tab1but.Visibility = Visibility.Visible;
+            currentTab = -1;
 
-            if (tab1.IsVisible)
+            if (openTabs >= 1)
             {
                 welcome.Visibility = Visibility.Collapsed;
                 message1.Visibility = Visibility.Collapsed;
 
                 tab1.IsEnabled = false;
+                tab1but.Visibility = Visibility.Visible;
 
                 tab1.Margin = new Thickness(139, 92, 0, 0);
                 tab1.Height = 200;
                 tab1.Width = 343;
                 string script = "document.body.style.overflow ='hidden'";
                 tab1.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
+            if (openTabs >= 2)
+            {
+                tab2.IsEnabled = false;
+                tab2but.Visibility = Visibility.Visible;
 
+                tab2.Margin = new Thickness(546, 80, 0, 0);
+                tab2.Height = 200;
+                tab2.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab2.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
+            if (openTabs >= 3)
+            {
+                tab3.IsEnabled = false;
+                tab3but.Visibility = Visibility.Visible;
+
+                tab3.Margin = new Thickness(139, 310, 0, 0);
+                tab3.Height = 200;
+                tab3.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab3.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
+            if (openTabs >= 4)
+            {
+                tab4.IsEnabled = false;
+                tab4but.Visibility = Visibility.Visible;
+
+                tab4.Margin = new Thickness(546, 310, 0, 0);
+                tab4.Height = 200;
+                tab4.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             }
         }
 
@@ -460,6 +521,57 @@ namespace Browser
             tab1.Height = 473;
             tab1.Margin = new Thickness(0, 100, 0, 0);
             tab1.IsEnabled = true;
+            back.Visibility = Visibility.Visible;
+            forward.Visibility = Visibility.Visible;
+            refresh.Visibility = Visibility.Visible;
+            urlbar.Margin = new Thickness(181, 0, 232, 18);
+            go.Margin = new Thickness(0, 0, 175, 13);
+        }
+        private void tab2but_Click(object sender, RoutedEventArgs e)
+        {
+            currentTab = 2;
+            welcomeScreen.Visibility = Visibility.Collapsed;
+            home.Visibility = Visibility.Visible;
+            string script = "document.body.style.overflow ='visible'";
+            tab2.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            tab2.Width = 1007;
+            tab2.Height = 473;
+            tab2.Margin = new Thickness(0, 100, 0, 0);
+            tab2.IsEnabled = true;
+            back.Visibility = Visibility.Visible;
+            forward.Visibility = Visibility.Visible;
+            refresh.Visibility = Visibility.Visible;
+            urlbar.Margin = new Thickness(181, 0, 232, 18);
+            go.Margin = new Thickness(0, 0, 175, 13);
+        }
+        private void tab3but_Click(object sender, RoutedEventArgs e)
+        {
+            currentTab = 3;
+            welcomeScreen.Visibility = Visibility.Collapsed;
+            home.Visibility = Visibility.Visible;
+            string script = "document.body.style.overflow ='visible'";
+            tab3.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            tab3.Width = 1007;
+            tab3.Height = 473;
+            tab3.Margin = new Thickness(0, 100, 0, 0);
+            tab3.IsEnabled = true;
+            back.Visibility = Visibility.Visible;
+            forward.Visibility = Visibility.Visible;
+            refresh.Visibility = Visibility.Visible;
+            urlbar.Margin = new Thickness(181, 0, 232, 18);
+            go.Margin = new Thickness(0, 0, 175, 13);
+        }
+        private void tab4but_Click(object sender, RoutedEventArgs e)
+        {
+            currentTab = 4;
+            welcomeScreen.Visibility = Visibility.Collapsed;
+            home.Visibility = Visibility.Visible;
+            string script = "document.body.style.overflow ='visible'";
+            tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            tab4.Width = 1007;
+            tab4.Height = 473;
+            tab4.Margin = new Thickness(0, 100, 0, 0);
+            tab4.IsEnabled = true;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
