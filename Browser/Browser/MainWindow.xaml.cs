@@ -566,6 +566,7 @@ namespace Browser
         }
         private void settings_Click(object sender, RoutedEventArgs e)
         {
+            settingsRectangle.Visibility = Visibility.Visible;
             settingsGrid.Visibility = Visibility.Visible;
             welcomeScreen.Visibility = Visibility.Collapsed;
             urlbar.Visibility = Visibility.Collapsed;
@@ -578,6 +579,7 @@ namespace Browser
         }
         private void settingsBack_Click(object sender, RoutedEventArgs e)
         {
+            settingsRectangle.Visibility = Visibility.Collapsed;
             settingsGrid.Visibility = Visibility.Collapsed;
             welcomeScreen.Visibility = Visibility.Visible;
             urlbar.Visibility = Visibility.Visible;
@@ -606,6 +608,7 @@ namespace Browser
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
+            settingsRectangle.Visibility = Visibility.Collapsed;
             settingsGrid2.Visibility = Visibility.Collapsed;
             welcomeScreen.Visibility = Visibility.Visible;
             urlbar.Visibility = Visibility.Visible;
@@ -630,6 +633,20 @@ namespace Browser
         private void HeaderGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void CheckBox_CheckedChanged(object sender, RoutedEventArgs e)
+        {
+            if (timeRestrictCheck.IsChecked == true)
+            {
+                startTime.IsEnabled = true;
+                endTime.IsEnabled = true;
+            }
+            if (timeRestrictCheck.IsChecked == false)
+            {
+                startTime.IsEnabled = false;
+                endTime.IsEnabled = false;
+            }
         }
     }
 }
