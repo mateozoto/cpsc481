@@ -566,8 +566,8 @@ namespace Browser
         }
         private void settings_Click(object sender, RoutedEventArgs e)
         {
-            settingsRectangle.Visibility = Visibility.Visible;
             settingsGrid.Visibility = Visibility.Visible;
+            settingsRectangle.Visibility = Visibility.Visible;
             welcomeScreen.Visibility = Visibility.Collapsed;
             urlbar.Visibility = Visibility.Collapsed;
             go.Visibility = Visibility.Collapsed;
@@ -579,14 +579,15 @@ namespace Browser
         }
         private void settingsBack_Click(object sender, RoutedEventArgs e)
         {
-            settingsRectangle.Visibility = Visibility.Collapsed;
             settingsGrid.Visibility = Visibility.Collapsed;
+            passwordEntry.Visibility = Visibility.Collapsed;
+            settingsRectangle.Visibility = Visibility.Collapsed;
             welcomeScreen.Visibility = Visibility.Visible;
             urlbar.Visibility = Visibility.Visible;
             go.Visibility = Visibility.Visible;
-            back.Visibility = Visibility.Visible;
-            forward.Visibility = Visibility.Visible;
-            refresh.Visibility = Visibility.Visible;
+            back.Visibility = Visibility.Collapsed;
+            forward.Visibility = Visibility.Collapsed;
+            refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Visible;
 
         }
@@ -595,8 +596,8 @@ namespace Browser
         {
             if (passwordEntryBox.Password == "password")
             {
-                settingsGrid.Visibility = Visibility.Collapsed;
-                settingsGrid2.Visibility = Visibility.Visible;
+                passwordEntry.Visibility = Visibility.Collapsed;
+                parentalControls.Visibility = Visibility.Visible;
                 passwordEntryBox.Password = "";
                 settingsEnterPassword.Text = "Enter password to continue...";
             }
@@ -609,13 +610,13 @@ namespace Browser
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             settingsRectangle.Visibility = Visibility.Collapsed;
-            settingsGrid2.Visibility = Visibility.Collapsed;
+            parentalControls.Visibility = Visibility.Collapsed;
             welcomeScreen.Visibility = Visibility.Visible;
             urlbar.Visibility = Visibility.Visible;
             go.Visibility = Visibility.Visible;
-            back.Visibility = Visibility.Visible;
-            forward.Visibility = Visibility.Visible;
-            refresh.Visibility = Visibility.Visible;
+            back.Visibility = Visibility.Collapsed;
+            forward.Visibility = Visibility.Collapsed;
+            refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Visible;
 
         }
@@ -647,6 +648,25 @@ namespace Browser
                 startTime.IsEnabled = false;
                 endTime.IsEnabled = false;
             }
+        }
+
+        private void settingsGridExit_Click(object sender, RoutedEventArgs e)
+        {
+            settingsGrid.Visibility = Visibility.Collapsed;
+            settingsRectangle.Visibility = Visibility.Collapsed;
+            welcomeScreen.Visibility = Visibility.Visible;
+            urlbar.Visibility = Visibility.Visible;
+            go.Visibility = Visibility.Visible;
+            back.Visibility = Visibility.Collapsed;
+            forward.Visibility = Visibility.Collapsed;
+            refresh.Visibility = Visibility.Collapsed;
+            bookmark.Visibility = Visibility.Visible;
+        }
+
+        private void bookmarksButton_Click(object sender, RoutedEventArgs e)
+        {
+            passwordEntry.Visibility = Visibility.Visible;
+            settingsGrid.Visibility = Visibility.Collapsed;
         }
     }
 }
