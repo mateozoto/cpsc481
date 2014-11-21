@@ -486,7 +486,7 @@ namespace Browser
             {
                 tab3.IsEnabled = false;
                 tab3but.Visibility = Visibility.Visible;
-                tab2X.Visibility = Visibility.Visible;
+                tab3X.Visibility = Visibility.Visible;
 
                 tab3.Margin = new Thickness(139, 310, 0, 0);
                 tab3.Height = 200;
