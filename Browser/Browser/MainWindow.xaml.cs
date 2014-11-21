@@ -230,9 +230,9 @@ namespace Browser
             if (welcomeScreen.IsVisible)
             {
                 welcomeScreen.Visibility = Visibility.Collapsed;
-                tab1but.Visibility = Visibility.Collapsed;
-                tab1.IsEnabled = true;
-                //browserScroll.Visibility = Visibility.Visible;
+                //tab1but.Visibility = Visibility.Collapsed;
+                //tab1X.Visibility = Visibility.Collapsed;
+                //tab1.IsEnabled = true;
                 home.Visibility = Visibility.Visible;
                 back.Visibility = Visibility.Visible;
                 forward.Visibility = Visibility.Visible;
@@ -462,6 +462,7 @@ namespace Browser
 
                 tab1.IsEnabled = false;
                 tab1but.Visibility = Visibility.Visible;
+                tab1X.Visibility = Visibility.Visible;
 
                 tab1.Margin = new Thickness(139, 92, 0, 0);
                 tab1.Height = 200;
@@ -473,8 +474,9 @@ namespace Browser
             {
                 tab2.IsEnabled = false;
                 tab2but.Visibility = Visibility.Visible;
+                tab2X.Visibility = Visibility.Visible;
 
-                tab2.Margin = new Thickness(546, 80, 0, 0);
+                tab2.Margin = new Thickness(546, 92, 0, 0);
                 tab2.Height = 200;
                 tab2.Width = 343;
                 string script = "document.body.style.overflow ='hidden'";
@@ -484,6 +486,7 @@ namespace Browser
             {
                 tab3.IsEnabled = false;
                 tab3but.Visibility = Visibility.Visible;
+                tab2X.Visibility = Visibility.Visible;
 
                 tab3.Margin = new Thickness(139, 310, 0, 0);
                 tab3.Height = 200;
@@ -495,6 +498,7 @@ namespace Browser
             {
                 tab4.IsEnabled = false;
                 tab4but.Visibility = Visibility.Visible;
+                tab4X.Visibility = Visibility.Visible;
 
                 tab4.Margin = new Thickness(546, 310, 0, 0);
                 tab4.Height = 200;
