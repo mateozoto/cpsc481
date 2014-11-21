@@ -102,7 +102,7 @@
             <RowDefinition Height="51*"/>
             <RowDefinition Height="254*"/>
         </Grid.RowDefinitions>
-        <Rectangle HorizontalAlignment="Left" Height="268" Margin="247,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="513" x:Name="settingsRectangle" Grid.ColumnSpan="3">
+        <Rectangle HorizontalAlignment="Left" Height="268" Margin="247,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="513" x:Name="settingsRectangle" Grid.ColumnSpan="3" Visibility="Collapsed">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0.998"/>
@@ -110,7 +110,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,39,0,0" Grid.Row="1" Grid.ColumnSpan="3">
+        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,39,0,0" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Collapsed">
             <Button Name ="printButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0"/>
             <Button Name="accessButton" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75"/>
             <Button Name="backgroundButton" Content="Button" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right"/>
@@ -164,6 +164,7 @@
         <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,13" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Grid.Row="1" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725" ToolTip="Go forward"/>
         <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,13" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Grid.Row="1" Visibility="Collapsed" FontFamily="Segoe UI Light" ToolTip="Go home"/>
         <Rectangle x:Name="recentplacesrectangle_Copy" Height="199" VerticalAlignment="Bottom" Margin="0,0,-1,333" Grid.Row="1" Width="70" HorizontalAlignment="Right" Grid.Column="2">
+
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0.002"/>
@@ -249,16 +250,20 @@
 
         </Grid>
 
+        <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab1_LoadCompleted" />
+        <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" />
+        <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" />
+        <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="546,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" />
+        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Visible" Click="tab1but_Click" Grid.RowSpan="2"/>
+        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Visible" Click="tab2but_Click" Grid.RowSpan="2"/>
+        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,210,0,0" Height="200"  Opacity="0" Visibility="Visible" Grid.Row="1" Click="tab3but_Click" />
+        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,210,0,0" Height="200" Opacity="0" Visibility="Visible" Grid.Row="1" Click="tab4but_Click"/>
+        <Button Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="450,93,0,0" Grid.RowSpan="2" Height="32" Visibility="Collapsed"/>
+        <Button Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="860,93,0,0" Grid.RowSpan="2" Height="32" Visibility="Collapsed"/>
+        <Button Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="450,210,0,0" Height="32" Grid.Row="1" Visibility="Collapsed"/>
+        <Button Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="32" Margin="857,210,0,0" Height="32" Grid.Row="1" Visibility="Collapsed"/>
+        <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown">
 
-        <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab1_LoadCompleted" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="150,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,38,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="149,38,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" Grid.RowSpan="2" ToolTip="Tab 1" Cursor="Hand" Grid.ColumnSpan="2"/>
-        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="150,92,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.RowSpan="2" ToolTip="Tab 2" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,38,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1" ToolTip="Tab 3" Cursor="Hand" Grid.ColumnSpan="2"/>
-        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="149,38,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1" ToolTip="Tab 4" Cursor="Hand" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown" Grid.ColumnSpan="3">
             <Button x:Name="ExitButton" Content="X" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Close"/>
             <Button x:Name="MinimizeButton" Content="_" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Minimize"/>
         </Grid>
