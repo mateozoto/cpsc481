@@ -1,6 +1,7 @@
-﻿<Window x:Class="Browser.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Browser.MainWindow"
         Title="Meow Cats Playground Web Browser" Height="640" Width="1014.686" ResizeMode="CanMinimize" WindowStyle="None">
     <Window.Resources>
         <Storyboard x:Key="Welcome">
@@ -91,26 +92,41 @@
             <BeginStoryboard Storyboard="{StaticResource Welcome}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid Name="mainGrid">
+    <Grid x:Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="51*"/>
             <RowDefinition Height="254*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name ="settingsGrid2" HorizontalAlignment="Left" Height="267" Margin="241,1,0,0" VerticalAlignment="Top" Width="513" Background="Gray" Visibility="Collapsed" Grid.Row="1">
-            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="10,82.197,0,0" VerticalAlignment="Top" Width="75"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="10,109.157,0,0" VerticalAlignment="Top" Width="75"/>
-            <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="0,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
+        <Rectangle HorizontalAlignment="Left" Height="268" Margin="247,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="513" x:Name="settingsRectangle" Visibility="Collapsed">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.998"/>
+                    <GradientStop Color="#FF49FEAC" Offset="0.002"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Grid x:Name ="settingsGrid2" HorizontalAlignment="Left" Height="267" Margin="247,39,0,0" VerticalAlignment="Top" Width="513" Grid.Row="1" Visibility="Collapsed">
+            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,84,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
+            <Popup>
+                <TextBlock x:Name ="safesearchPopupText" Background="Aquamarine" Foreground="Blue"/>
+            </Popup>
+            <CheckBox x:Name="safeSearchCheckbox" Content="Safe Search" HorizontalAlignment="Left" Margin="17,129,0,0" VerticalAlignment="Top" ToolTip="Enables a Search Filter"/>
+            <TextBox Name ="startTime" HorizontalAlignment="Left" Height="23" Margin="17,170,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+            <TextBox Name ="endTime" HorizontalAlignment="Left" Height="23" Margin="103,170,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+            <TextBlock HorizontalAlignment="Left" Margin="76,171,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.501"/>
+            <CheckBox Name="timeRestrictCheck" Content="Time Restriction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,150,0,0" Unchecked="CheckBox_CheckedChanged" Checked="CheckBox_CheckedChanged" ToolTip="Sets a time allowed access"/>
         </Grid>
-        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" Margin="241,1,0,0" VerticalAlignment="Top" Width="519" Background="Gray" Visibility="Collapsed" Grid.Row="1">
+        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" Margin="247,39,0,0" VerticalAlignment="Top" Width="519" Grid.Row="1" Visibility="Collapsed">
 
             <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="268,140.466,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
             <Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
             <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="149,45.05,0,0" TextWrapping="Wrap" Text="Enter Password to Continue..." VerticalAlignment="Top" Height="25.96" Width="181.503" FontSize="13.333"/>
             <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="149,112.333,0,0" VerticalAlignment="Top" Width="194" Height="23.133"/>
         </Grid>
-        <TextBox x:Name="urlbar" Margin="10,0,123.5,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" Grid.Row="1" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}" Text="Search or enter a URL here"/>
-        <Button x:Name="go" Content="Go" Margin="0,0,66,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontFamily="Segoe UI Light" FontSize="13.333"/>
-        <Rectangle x:Name="bookmarksrectangle" Height="68" VerticalAlignment="Top" Margin="0,0,-1,0">
+        <TextBox x:Name="urlbar" Margin="10,0,123.5,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" Grid.Row="1" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}" Text="Search or enter a URL here" d:IsHidden="True"/>
+        <Button x:Name="go" Content="Go" Margin="0,0,66,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontFamily="Segoe UI Light" FontSize="13.333" d:IsHidden="True"/>
+        <Rectangle x:Name="bookmarksrectangle" Height="68" VerticalAlignment="Top" Margin="0,0,-1,0" d:IsHidden="True">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF49FEAC" Offset="0"/>
@@ -118,7 +134,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
+        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light" d:IsHidden="True"/>
         <Button x:Name="settings"  Height="51" Margin="0,0,3,13" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
             <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" RenderTransformOrigin="0.525,0.579" ToolTip="Settings and options" />
         </Button>
@@ -148,7 +164,7 @@
         <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,3,365.984" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
         <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,3,282.984" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
         <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,3,199.984" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2" Margin="1,-2,-1,0">
+        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2" Margin="1,-2,-1,0" d:IsHidden="True">
             <Grid.RowDefinitions>
                 <RowDefinition Height="317*"/>
                 <RowDefinition Height="198*"/>
