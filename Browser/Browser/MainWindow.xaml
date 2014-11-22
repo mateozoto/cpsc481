@@ -85,6 +85,118 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy1">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy2">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle3">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle4">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle5">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle6">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle7">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle8">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle9">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle10">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle11">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle12">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle13">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle14">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle15">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle16">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle17">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle18">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle19">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle20">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle21">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle22">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle23">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bookmarksrectangle">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="urlmask">
+            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.5"/>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -93,7 +205,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid x:Name="mainGrid">
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="880,524,0,-14">
+        <Rectangle x:Name="rectangle20" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="880,524,0,-14">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF32F825" Offset="0"/>
@@ -101,7 +213,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="789,538,0,-28">
+        <Rectangle x:Name="rectangle21" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="789,538,0,-28">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFC9E82C" Offset="0"/>
@@ -109,7 +221,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="866,570,0,-60">
+        <Rectangle x:Name="rectangle22" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="866,570,0,-60">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF2CCEE8" Offset="0.004"/>
@@ -117,7 +229,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="710,555,0,-45">
+        <Rectangle x:Name="rectangle23" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="710,555,0,-45">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -125,7 +237,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-58,437,0,0">
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-58,437,0,0">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF676EB" Offset="0"/>
@@ -133,7 +245,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="949,440,-63.5,0">
+        <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="949,440,-63.5,0">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF676EB" Offset="0"/>
@@ -141,7 +253,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="938,492,-52.5,0">
+        <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="938,492,-52.5,0">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF7681F6" Offset="0"/>
@@ -149,7 +261,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="923,545,-37.5,-35">
+        <Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="923,545,-37.5,-35">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF25F5F8" Offset="0"/>
@@ -157,7 +269,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="637,547,0,-37">
+        <Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="637,547,0,-37">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -165,7 +277,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="559,547,0,-37">
+        <Rectangle x:Name="rectangle5" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="559,547,0,-37">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -173,7 +285,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="145,545,0,-35">
+        <Rectangle x:Name="rectangle6" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="145,545,0,-35">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -181,7 +293,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="466,545,0,-35">
+        <Rectangle x:Name="rectangle7" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="466,545,0,-35">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFFFD560" Offset="0"/>
@@ -189,7 +301,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="530,570,0,-60">
+        <Rectangle x:Name="rectangle8" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="530,570,0,-60">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
@@ -197,7 +309,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="409,551,0,-41">
+        <Rectangle x:Name="rectangle9" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="409,551,0,-41">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -205,7 +317,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="332,547,0,-37">
+        <Rectangle x:Name="rectangle10" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="332,547,0,-37">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -213,7 +325,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="322,563,0,-53">
+        <Rectangle x:Name="rectangle11" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="322,563,0,-53">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
@@ -221,7 +333,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="247,548,0,-38">
+        <Rectangle x:Name="rectangle12" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="247,548,0,-38">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -229,7 +341,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="205,555,0,-45">
+        <Rectangle x:Name="rectangle13" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="205,555,0,-45">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -237,7 +349,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="100,555,0,-45">
+        <Rectangle x:Name="rectangle14" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="100,555,0,-45">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -245,7 +357,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="71,536,0,-26">
+        <Rectangle x:Name="rectangle15" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="71,536,0,-26">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFFFD560" Offset="0"/>
@@ -253,7 +365,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-8,516,0,-6">
+        <Rectangle x:Name="rectangle16" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-8,516,0,-6">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF32F825" Offset="0"/>
@@ -261,7 +373,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="31,555,0,-45">
+        <Rectangle x:Name="rectangle17" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="31,555,0,-45">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF87F098" Offset="0"/>
@@ -269,7 +381,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-48,490,0,0">
+        <Rectangle x:Name="rectangle18" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-48,490,0,0">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF7681F6" Offset="0"/>
@@ -277,7 +389,7 @@
                 </RadialGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-34,553,0,-43">
+        <Rectangle x:Name="rectangle19" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-34,553,0,-43">
             <Rectangle.Fill>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF25F5F8" Offset="0"/>
