@@ -537,6 +537,7 @@ namespace Browser
             tab1.Height = 500;
             tab1.Margin = new Thickness(0, 65, 0, 0);
             tab1.IsEnabled = true;
+            urlbar.Text = tab1.Source.OriginalString;
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
@@ -565,6 +566,7 @@ namespace Browser
             tab2.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             tab2.Width = 1015;
             tab2.Height = 500;
+            urlbar.Text = tab2.Source.OriginalString;
             tab2.Margin = new Thickness(0, 65, 0, 0);
             tab2.IsEnabled = true;
             back.Visibility = Visibility.Visible;
@@ -597,6 +599,8 @@ namespace Browser
             tab3.Height = 500;
             tab3.Margin = new Thickness(0, 65, 0, 0);
             tab3.IsEnabled = true;
+            urlbar.Text = tab3.Source.OriginalString;
+
             back.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
@@ -625,6 +629,7 @@ namespace Browser
             tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             tab4.Width = 1015;
             tab4.Height = 500;
+            urlbar.Text = tab4.Source.OriginalString;
             tab4.Margin = new Thickness(0, 65, 0, 0);
             tab4.IsEnabled = true;
             back.Visibility = Visibility.Visible;
