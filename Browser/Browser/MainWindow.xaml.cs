@@ -755,6 +755,7 @@ namespace Browser
             forward.Visibility = Visibility.Collapsed;
             refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Collapsed;
+            urlmask.Visibility = Visibility.Collapsed;
 
             tab1URL = tab1.Source;
             tab2URL = tab2.Source;
@@ -843,6 +844,7 @@ namespace Browser
             urlbar.Visibility = Visibility.Visible;
             go.Visibility = Visibility.Visible;
             back.Visibility = Visibility.Collapsed;
+            urlmask.Visibility = Visibility.Visible;
             forward.Visibility = Visibility.Collapsed;
             refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Visible;
