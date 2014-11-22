@@ -93,11 +93,217 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid x:Name="mainGrid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="51*"/>
-            <RowDefinition Height="254*"/>
-        </Grid.RowDefinitions>
-        <Rectangle HorizontalAlignment="Left" Height="268" Margin="247,38,0,0" Grid.Row="1" VerticalAlignment="Top" Width="513" x:Name="settingsRectangle" Visibility="Collapsed">
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="880,524,0,-14">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF32F825" Offset="0"/>
+                    <GradientStop Color="#00EBF39D" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="789,538,0,-28">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFC9E82C" Offset="0"/>
+                    <GradientStop Color="#001FEFDE" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="866,570,0,-60">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF2CCEE8" Offset="0.004"/>
+                    <GradientStop Color="#00E183F9" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="710,555,0,-45">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00EF1FDB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-58,437,0,0">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF676EB" Offset="0"/>
+                    <GradientStop Color="#00FBFBFB" Offset="0.837"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="949,440,-63.5,0">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF676EB" Offset="0"/>
+                    <GradientStop Color="#00FBFBFB" Offset="0.837"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="938,492,-52.5,0">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF7681F6" Offset="0"/>
+                    <GradientStop Color="#009DD0F3" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="923,545,-37.5,-35">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF25F5F8" Offset="0"/>
+                    <GradientStop Color="#00F39DEB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="637,547,0,-37">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00ECE328" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="559,547,0,-37">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#0046EC28" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="145,545,0,-35">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#0046EC28" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="466,545,0,-35">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFFFD560" Offset="0"/>
+                    <GradientStop Color="#00F39DEB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="530,570,0,-60">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
+                    <GradientStop Offset="0.996" Color="#00F8BDF9"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="409,551,0,-41">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00ECE328" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="332,547,0,-37">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00EFA41F" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="322,563,0,-53">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
+                    <GradientStop Offset="0.996" Color="#00F8BDF9"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="247,548,0,-38">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00EF1FDB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="205,555,0,-45">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00EFA41F" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="100,555,0,-45">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00ECE328" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="71,536,0,-26">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFFFD560" Offset="0"/>
+                    <GradientStop Color="#00F39DEB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-8,516,0,-6">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF32F825" Offset="0"/>
+                    <GradientStop Color="#00EBF39D" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="31,555,0,-45">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF87F098" Offset="0"/>
+                    <GradientStop Color="#00F39DEB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-48,490,0,0">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF7681F6" Offset="0"/>
+                    <GradientStop Color="#009DD0F3" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-34,553,0,-43">
+            <Rectangle.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF25F5F8" Offset="0"/>
+                    <GradientStop Color="#00F39DEB" Offset="1"/>
+                </RadialGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="recentplacesrectangle_Copy2" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,366" Width="70" HorizontalAlignment="Right">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF49FEAC" Offset="0"/>
+                    <GradientStop Color="#FF25F5F8" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Rectangle x:Name="recentplacesrectangle_Copy1" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,283" Width="70" HorizontalAlignment="Right">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF25F5F8" Offset="0"/>
+                    <GradientStop Color="#FFF19DF3" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="268" Margin="247,145,0,0" VerticalAlignment="Top" Width="513" x:Name="settingsRectangle" Visibility="Collapsed">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White" Offset="0.998"/>
@@ -105,23 +311,23 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,39,0,0" Grid.Row="1" Visibility="Collapsed">
-            <Button Name ="printButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,146,0,0" Visibility="Collapsed">
+            <Button x:Name ="printButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <Image Source="Resources/printer.png" Width="65" Height="75"/>
             </Button>
-            <Button Name="accessButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button x:Name="accessButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <Image Height="75" Width="75" Source="Resources/1416621578_685082-Search-128.png"/>
             </Button>
-            <Button Name="backgroundButton" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button x:Name="backgroundButton" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <Image Height="75" Width="75" Source="Resources/1416621613_photos.png"/>
             </Button>
-            <Button Name="bookmarksButton" VerticalAlignment="Bottom" Width="75" Margin="0,0,363,40" Height="75" HorizontalAlignment="Right" Click="bookmarksButton_Click" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button x:Name="bookmarksButton" VerticalAlignment="Bottom" Width="75" Margin="0,0,363,40" Height="75" HorizontalAlignment="Right" Click="bookmarksButton_Click" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <Image Height="75" Width="65" Source="Resources/bookmark_bookmarks_favorite_favorites_star-512.png"/>
             </Button>
-            <Button Name="historyButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="222,0,0,40" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button x:Name="historyButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="222,0,0,40" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <Image Height="75" Width="65" Source="Resources/1416621648_ic_history_48px-128.png"/>
             </Button>
-            <Button Name="parentalSettings" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="76" Margin="363,0,0,40" Height="74" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="parentalSettings_Click">
+            <Button x:Name="parentalSettings" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="76" Margin="363,0,0,40" Height="74" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="parentalSettings_Click">
                 <Image Height="74" Width="76" Source="Resources/1416621667_Live_Messenger.png"/>
             </Button>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="363,120,0,0" Width="75" FontWeight="Bold" Text="Parental Controls" TextAlignment="Center"/>
@@ -130,47 +336,45 @@
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Background" VerticalAlignment="Top" Margin="363,19,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Accessibility" VerticalAlignment="Top" Margin="222,19,0,0" Width="75" TextAlignment="Center" FontWeight="Bold"/>
             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Print" VerticalAlignment="Top" Margin="75,19,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
-            <Button Name="settingsGridExit" Content="Exit" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="75" Click="settingsGridExit_Click"/>
+            <Button x:Name="settingsGridExit" Content="Exit" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="75" Click="settingsGridExit_Click"/>
         </Grid>
-        <Grid x:Name ="parentalControls" HorizontalAlignment="Left" Height="267" Margin="247,39,0,0" VerticalAlignment="Top" Width="513" Grid.Row="1" Visibility="Collapsed">
+        <Grid x:Name ="parentalControls" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="513" Visibility="Collapsed">
             <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,84,0,0" VerticalAlignment="Top" Width="75"/>
             <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
             <Popup>
                 <TextBlock x:Name ="safesearchPopupText" Background="Aquamarine" Foreground="Blue"/>
             </Popup>
             <CheckBox x:Name="safeSearchCheckbox" Content="Safe Search" HorizontalAlignment="Left" Margin="17,129,0,0" VerticalAlignment="Top" ToolTip="Enables a Search Filter"/>
-            <TextBox Name ="startTime" HorizontalAlignment="Left" Height="23" Margin="17,170,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
-            <TextBox Name ="endTime" HorizontalAlignment="Left" Height="23" Margin="103,170,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+            <TextBox x:Name ="startTime" HorizontalAlignment="Left" Height="23" Margin="17,170,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+            <TextBox x:Name ="endTime" HorizontalAlignment="Left" Height="23" Margin="103,170,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
             <TextBlock HorizontalAlignment="Left" Margin="76,171,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.501"/>
-            <CheckBox Name="timeRestrictCheck" Content="Time Restriction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,150,0,0" Unchecked="CheckBox_CheckedChanged" Checked="CheckBox_CheckedChanged" ToolTip="Sets a time allowed access"/>
+            <CheckBox x:Name="timeRestrictCheck" Content="Time Restriction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,150,0,0" Unchecked="CheckBox_CheckedChanged" Checked="CheckBox_CheckedChanged" ToolTip="Sets a time allowed access"/>
         </Grid>
-        <Grid x:Name ="passwordEntry" HorizontalAlignment="Left" Height="267" Margin="247,39,0,0" VerticalAlignment="Top" Width="519" Grid.Row="1" Visibility="Collapsed">
+        <Grid x:Name ="passwordEntry" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
 
             <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="268,140.466,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
             <Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
             <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="149,45.05,0,0" TextWrapping="Wrap" Text="Enter Password to Continue..." VerticalAlignment="Top" Height="25.96" Width="181.503" FontSize="13.333"/>
             <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="149,112.333,0,0" VerticalAlignment="Top" Width="194" Height="23.133"/>
         </Grid>
-        <TextBox x:Name="urlbar" Margin="10,0,153,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" Grid.Row="1" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}" Text="Search or enter a URL here"/>
-        <Button x:Name="go" Content="Go" Margin="0,0,96,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontFamily="Segoe UI Light" FontSize="13.333"/>
-        <Rectangle x:Name="bookmarksrectangle" Height="68" VerticalAlignment="Top" Margin="0,0,-1,0" Grid.ColumnSpan="3">
+        <Button x:Name="go" Content="Go" Margin="0,0,96.5,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light" FontSize="13.333"/>
+        <Rectangle x:Name="urlmask" HorizontalAlignment="Left" Height="36" Margin="10,0,152.5,18" Opacity ="0.5" VerticalAlignment="Bottom" Width="851" Fill="White"/>
+        <TextBox x:Name="urlbar" Margin="10,0,152.5,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}" Text="Make a search or enter a website here..."/>
+        <Rectangle x:Name="bookmarksrectangle" Height="68" VerticalAlignment="Top" Margin="0,0,-1.5,0">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF49FEAC" Offset="0"/>
+                    <GradientStop Color="#FF1AB870" Offset="0"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
-        <Button x:Name="settings"  Height="51" Margin="0,0,2,13" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click" Grid.Row="1">
-            <Image Source="Resources/powerpoint-gear-2010-tutorial.jpg" RenderTransformOrigin="0.525,0.579" ToolTip="Settings and options" />
-        </Button>
-        <Button x:Name ="back" Content="←" HorizontalAlignment="Left" Height="51" Margin="69,0,0,13" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Grid.Row="1" Visibility="Collapsed" ToolTip="Go back"/>
-        <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,118,13" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" Grid.Row="1" FontSize="24" ToolTip="Reload current page" Visibility="Collapsed"/>
-        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="55" Margin="0,26,2,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="24" Opacity="0.7" ToolTip="Bookmark this page"/>
-        <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,13" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Grid.Row="1" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725" ToolTip="Go forward"/>
-        <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,13" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Grid.Row="1" Visibility="Collapsed" FontFamily="Segoe UI Light" ToolTip="Go home"/>
-        <Rectangle x:Name="recentplacesrectangle_Copy" Height="199" VerticalAlignment="Bottom" Margin="0,0,-1,333" Grid.Row="1" Width="70" HorizontalAlignment="Right" Grid.ColumnSpan="3">
+        <Button x:Name ="back" Content="←" HorizontalAlignment="Left" Height="51" Margin="69,0,0,13" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Visibility="Collapsed" ToolTip="Go back"/>
+        <Button x:Name ="refresh" Content="↻" VerticalAlignment="Bottom" Margin="0,0,118.5,13" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" ToolTip="Reload current page" Visibility="Collapsed"/>
+        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="54" Margin="0,26,2.5,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="24" Opacity="0.7" ToolTip="Bookmark this page"/>
+        <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,13" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725" ToolTip="Go forward"/>
+        <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,13" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Visibility="Collapsed" FontFamily="Segoe UI Light" ToolTip="Go home"/>
+        <Rectangle x:Name="recentplacesrectangle_Copy" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,449" Width="70" HorizontalAlignment="Right">
 
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -179,20 +383,20 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle x:Name="recentplacesrectangle" Height="133" VerticalAlignment="Bottom" Margin="0,0,-1,200" Grid.Row="1" Width="70" HorizontalAlignment="Right" Grid.ColumnSpan="3">
+        <Rectangle x:Name="recentplacesrectangle" Height="83                    " VerticalAlignment="Bottom" Margin="0,0,-0.5,200" Width="70" HorizontalAlignment="Right">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF49FEAC"/>
-                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFF19DF3" Offset="0.019"/>
+                    <GradientStop Offset="1"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <TextBlock x:Name="norecent" Margin="0,0,0,197" TextWrapping="Wrap" TextAlignment="Center" Height="336" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="61" FontSize="16" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Grid.Row="1"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
-        <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,2,449" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderBrush="#FF4BB7C9" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,2,366" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,2,283" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2,200" VerticalAlignment="Bottom" Width="62" Height="83" Grid.Row="1" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Grid.RowSpan="2" Margin="5,0,0,0" d:IsHidden="True">
+        <TextBlock x:Name="norecent" Margin="0,0,3.5,227" TextWrapping="Wrap" TextAlignment="Center" Height="306" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="62" FontSize="16" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
+        <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,2.5,449" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderBrush="#FF4BB7C9" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+        <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,2.5,366" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+        <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,2.5,283" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2.5,200" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Margin="5,0,0,0" d:IsHidden="True">
             <Grid.RowDefinitions>
                 <RowDefinition Height="317*"/>
                 <RowDefinition Height="198*"/>
@@ -211,17 +415,8 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </TextBlock.RenderTransform><Run Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-            <TextBlock x:Name="message1" Height="47" Margin="392.988,269.384,0,0" TextWrapping="Wrap" Text="No currently open tabs." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="209.241" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light">
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-            <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="0,107,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" FontSize="14.667" BorderThickness="0" Opacity="0.9" FontFamily="Segoe UI Light" ToolTip="Popular games">
+            <TextBlock x:Name="message1" Height="147" Margin="310.988,269.384,0,0" TextWrapping="Wrap" Text="There are no currently open tabs. To create a tab, enter something in the bar below." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="409.241" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light"/>
+            <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="-5,107,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" FontSize="14.667" BorderThickness="0" Opacity="0.9" FontFamily="Segoe UI Light" ToolTip="Popular games">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="White" Offset="0"/>
@@ -229,7 +424,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="0,192,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="70" Height="85" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular videos">
+            <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="-5,192,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="70" Height="85" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular videos">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF49FEAC" Offset="0"/>
@@ -237,7 +432,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="0,277,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" Grid.RowSpan="2" FontSize="14" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular music">
+            <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="-5,277,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" Grid.RowSpan="2" FontSize="14" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular music">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF25F5F8" Offset="0"/>
@@ -245,11 +440,11 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="0,45.616,0,0" VerticalAlignment="Top" Width="70" Height="85" Grid.Row="1" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="School website and popular learning apps">
+            <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="-5,45.616,0,0" VerticalAlignment="Top" Width="70" Height="85" Grid.Row="1" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="School website and popular learning apps">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFF19DF3" Offset="0.019"/>
-                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Offset="1"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
@@ -261,21 +456,21 @@
         <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" />
         <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" />
         <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="546,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" />
-        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" Grid.RowSpan="2" MouseEnter="tab1but_MouseEnter" MouseLeave="tab1but_MouseLeave"/>
-        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" Grid.RowSpan="2" MouseEnter="tab2but_MouseEnter" MouseLeave="tab2but_MouseLeave"/>
-        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,210,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab3but_Click" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" />
-        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,210,0,0" Height="200" Opacity="0" Visibility="Collapsed" Grid.Row="1" Click="tab4but_Click" MouseEnter="tab4but_MouseEnter" MouseLeave="tab4but_MouseLeave"/>
-        <Button Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave" Click="tab1X_Click"/>
-        <Button Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed" Click="tab2X_Click" MouseEnter="tab2X_MouseEnter" MouseLeave="tab2X_MouseLeave"/>
-        <Button Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" Click="tab3X_Click"/>
-        <Button Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,185,0,0" Height="19" Grid.Row="1" Visibility="Collapsed" MouseEnter="tab4X_MouseEnter" MouseLeave="tab4X_MouseLeave" Click="tab4X_Click"/>
-        
-        
-        <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown">
+        <Button x:Name="tab1but" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" MouseEnter="tab1but_MouseEnter" MouseLeave="tab1but_MouseLeave"/>
+        <Button x:Name="tab2but" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" MouseEnter="tab2but_MouseEnter" MouseLeave="tab2but_MouseLeave"/>
+        <Button x:Name="tab3but" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,317,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab3but_Click" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" />
+        <Button x:Name="tab4but" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,317,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab4but_Click" MouseEnter="tab4but_MouseEnter" MouseLeave="tab4but_MouseLeave"/>
+        <Button x:Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave" Click="tab1X_Click"/>
+        <Button x:Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed" Click="tab2X_Click" MouseEnter="tab2X_MouseEnter" MouseLeave="tab2X_MouseLeave"/>
+        <Button x:Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,292,0,0" Height="19" Visibility="Collapsed" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" Click="tab3X_Click"/>
+        <Button x:Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,292,0,0" Height="19" Visibility="Collapsed" MouseEnter="tab4X_MouseEnter" MouseLeave="tab4X_MouseLeave" Click="tab4X_Click"/>
 
-            <Button x:Name="ExitButton" Content="X" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Close"/>
-            <Button x:Name="MinimizeButton" Content="_" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Minimize"/>
+
+        <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown" Margin="0,0,0.5,0">
+
+            <Button x:Name="ExitButton" Content="×" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Close"/>
+            <Button x:Name="MinimizeButton" Content="-" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Minimize"/>
         </Grid>
-        <InkCanvas HorizontalAlignment="Left" Height="344.638" VerticalAlignment="Top" Width="655.362" Margin="147,39,0,0" Grid.Row="1"/>
+        <Button x:Name="settings" Content="Settings" Height="51" FontSize ="13.333" FontFamily="Segoe UI Light" Margin="0,0,2.5,13" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click"/>
     </Grid>
 </Window>

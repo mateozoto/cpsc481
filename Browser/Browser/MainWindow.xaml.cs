@@ -68,6 +68,7 @@ namespace Browser
                         newBookmark.Height = 30;
                         newBookmark.Width = 100;
                         newBookmark.Content = line;
+                        newBookmark.BorderThickness = new Thickness(0, 0, 0, 0);
                         newBookmark.ToolTip = line;
                         newBookmark.ContextMenu = menudel;
                         newBookmark.Click += newBookmark_Click;
@@ -243,6 +244,7 @@ namespace Browser
                 forward.Visibility = Visibility.Visible;
                 refresh.Visibility = Visibility.Visible;
                 urlbar.Margin = new Thickness(181, 0, 232, 18);
+                urlmask.Margin = new Thickness(181, 0, 232, 18);
                 go.Margin = new Thickness(0, 0, 175, 13);
 
                 openTabs++;
@@ -419,7 +421,7 @@ namespace Browser
 
         private void urlbar_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (urlbar.Text == "Search or enter a URL here")
+            if (urlbar.Text == "Make a search or enter a website here...")
             {
                 urlbar.Text = "";
             }
@@ -429,7 +431,7 @@ namespace Browser
         {
             if (urlbar.Text == "")
             {
-                urlbar.Text = "Search or enter a URL here";
+                urlbar.Text = "Make a search or enter a website here...";
             }
         }
 
@@ -449,13 +451,15 @@ namespace Browser
         private void home_Click_1(object sender, RoutedEventArgs e)
         {
             welcomeScreen.Visibility = Visibility.Visible;
-            urlbar.Text = "Search or enter a URL here";
+            urlbar.Text = "Make a search or enter a website here...";
 
             home.Visibility = Visibility.Collapsed;
             back.Visibility = Visibility.Collapsed;
             forward.Visibility = Visibility.Collapsed;
             refresh.Visibility = Visibility.Collapsed;
             urlbar.Margin = new Thickness(10, 0, 123, 18);
+            urlmask.Margin = new Thickness(10, 0, 123, 18);
+            urlmask.Width = 880;
             go.Margin = new Thickness(0, 0, 66, 13);
 
             currentTab = -1;
@@ -542,6 +546,7 @@ namespace Browser
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
+            urlmask.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
 
             tab2URL = tab2.Source;
@@ -571,6 +576,7 @@ namespace Browser
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
+            urlmask.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
 
             tab1URL = tab1.Source;
@@ -600,6 +606,7 @@ namespace Browser
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
+            urlmask.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
 
             tab1URL = tab1.Source;
@@ -629,6 +636,7 @@ namespace Browser
             forward.Visibility = Visibility.Visible;
             refresh.Visibility = Visibility.Visible;
             urlbar.Margin = new Thickness(181, 0, 232, 18);
+            urlmask.Margin = new Thickness(181, 0, 232, 18);
             go.Margin = new Thickness(0, 0, 175, 13);
 
             tab1URL = tab2.Source;
@@ -647,7 +655,7 @@ namespace Browser
         private void bookmark_Click(object sender, RoutedEventArgs e)
         {
             bool skip = false;
-            if (urlbar.Text == "" || urlbar.Text == "Search or enter a URL here" || !(urlbar.Text.StartsWith("http://") || urlbar.Text.StartsWith("https://")) || !(urlbar.Text.Contains(".com") || urlbar.Text.Contains(".ca") || urlbar.Text.Contains(".net") || urlbar.Text.Contains(".org") || urlbar.Text.Contains(".tv")))
+            if (urlbar.Text == "" || urlbar.Text == "Make a search or enter a website here..." || !(urlbar.Text.StartsWith("http://") || urlbar.Text.StartsWith("https://")) || !(urlbar.Text.Contains(".com") || urlbar.Text.Contains(".ca") || urlbar.Text.Contains(".net") || urlbar.Text.Contains(".org") || urlbar.Text.Contains(".tv")))
             {
                 skip=true;
             }
