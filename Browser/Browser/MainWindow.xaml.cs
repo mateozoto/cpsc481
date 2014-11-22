@@ -805,6 +805,68 @@ namespace Browser
             forward.Visibility = Visibility.Collapsed;
             refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Visible;
+            urlmask.Visibility = Visibility.Visible;
+            currentTab = -1;
+
+            if (openTabs >= 1)
+            {
+                welcome.Visibility = Visibility.Collapsed;
+                message1.Visibility = Visibility.Collapsed;
+
+                tab1.Visibility = Visibility.Visible;
+                if (tab1URL != null)
+                    tab1.Source = tab1URL;
+                tab1but.Visibility = Visibility.Visible;
+                tab1.IsEnabled = false;
+
+                tab1.Margin = new Thickness(139, 92, 0, 0);
+                tab1.Height = 200;
+                tab1.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab1.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
+            if (openTabs >= 2)
+            {
+                tab2.IsEnabled = false;
+                tab2.Visibility = Visibility.Visible;
+                if (tab2URL != null)
+                    tab2.Source = tab2URL;
+                tab2but.Visibility = Visibility.Visible;
+
+                tab2.Margin = new Thickness(546, 92, 0, 0);
+                tab2.Height = 200;
+                tab2.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab2.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
+            if (openTabs >= 3)
+            {
+                tab3.IsEnabled = false;
+                tab3.Visibility = Visibility.Visible;
+                if (tab3URL != null)
+                    tab3.Source = tab3URL;
+                tab3but.Visibility = Visibility.Visible;
+
+                tab3.Margin = new Thickness(139, 310, 0, 0);
+                tab3.Height = 200;
+                tab3.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab3.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
+            if (openTabs >= 4)
+            {
+                tab4.IsEnabled = false;
+                tab4.Visibility = Visibility.Visible;
+                if (tab4URL != null)
+                    tab4.Source = tab4URL;
+                tab4but.Visibility = Visibility.Visible;
+
+                tab4.Margin = new Thickness(546, 310, 0, 0);
+                tab4.Height = 200;
+                tab4.Width = 343;
+                string script = "document.body.style.overflow ='hidden'";
+                tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
+            }
         }
 
         private void ExitButton_Click_1(object sender, RoutedEventArgs e)
