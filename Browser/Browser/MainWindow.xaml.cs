@@ -1387,6 +1387,7 @@ namespace Browser
 
         private void settingsBlockedSites_Click(object sender, RoutedEventArgs e)
         {
+            blockedSitesListbox.Items.Clear();
             if (!System.IO.File.Exists(blockedSitesFile))
                 System.IO.File.Create(blockedSitesFile);
             else
