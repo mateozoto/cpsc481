@@ -897,6 +897,7 @@ namespace Browser
             passwordEntry.Visibility = Visibility.Collapsed;
             settingsRectangle.Visibility = Visibility.Visible;
             passwordEntryBox.Password = "";
+            settingsEnterPassword.Text = "Please enter a valid password to access parental controls.";
         }
 
         private void passwordEnter_Click(object sender, RoutedEventArgs e)
@@ -906,7 +907,7 @@ namespace Browser
                 passwordEntry.Visibility = Visibility.Collapsed;
                 parentalControls.Visibility = Visibility.Visible;
                 passwordEntryBox.Password = "";
-                settingsEnterPassword.Text = "Enter password to continue...";
+                settingsEnterPassword.Text = "Please enter a valid password to access parental controls.";
             }
             else
             {
@@ -1360,11 +1361,6 @@ namespace Browser
             }
         }
 
-        private void blockURLTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void blockURLTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (blockURLTextBox.Text == "Enter URL to Block")
@@ -1378,6 +1374,7 @@ namespace Browser
         {
 
             blockedSitesGrid.Visibility = Visibility.Visible;
+            passwordChangeGrid.Visibility = Visibility.Collapsed;
         }
 
         private void addBlockedButton_Click(object sender, RoutedEventArgs e)
@@ -1413,6 +1410,7 @@ namespace Browser
 
         private void passwordChangeButton_Click(object sender, RoutedEventArgs e)
         {
+            blockedSitesGrid.Visibility = Visibility.Collapsed;
             passwordChangeGrid.Visibility = Visibility.Visible;
         }
 
