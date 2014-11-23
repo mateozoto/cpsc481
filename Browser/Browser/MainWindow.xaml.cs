@@ -86,7 +86,8 @@ namespace Browser
                             mainGrid.Children.Add(more);
 
                         }
-                        else if (bookmarkcount > 9) {
+                        else if (bookmarkcount > 9)
+                        {
                             MenuItem menubookmark = new MenuItem();
                             menubookmark.Header = line;
                             menubookmark.Click += menubookmark_Click;
@@ -238,7 +239,8 @@ namespace Browser
                     bookmarkcount++;
                 }
             }
-            if (bookmarkcount == 0) {
+            if (bookmarkcount == 0)
+            {
                 nobookmarks.Text = "No bookmarks";
             }
 
@@ -528,7 +530,7 @@ namespace Browser
                 message1.Visibility = Visibility.Collapsed;
 
                 tab1.Visibility = Visibility.Visible;
-                if(tab1URL != null)
+                if (tab1URL != null)
                     tab1.Source = tab1URL;
                 tab1but.Visibility = Visibility.Visible;
                 tab1.IsEnabled = false;
@@ -721,7 +723,7 @@ namespace Browser
             bool skip = false;
             if (urlbar.Text == "" || urlbar.Text == "Make a search or enter a website here..." || !(urlbar.Text.StartsWith("http://") || urlbar.Text.StartsWith("https://")) || !(urlbar.Text.Contains(".com") || urlbar.Text.Contains(".ca") || urlbar.Text.Contains(".net") || urlbar.Text.Contains(".org") || urlbar.Text.Contains(".tv")))
             {
-                skip=true;
+                skip = true;
             }
 
             String bookmark = urlbar.Text;
@@ -730,8 +732,9 @@ namespace Browser
             if (urlbar.Text.StartsWith("https://www."))
                 bookmark = bookmark.Remove(0, 12);
 
-            string[] lines = System.IO.File.ReadAllLines(bookmarksFile);            
-            foreach (string line in lines) {
+            string[] lines = System.IO.File.ReadAllLines(bookmarksFile);
+            foreach (string line in lines)
+            {
                 if (line.Equals(bookmark))
                 {
                     skip = true;
@@ -827,7 +830,8 @@ namespace Browser
         private void refresh_Click(object sender, RoutedEventArgs e)
         {
             //crashes if there is no webpage open
-            if (welcomeScreen.IsVisible){
+            if (welcomeScreen.IsVisible)
+            {
             }
             else
             {
@@ -897,6 +901,7 @@ namespace Browser
             passwordEntry.Visibility = Visibility.Collapsed;
             settingsRectangle.Visibility = Visibility.Visible;
             passwordEntryBox.Password = "";
+            settingsEnterPassword.Text = "Please enter a valid password to access parental controls.";
         }
 
         private void passwordEnter_Click(object sender, RoutedEventArgs e)
@@ -906,7 +911,7 @@ namespace Browser
                 passwordEntry.Visibility = Visibility.Collapsed;
                 parentalControls.Visibility = Visibility.Visible;
                 passwordEntryBox.Password = "";
-                settingsEnterPassword.Text = "Enter password to continue...";
+                settingsEnterPassword.Text = "Please enter a valid password to access parental controls.";
             }
             else
             {
@@ -992,41 +997,41 @@ namespace Browser
                 string script = "document.body.style.overflow ='hidden'";
                 tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             }
-                string[] lines = System.IO.File.ReadAllLines(recentPlacesFile);
-                if (lines.Length != 0)
+            string[] lines = System.IO.File.ReadAllLines(recentPlacesFile);
+            if (lines.Length != 0)
+            {
+                norecent.Text = "";
+                int recentPlaceNum = 0;
+                foreach (string line in lines)
                 {
-                    norecent.Text = "";
-                    int recentPlaceNum = 0;
-                    foreach (string line in lines)
+                    if (recentPlaceNum == 0)
                     {
-                        if (recentPlaceNum == 0)
-                        {
-                            recentButton1.Content = line;
-                            recentButton1.ToolTip = line;
-                            recentButton1.Visibility = Visibility.Visible;
-                        }
-                        else if (recentPlaceNum == 1)
-                        {
-                            recentButton2.Content = line;
-                            recentButton2.ToolTip = line;
-                            recentButton2.Visibility = Visibility.Visible;
-                        }
-                        else if (recentPlaceNum == 2)
-                        {
-                            recentButton3.Content = line;
-                            recentButton3.ToolTip = line;
-                            recentButton3.Visibility = Visibility.Visible;
-                        }
-                        else if (recentPlaceNum == 3)
-                        {
-                            recentButton4.Content = line;
-                            recentButton4.ToolTip = line;
-                            recentButton4.Visibility = Visibility.Visible;
-                        }
-
-                        recentPlaceNum++;
+                        recentButton1.Content = line;
+                        recentButton1.ToolTip = line;
+                        recentButton1.Visibility = Visibility.Visible;
                     }
+                    else if (recentPlaceNum == 1)
+                    {
+                        recentButton2.Content = line;
+                        recentButton2.ToolTip = line;
+                        recentButton2.Visibility = Visibility.Visible;
+                    }
+                    else if (recentPlaceNum == 2)
+                    {
+                        recentButton3.Content = line;
+                        recentButton3.ToolTip = line;
+                        recentButton3.Visibility = Visibility.Visible;
+                    }
+                    else if (recentPlaceNum == 3)
+                    {
+                        recentButton4.Content = line;
+                        recentButton4.ToolTip = line;
+                        recentButton4.Visibility = Visibility.Visible;
+                    }
+
+                    recentPlaceNum++;
                 }
+            }
         }
 
         private void ExitButton_Click_1(object sender, RoutedEventArgs e)
@@ -1360,11 +1365,6 @@ namespace Browser
             }
         }
 
-        private void blockURLTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void blockURLTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (blockURLTextBox.Text == "Enter URL to Block")
@@ -1376,8 +1376,21 @@ namespace Browser
 
         private void settingsBlockedSites_Click(object sender, RoutedEventArgs e)
         {
-
+            if (!System.IO.File.Exists(blockedSitesFile))
+                System.IO.File.Create(blockedSitesFile);
+            else
+            {
+                string[] lines = System.IO.File.ReadAllLines(blockedSitesFile);
+                if (lines.Length != 0)
+                {
+                    foreach (string line in lines)
+                    {
+                        blockedSitesListbox.Items.Add(line);
+                    }
+                }
+            }
             blockedSitesGrid.Visibility = Visibility.Visible;
+            passwordChangeGrid.Visibility = Visibility.Collapsed;
         }
 
         private void addBlockedButton_Click(object sender, RoutedEventArgs e)
@@ -1388,13 +1401,46 @@ namespace Browser
 
         private void blockURLAcceptButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!System.IO.File.Exists(blockedSitesFile))
+                System.IO.File.Create(blockedSitesFile);
+            else
+            {
+                using (StreamWriter writer = new StreamWriter(blockedSitesFile, true))
+                {
+                    writer.WriteLine(blockURLTextBox.Text);
+                }
+            }
             blockedSitesListbox.Items.Add(blockURLTextBox.Text);
+
             blockURLGrid.Visibility = Visibility.Collapsed;
             blockedSitesGrid.Visibility = Visibility.Visible;
         }
 
         private void removeBlockedButton_Click(object sender, RoutedEventArgs e)
         {
+            int i = 0;
+            if (!System.IO.File.Exists(blockedSitesFile))
+                System.IO.File.Create(blockedSitesFile);
+            else
+            {
+                string[] lines = System.IO.File.ReadAllLines(blockedSitesFile);
+                if (lines.Length != 0)
+                {
+                    foreach (string line in lines)
+                    {
+                        if (blockedSitesListbox.SelectedItem.Equals(line))
+                        {
+                            break;
+                        }
+                        i++;
+                    }
+                }
+            }
+            List<string> quotelist = File.ReadAllLines(blockedSitesFile).ToList();
+            string firstItem = quotelist[0];
+            quotelist.RemoveAt(i);
+            File.WriteAllLines(blockedSitesFile, quotelist.ToArray());
+
             blockedSitesListbox.Items.Remove(blockedSitesListbox.SelectedItem);
         }
 
@@ -1413,6 +1459,7 @@ namespace Browser
 
         private void passwordChangeButton_Click(object sender, RoutedEventArgs e)
         {
+            blockedSitesGrid.Visibility = Visibility.Collapsed;
             passwordChangeGrid.Visibility = Visibility.Visible;
         }
 
@@ -1431,67 +1478,6 @@ namespace Browser
                 newPassword.Password = "";
                 //password change confirmation here
             }
-
-
-           
-        }
-
-        private void blockedSites_Click(object sender, RoutedEventArgs e)
-        {
-            parentalControls.Visibility = Visibility.Collapsed;
-            BlockedSites.Visibility = Visibility.Visible;
-            if (!System.IO.File.Exists(blockedSitesFile))
-                System.IO.File.Create(blockedSitesFile);
-            else
-            {
-                blockedsiteslist.Text = "";
-                string[] lines = System.IO.File.ReadAllLines(blockedSitesFile);
-                if (lines.Length != 0)
-                {
-                    foreach (string line in lines)
-                    {
-                        blockedsiteslist.Text += line;
-                        blockedsiteslist.Text += "\n";
-                    }
-                }
-                blockedsitescroll.ScrollToTop();
-            }
-        }
-
-        private void addblocksite_Click(object sender, RoutedEventArgs e)
-        {
-            if (blocksiteinput.Text == "")
-            {
-                //I'll add an error message, for now do nothing.
-            }
-            else
-            {
-                if (!System.IO.File.Exists(blockedSitesFile))
-                {
-                    System.IO.File.Create(blockedSitesFile);
-                    blockedsiteslist.Text += blocksiteinput.Text;
-                    blockedsiteslist.Text += "\n";
-                    using (StreamWriter writer = new StreamWriter(blockedSitesFile, true))
-                    {
-                        writer.WriteLine(blocksiteinput.Text);
-                    }
-                }
-                else
-                {
-                    blockedsiteslist.Text += blocksiteinput.Text;
-                    blockedsiteslist.Text += "\n";
-                    using (StreamWriter writer = new StreamWriter(blockedSitesFile, true))
-                    {
-                        writer.WriteLine(blocksiteinput.Text);
-                    }
-                }
-            }
-        }
-
-        private void backtoparental_Click(object sender, RoutedEventArgs e)
-        {
-            parentalControls.Visibility = Visibility.Visible;
-            BlockedSites.Visibility = Visibility.Collapsed;
         }
     }
 }

@@ -3,625 +3,648 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Browser.MainWindow"
         Title="Meow Cats Playground Web Browser" Height="640" Width="1014.686" ResizeMode="CanMinimize" WindowStyle="None">
-    <Window.Resources>
-        <Storyboard x:Key="Welcome">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="welcome">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-340.598"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-51.494"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="28.69"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="welcome">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-5.885"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-0.736"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="welcome">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="message1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="games">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="videos">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="music">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="learning">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="back">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="forward">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="urlbar">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="go">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="refresh">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="norecent">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bookmark">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="nobookmarks">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="settings">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle3">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle4">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle5">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle6">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle7">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle8">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle9">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle10">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle11">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle12">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle13">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle14">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle15">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle16">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle17">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle18">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle19">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle20">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle21">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle22">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle23">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bookmarksrectangle">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="urlmask">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.5"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard Storyboard="{StaticResource Welcome}"/>
-        </EventTrigger>
-    </Window.Triggers>
-    <Grid x:Name="mainGrid">
-        <Rectangle HorizontalAlignment="Left" Height="295" Margin="33,137,0,0" VerticalAlignment="Top" Width="948" x:Name="settingsRectangle" Visibility="Collapsed">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0.998"/>
-                    <GradientStop Color="#FF49FEAC" Offset="0.002"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+  <Window.Resources>
+    <Storyboard x:Key="Welcome">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="welcome">
+        <EasingDoubleKeyFrame KeyTime="0" Value="-340.598"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-51.494"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="28.69"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="welcome">
+        <EasingDoubleKeyFrame KeyTime="0" Value="-5.885"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-0.736"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="welcome">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0.1"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0.5"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="message1">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="games">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="videos">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="music">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="learning">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="back">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="forward">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="urlbar">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="go">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="refresh">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="norecent">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bookmark">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="nobookmarks">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="settings">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy1">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy2">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle3">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle4">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle5">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle6">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle7">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle8">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle9">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle10">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle11">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle12">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle13">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle14">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle15">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle16">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle17">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle18">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle19">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle20">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle21">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle22">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle23">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bookmarksrectangle">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="urlmask">
+        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+        <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.5"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+  </Window.Resources>
+  <Window.Triggers>
+    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+      <BeginStoryboard Storyboard="{StaticResource Welcome}"/>
+    </EventTrigger>
+  </Window.Triggers>
+  <Grid x:Name="mainGrid">
+    <Rectangle HorizontalAlignment="Left" Height="295" Margin="33,137,0,0" VerticalAlignment="Top" Width="948" x:Name="settingsRectangle" Visibility="Collapsed">
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="White" Offset="0.998"/>
+          <GradientStop Color="#FF49FEAC" Offset="0.002"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
 
-        <Rectangle x:Name="rectangle20" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="880,524,0,-14">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF32F825" Offset="0"/>
-                    <GradientStop Color="#00EBF39D" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle21" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="789,538,0,-28">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFC9E82C" Offset="0"/>
-                    <GradientStop Color="#001FEFDE" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle22" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="866,570,0,-60">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF2CCEE8" Offset="0.004"/>
-                    <GradientStop Color="#00E183F9" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle23" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="710,555,0,-45">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00EF1FDB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-58,437,0,0">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFF676EB" Offset="0"/>
-                    <GradientStop Color="#00FBFBFB" Offset="0.837"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="949,440,-63.5,0">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFF676EB" Offset="0"/>
-                    <GradientStop Color="#00FBFBFB" Offset="0.837"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="938,492,-52.5,0">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF7681F6" Offset="0"/>
-                    <GradientStop Color="#009DD0F3" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="923,545,-37.5,-35">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF25F5F8" Offset="0"/>
-                    <GradientStop Color="#00F39DEB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="637,547,0,-37">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00ECE328" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle5" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="559,547,0,-37">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#0046EC28" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle6" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="145,545,0,-35">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#0046EC28" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle7" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="466,545,0,-35">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFFFD560" Offset="0"/>
-                    <GradientStop Color="#00F39DEB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle8" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="530,570,0,-60">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
-                    <GradientStop Offset="0.996" Color="#00F8BDF9"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle9" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="409,551,0,-41">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00ECE328" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle10" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="332,547,0,-37">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00EFA41F" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle11" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="322,563,0,-53">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
-                    <GradientStop Offset="0.996" Color="#00F8BDF9"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle12" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="247,548,0,-38">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00EF1FDB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle13" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="205,555,0,-45">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00EFA41F" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle14" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="100,555,0,-45">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00ECE328" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle15" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="71,536,0,-26">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FFFFD560" Offset="0"/>
-                    <GradientStop Color="#00F39DEB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle16" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-8,516,0,-6">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF32F825" Offset="0"/>
-                    <GradientStop Color="#00EBF39D" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle17" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="31,555,0,-45">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF87F098" Offset="0"/>
-                    <GradientStop Color="#00F39DEB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle18" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-48,490,0,0">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF7681F6" Offset="0"/>
-                    <GradientStop Color="#009DD0F3" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="rectangle19" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-34,553,0,-43">
-            <Rectangle.Fill>
-                <RadialGradientBrush>
-                    <GradientStop Color="#FF25F5F8" Offset="0"/>
-                    <GradientStop Color="#00F39DEB" Offset="1"/>
-                </RadialGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="recentplacesrectangle_Copy2" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,366" Width="70" HorizontalAlignment="Right">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF49FEAC" Offset="0"/>
-                    <GradientStop Color="#FF25F5F8" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-
-
-        <Rectangle x:Name="recentplacesrectangle_Copy1" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,283" Width="70" HorizontalAlignment="Right">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF25F5F8" Offset="0"/>
-                    <GradientStop Color="#FFF19DF3" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,146,0,0" Visibility="Collapsed">
-            <Button x:Name ="printButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
-                <Image Source="Resources/printer.png" Width="65" Height="75"/>
-            </Button>
-            <Button x:Name="accessButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
-                <Image Height="75" Width="75" Source="Resources/1416621578_685082-Search-128.png"/>
-            </Button>
-            <Button x:Name="backgroundButton" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
-                <Image Height="75" Width="75" Source="Resources/1416621613_photos.png"/>
-            </Button>
-            <Button x:Name="bookmarksButton" VerticalAlignment="Bottom" Width="75" Margin="0,0,363,40" Height="75" HorizontalAlignment="Right" Click="bookmarksButton_Click" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
-                <Image Height="75" Width="65" Source="Resources/bookmark_bookmarks_favorite_favorites_star-512.png"/>
-            </Button>
-            <Button x:Name="historyButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="222,0,0,40" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
-                <Image Height="75" Width="65" Source="Resources/1416621648_ic_history_48px-128.png"/>
-            </Button>
-            <Button x:Name="parentalSettings" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="76" Margin="363,0,0,40" Height="74" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="parentalSettings_Click">
-                <Image Height="74" Width="76" Source="Resources/1416621667_Live_Messenger.png"/>
-            </Button>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="363,120,0,0" Width="75" FontWeight="Bold" Text="Parental Controls" TextAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="222,131,0,0" Width="75" TextAlignment="Center"><Run FontWeight="Bold" Text="History"/></TextBlock>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bookmarks" VerticalAlignment="Top" Margin="75,131,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Background" VerticalAlignment="Top" Margin="363,19,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Accessibility" VerticalAlignment="Top" Margin="222,19,0,0" Width="75" TextAlignment="Center" FontWeight="Bold"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Print" VerticalAlignment="Top" Margin="75,19,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
-            <Button x:Name="settingsGridExit" Content="Exit" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="75" Click="settingsGridExit_Click"/>
-        </Grid>
-        <Grid x:Name ="parentalControls" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="513" Visibility="Collapsed">
-
-            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="75" ToolTip="A list of Blocked Sites" Click="settingsBlockedSites_Click"/>
-
-            <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
-            <Popup>
-                <TextBlock x:Name ="safesearchPopupText" Background="Aquamarine" Foreground="Blue"/>
-            </Popup>
-            <CheckBox x:Name="safeSearchCheckbox" Content="Safe Search" HorizontalAlignment="Left" Margin="17,129,0,0" VerticalAlignment="Top" ToolTip="Enables a Search Filter" Unchecked="safeSearchCheckbox_CheckedChanged" Checked="safeSearchCheckbox_CheckedChanged"/>
-            <TextBox x:Name ="startTime" HorizontalAlignment="Left" Height="23" Margin="17,170,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
-            <TextBox x:Name ="endTime" HorizontalAlignment="Left" Height="23" Margin="103,170,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
-            <TextBlock HorizontalAlignment="Left" Margin="76,171,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.501"/>
-            <CheckBox x:Name="timeRestrictCheck" Content="Time Restriction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,150,0,0" Unchecked="CheckBox_CheckedChanged" Checked="CheckBox_CheckedChanged" ToolTip="Sets a time allowed access"/>
-            <Button Name="passwordChangeButton" Content="Password Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="14,89,0,0" ToolTip="Changes the password" Click="passwordChangeButton_Click"/>
-            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="43" Width="503" FontSize="25" FontWeight="Bold" TextAlignment="Center" Text="Parental Controls"/>
-            <Button Name ="safeSearchButton" Content="Categories..." HorizontalAlignment="Left" Margin="115,126,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
-            <Grid Name="blockedSitesGrid" HorizontalAlignment="Left" Height="202" Margin="222,43,0,0" VerticalAlignment="Top" Width="260" Visibility="Collapsed">
-                <ListBox Name="blockedSitesListbox" HorizontalAlignment="Left" Height="202" Margin="110,0,0,0" VerticalAlignment="Top" Width="150"/>
-                <Button Name="addBlockedButton"  Content="Add" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="75" Click="addBlockedButton_Click"/>
-                <Button Name ="removeBlockedButton" Content="Remove" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="75" Click="removeBlockedButton_Click"/>
-                <Button Name ="acceptBlockedButton" Content="Accept" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="75" Click="acceptBlockedButton_Click"/>
-            </Grid>
-            <Grid Name="blockURLGrid" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="179" Margin="255,79,0,0" Visibility="Collapsed">
-                <TextBox Name="blockURLTextBox" HorizontalAlignment="Left" Height="23" Margin="28,10,0,0" TextWrapping="Wrap" Text="Enter URL to Block" VerticalAlignment="Top" Width="120" GotFocus="blockURLTextBox_GotFocus">
-                </TextBox>
-                <Button Name="blockURLAcceptButton" Content="Accept" HorizontalAlignment="Left" Margin="91,33,0,0" VerticalAlignment="Top" Width="57" Click="blockURLAcceptButton_Click"/>
-            </Grid>
-            <Grid Name="passwordChangeGrid" HorizontalAlignment="Left" Height="169" VerticalAlignment="Top" Width="249" Margin="233,62,0,0" Visibility="Collapsed">
-                <Button Name="cancelPassword" Content="Cancel" HorizontalAlignment="Left" Margin="149,144,0,0" VerticalAlignment="Top" Width="75" Click="cancelPassword_Click"/>
-                <Button Name="acceptPassword" Content="Accept" HorizontalAlignment="Left" Margin="27,144,0,3" Width="75" Click="acceptPassword_Click"/>
-                <PasswordBox Name="oldPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171" Margin="27,50,0,0" />
-                <PasswordBox Name="newPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" Margin="27,94,0,0"/>
-                <TextBlock Name="enterOldPassword" HorizontalAlignment="Left" Margin="27,20,0,0" TextWrapping="Wrap" Text="Enter your old password" VerticalAlignment="Top" Width="142"/>
-                <TextBlock Name="enterNewPassword" HorizontalAlignment="Left" Margin="27,75,0,0" TextWrapping="Wrap" Text="Enter your new password" VerticalAlignment="Top" Width="142"/>
-
-            </Grid>
-        </Grid>
-
-        <Grid x:Name ="passwordEntry" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
-
-            <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="300,134,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
-            <Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
-            <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="44,69,0,0" TextWrapping="Wrap" Text="Please enter a valid password to access parental controls." VerticalAlignment="Top" Height="42" Width="386" FontSize="13.333"/>
-            <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="48,132,0,0" VerticalAlignment="Top" Width="222" Height="23"/>
-        </Grid>
-        <Button x:Name="go" Content="Go" Margin="0,0,96.5,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light" FontSize="13.333"/>
-        <Rectangle x:Name="urlmask" HorizontalAlignment="Left" Height="36" Margin="10,0,152.5,18" Opacity ="0.5" VerticalAlignment="Bottom" Width="851" Fill="White"/>
-        <TextBox x:Name="urlbar" Margin="10,0,152.5,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}" Text="Make a search or enter a website here..."/>
-        <Rectangle x:Name="bookmarksrectangle" Height="68" VerticalAlignment="Top" Margin="0,0,-1.5,0">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF1AB870" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Grid x:Name ="BlockedSites" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
-            <TextBox x:Name ="blocksiteinput" HorizontalAlignment="Left" Height="23" Margin="14,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="356"/>
-            <TextBlock HorizontalAlignment="Left" Margin="14,47,0,0" TextWrapping="Wrap" Text="Enter a website you would like to block access to." VerticalAlignment="Top"/>
-            <Button Name ="addblocksite" Content="Enter" HorizontalAlignment="Left" Margin="406,64,0,0" VerticalAlignment="Top" Width="52" Height="21" Click="addblocksite_Click"/>
-            <Label Content="List of blocked websites" HorizontalAlignment="Left" Margin="12,113,0,0" VerticalAlignment="Top"/>
-            <ScrollViewer Name ="blockedsitescroll" ScrollViewer.VerticalScrollBarVisibility="Auto"  HorizontalAlignment="Left" Height="100" Margin="16,139,0,0" VerticalAlignment="Top" Width="442">
-                <TextBlock Name ="blockedsiteslist" TextWrapping="Wrap" Text=""/>
-            </ScrollViewer>
-            <Button Name ="backtoparental" Content="Back" HorizontalAlignment="Left" Margin="20,239,0,0" VerticalAlignment="Top" Width="75" Click="backtoparental_Click"/>
-        </Grid>
-        <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
-        <Button x:Name ="back" Content="←" ToolTip = "This will allow you to go back to the previous page you were on." HorizontalAlignment="Left" Height="51" Margin="69,0,0,13" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Visibility="Collapsed"/>
-        <Button x:Name ="refresh" Content="↻" ToolTip ="This will allow you to refresh the page you currently are on." VerticalAlignment="Bottom" Margin="0,0,118.5,13" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Visibility="Collapsed"/>
-        <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="54" Margin="0,26,2.5,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="24" Opacity="0.7" ToolTip="Click this to add the current page to your bookmarks."/>
-        <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,13" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725" ToolTip="If you've gone back to a page, this will allow you to go to pages you visited after the page you are on."/>
-        <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,13" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Visibility="Collapsed" FontFamily="Segoe UI Light" ToolTip="Clicking this will take you back to the welcome screen where you can view all your tabs and more!"/>
-        <Rectangle x:Name="recentplacesrectangle_Copy" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,449" Width="70" HorizontalAlignment="Right">
-
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0.002"/>
-                    <GradientStop Color="#FF49FEAC" Offset="0.998"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle x:Name="recentplacesrectangle" Height="83                    " VerticalAlignment="Bottom" Margin="0,0,-0.5,200" Width="70" HorizontalAlignment="Right">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFF19DF3" Offset="0.019"/>
-                    <GradientStop Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <TextBlock x:Name="norecent" ToolTip = "These are recently opened places. Your last four recently opened pages pop up on here. Your most recent page that was last visited is on the bottom." Margin="0,0,3.5,227" TextWrapping="Wrap" TextAlignment="Center" Height="306" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="62" FontSize="16" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5"><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run FontStyle="Normal" Text="No"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Recent"/><LineBreak/><LineBreak/><LineBreak/><Run FontStyle="Normal" Text="Places"/></TextBlock>
-        <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,2.5,449" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderBrush="#FF4BB7C9" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,2.5,366" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,2.5,283" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2.5,200" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
-        <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Margin="5,0,0,0" d:IsHidden="True">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="317*"/>
-                <RowDefinition Height="198*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="977*"/>
-                <ColumnDefinition Width="0*"/>
-                <ColumnDefinition Width="30*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock x:Name="welcome" Margin="244,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" HorizontalAlignment="Left" Width="282.115" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light" FontSize="48">
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform><Run Text="Welcome!"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-            <TextBlock x:Name="message1" Height="147" Margin="310.988,269.384,0,0" TextWrapping="Wrap" Text="There are no currently open tabs. To create a tab, enter something in the bar below." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="409.241" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light"/>
-            <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="-5,107,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" FontSize="14.667" BorderThickness="0" Opacity="0.9" FontFamily="Segoe UI Light" ToolTip="Popular games">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="0"/>
-                        <GradientStop Color="#FF49FEAC" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="-5,192,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="70" Height="85" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular videos">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF49FEAC" Offset="0"/>
-                        <GradientStop Color="#FF25F5F8" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="-5,277,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" Grid.RowSpan="2" FontSize="14" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular music">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF25F5F8" Offset="0"/>
-                        <GradientStop Color="#FFF19DF3" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="-5,45.616,0,0" VerticalAlignment="Top" Width="70" Height="85" Grid.Row="1" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="School website and popular learning apps">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFF19DF3" Offset="0.019"/>
-                        <GradientStop Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+    <Rectangle x:Name="rectangle20" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="880,524,0,-14">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF32F825" Offset="0"/>
+          <GradientStop Color="#00EBF39D" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle21" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="789,538,0,-28">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFC9E82C" Offset="0"/>
+          <GradientStop Color="#001FEFDE" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle22" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="866,570,0,-60">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF2CCEE8" Offset="0.004"/>
+          <GradientStop Color="#00E183F9" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle23" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="710,555,0,-45">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00EF1FDB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-58,437,0,0">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFF676EB" Offset="0"/>
+          <GradientStop Color="#00FBFBFB" Offset="0.837"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="949,440,-63.5,0">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFF676EB" Offset="0"/>
+          <GradientStop Color="#00FBFBFB" Offset="0.837"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="938,492,-52.5,0">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF7681F6" Offset="0"/>
+          <GradientStop Color="#009DD0F3" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="923,545,-37.5,-35">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF25F5F8" Offset="0"/>
+          <GradientStop Color="#00F39DEB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="637,547,0,-37">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00ECE328" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle5" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="559,547,0,-37">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#0046EC28" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle6" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="145,545,0,-35">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#0046EC28" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle7" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="466,545,0,-35">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFFFD560" Offset="0"/>
+          <GradientStop Color="#00F39DEB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle8" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="530,570,0,-60">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
+          <GradientStop Offset="0.996" Color="#00F8BDF9"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle9" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="409,551,0,-41">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00ECE328" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle10" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="332,547,0,-37">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00EFA41F" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle11" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="322,563,0,-53">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFF6A9F7" Offset="0.002"/>
+          <GradientStop Offset="0.996" Color="#00F8BDF9"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle12" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="247,548,0,-38">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00EF1FDB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle13" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="205,555,0,-45">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00EFA41F" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle14" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="100,555,0,-45">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00ECE328" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle15" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="71,536,0,-26">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FFFFD560" Offset="0"/>
+          <GradientStop Color="#00F39DEB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle16" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-8,516,0,-6">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF32F825" Offset="0"/>
+          <GradientStop Color="#00EBF39D" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle17" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="31,555,0,-45">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF87F098" Offset="0"/>
+          <GradientStop Color="#00F39DEB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle18" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-48,490,0,0">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF7681F6" Offset="0"/>
+          <GradientStop Color="#009DD0F3" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="rectangle19" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="-34,553,0,-43">
+      <Rectangle.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#FF25F5F8" Offset="0"/>
+          <GradientStop Color="#00F39DEB" Offset="1"/>
+        </RadialGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="recentplacesrectangle_Copy2" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,366" Width="70" HorizontalAlignment="Right">
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="#FF49FEAC" Offset="0"/>
+          <GradientStop Color="#FF25F5F8" Offset="1"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
 
 
-        </Grid>
+    <Rectangle x:Name="recentplacesrectangle_Copy1" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,283" Width="70" HorizontalAlignment="Right">
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="#FF25F5F8" Offset="0"/>
+          <GradientStop Color="#FFF19DF3" Offset="1"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
 
-        <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab1_LoadCompleted" />
-        <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" />
-        <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" />
-        <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="546,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" />
-        <Button x:Name="tab1but" Content="1" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" MouseEnter="tab1but_MouseEnter" MouseLeave="tab1but_MouseLeave"/>
-        <Button x:Name="tab2but" Content="2" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" MouseEnter="tab2but_MouseEnter" MouseLeave="tab2but_MouseLeave"/>
-        <Button x:Name="tab3but" Content="3" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,317,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab3but_Click" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" />
-        <Button x:Name="tab4but" Content="4" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,317,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab4but_Click" MouseEnter="tab4but_MouseEnter" MouseLeave="tab4but_MouseLeave"/>
-        <Button x:Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave" Click="tab1X_Click"/>
-        <Button x:Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed" Click="tab2X_Click" MouseEnter="tab2X_MouseEnter" MouseLeave="tab2X_MouseLeave"/>
-        <Button x:Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,292,0,0" Height="19" Visibility="Collapsed" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" Click="tab3X_Click"/>
-        <Button x:Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,292,0,0" Height="19" Visibility="Collapsed" MouseEnter="tab4X_MouseEnter" MouseLeave="tab4X_MouseLeave" Click="tab4X_Click"/>
-
-
-        <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown" Margin="0,0,0.5,0">
-
-            <Button x:Name="ExitButton" Content="×" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Click this to close the browser."/>
-            <Button x:Name="MinimizeButton" Content="-" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Click this to minimize the browser."/>
-        </Grid>
-        <Button x:Name="settings" Content="Settings" Height="51" ToolTip = "These are the settings. You can find things such as Parental Controls on here." FontSize ="13.333" FontFamily="Segoe UI Light" Margin="0,0,2.5,13" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click"/>
-        <TextBlock Name="settingslabel" HorizontalAlignment="Left" Margin="32,84,0,0" TextWrapping="Wrap" Visibility ="Collapsed" Text="Settings" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="36"/>
+    <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,146,0,0" Visibility="Collapsed">
+      <Button x:Name ="printButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <Image Source="Resources/printer.png" Width="65" Height="75"/>
+      </Button>
+      <Button x:Name="accessButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,40,0,0" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <Image Height="75" Width="75" Source="Resources/1416621578_685082-Search-128.png"/>
+      </Button>
+      <Button x:Name="backgroundButton" VerticalAlignment="Top" Width="75" Margin="0,40,75,0" Height="75" HorizontalAlignment="Right" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <Image Height="75" Width="75" Source="Resources/1416621613_photos.png"/>
+      </Button>
+      <Button x:Name="bookmarksButton" VerticalAlignment="Bottom" Width="75" Margin="0,0,363,40" Height="75" HorizontalAlignment="Right" Click="bookmarksButton_Click" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <Image Height="75" Width="65" Source="Resources/bookmark_bookmarks_favorite_favorites_star-512.png"/>
+      </Button>
+      <Button x:Name="historyButton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="222,0,0,40" Height="75" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+        <Image Height="75" Width="65" Source="Resources/1416621648_ic_history_48px-128.png"/>
+      </Button>
+      <Button x:Name="parentalSettings" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="76" Margin="363,0,0,40" Height="74" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="parentalSettings_Click">
+        <Image Height="74" Width="76" Source="Resources/1416621667_Live_Messenger.png"/>
+      </Button>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="363,120,0,0" Width="75" FontWeight="Bold" Text="Parental Controls" TextAlignment="Center"/>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="222,131,0,0" Width="75" TextAlignment="Center">
+        <Run FontWeight="Bold" Text="History"/>
+      </TextBlock>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bookmarks" VerticalAlignment="Top" Margin="75,131,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Background" VerticalAlignment="Top" Margin="363,19,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Accessibility" VerticalAlignment="Top" Margin="222,19,0,0" Width="75" TextAlignment="Center" FontWeight="Bold"/>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Print" VerticalAlignment="Top" Margin="75,19,0,0" Width="75" FontWeight="Bold" TextAlignment="Center"/>
+      <Button x:Name="settingsGridExit" Content="Exit" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="75" Click="settingsGridExit_Click"/>
     </Grid>
+    <Grid x:Name ="parentalControls" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="513" Visibility="Collapsed">
+
+      <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="75" ToolTip="A list of Blocked Sites" Click="settingsBlockedSites_Click"/>
+
+      <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
+      <Popup>
+        <TextBlock x:Name ="safesearchPopupText" Background="Aquamarine" Foreground="Blue"/>
+      </Popup>
+      <CheckBox x:Name="safeSearchCheckbox" Content="Safe Search" HorizontalAlignment="Left" Margin="17,129,0,0" VerticalAlignment="Top" ToolTip="Enables a Search Filter" Unchecked="safeSearchCheckbox_CheckedChanged" Checked="safeSearchCheckbox_CheckedChanged"/>
+      <TextBox x:Name ="startTime" HorizontalAlignment="Left" Height="23" Margin="17,170,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+      <TextBox x:Name ="endTime" HorizontalAlignment="Left" Height="23" Margin="103,170,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
+      <TextBlock HorizontalAlignment="Left" Margin="76,171,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.501"/>
+      <CheckBox x:Name="timeRestrictCheck" Content="Time Restriction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,150,0,0" Unchecked="CheckBox_CheckedChanged" Checked="CheckBox_CheckedChanged" ToolTip="Sets a time allowed access"/>
+      <Button Name="passwordChangeButton" Content="Password Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="14,89,0,0" ToolTip="Changes the password" Click="passwordChangeButton_Click"/>
+      <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="43" Width="503" FontSize="25" FontWeight="Bold" TextAlignment="Center" Text="Parental Controls"/>
+      <Button Name ="safeSearchButton" Content="Categories..." HorizontalAlignment="Left" Margin="115,126,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+      <Grid Name="blockedSitesGrid" HorizontalAlignment="Left" Height="202" Margin="222,43,0,0" VerticalAlignment="Top" Width="260" Visibility="Collapsed">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Height="202" Margin="110,0,0,0" VerticalAlignment="Top" Width="150">
+          <ListBox Name="blockedSitesListbox"/>
+        </ScrollViewer>
+        <Button Name="addBlockedButton"  Content="Add" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="75" Click="addBlockedButton_Click"/>
+        <Button Name ="removeBlockedButton" Content="Remove" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="75" Click="removeBlockedButton_Click"/>
+        <Button Name ="acceptBlockedButton" Content="Close" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="75" Click="acceptBlockedButton_Click"/>
+      </Grid>
+      <Grid Name="blockURLGrid" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="179" Margin="255,79,0,0" Visibility="Collapsed">
+        <TextBox Name="blockURLTextBox" HorizontalAlignment="Left" Height="23" Margin="28,10,0,0" TextWrapping="Wrap" Text="Enter URL to Block" VerticalAlignment="Top" Width="120" GotFocus="blockURLTextBox_GotFocus">
+        </TextBox>
+        <Button Name="blockURLAcceptButton" Content="Accept" HorizontalAlignment="Left" Margin="91,33,0,0" VerticalAlignment="Top" Width="57" Click="blockURLAcceptButton_Click"/>
+      </Grid>
+      <Grid Name="passwordChangeGrid" HorizontalAlignment="Left" Height="169" VerticalAlignment="Top" Width="249" Margin="233,62,0,0" Visibility="Collapsed">
+        <Button Name="cancelPassword" Content="Cancel" HorizontalAlignment="Left" Margin="149,144,0,0" VerticalAlignment="Top" Width="75" Click="cancelPassword_Click"/>
+        <Button Name="acceptPassword" Content="Accept" HorizontalAlignment="Left" Margin="27,144,0,3" Width="75" Click="acceptPassword_Click"/>
+        <PasswordBox Name="oldPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171" Margin="27,50,0,0" />
+        <PasswordBox Name="newPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" Margin="27,94,0,0"/>
+        <TextBlock Name="enterOldPassword" HorizontalAlignment="Left" Margin="27,20,0,0" TextWrapping="Wrap" Text="Enter your old password" VerticalAlignment="Top" Width="142"/>
+        <TextBlock Name="enterNewPassword" HorizontalAlignment="Left" Margin="27,75,0,0" TextWrapping="Wrap" Text="Enter your new password" VerticalAlignment="Top" Width="142"/>
+
+      </Grid>
+    </Grid>
+
+    <Grid x:Name ="passwordEntry" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
+
+      <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="300,134,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
+      <Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
+      <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="44,69,0,0" TextWrapping="Wrap" Text="Please enter a valid password to access parental controls." VerticalAlignment="Top" Height="42" Width="386" FontSize="13.333"/>
+      <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="48,132,0,0" VerticalAlignment="Top" Width="222" Height="23"/>
+    </Grid>
+    <Button x:Name="go" Content="Go" Margin="0,0,96.5,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light" FontSize="13.333"/>
+    <Rectangle x:Name="urlmask" HorizontalAlignment="Left" Height="36" Margin="10,0,152.5,18" Opacity ="0.5" VerticalAlignment="Bottom" Width="851" Fill="White"/>
+    <TextBox x:Name="urlbar" Margin="10,0,152.5,18" TextWrapping="Wrap" FontSize="22" Height="36" VerticalAlignment="Bottom" GotFocus="urlbar_GotFocus" LostFocus="urlbar_LostFocus" KeyDown="urlbar_KeyDown" FontFamily="Segoe UI Light" MaxLines="1" BorderBrush="#FFB3FBCB" Opacity="0.5" BorderThickness="2" SelectionBrush="#FF77B4F0" Background="{x:Null}" Text="Make a search or enter a website here..."/>
+    <Rectangle x:Name="bookmarksrectangle" Height="68" VerticalAlignment="Top" Margin="0,0,-1.5,0">
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="#FF1AB870" Offset="0"/>
+          <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
+    <Button x:Name ="back" Content="←" ToolTip = "This will allow you to go back to the previous page you were on." HorizontalAlignment="Left" Height="51" Margin="69,0,0,13" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Visibility="Collapsed"/>
+    <Button x:Name ="refresh" Content="↻" ToolTip ="This will allow you to refresh the page you currently are on." VerticalAlignment="Bottom" Margin="0,0,118.5,13" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Visibility="Collapsed"/>
+    <Button x:Name ="bookmark" Content="★" HorizontalAlignment="Right" VerticalAlignment="Top" Width="54" Margin="0,26,2.5,0" Height="42" Click="bookmark_Click" Background="{x:Null}" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" FontSize="24" Opacity="0.7" ToolTip="Click this to add the current page to your bookmarks."/>
+    <Button x:Name = "forward" Content="→" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="124,0,0,13" Height="51" Click="forward_Click" Background="{x:Null}" BorderThickness="0" FontSize="36" FontFamily="Calibri" Visibility="Collapsed" RenderTransformOrigin="0.558,0.725" ToolTip="If you've gone back to a page, this will allow you to go to pages you visited after the page you are on."/>
+    <Button x:Name = "home" Content="Home" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="52" Margin="10,0,0,13" Height="51" Click="home_Click_1" Background="{x:Null}" BorderThickness="0" Visibility="Collapsed" FontFamily="Segoe UI Light" ToolTip="Clicking this will take you back to the welcome screen where you can view all your tabs and more!"/>
+    <Rectangle x:Name="recentplacesrectangle_Copy" Height="83" VerticalAlignment="Bottom" Margin="0,0,-0.5,449" Width="70" HorizontalAlignment="Right">
+
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="White" Offset="0.002"/>
+          <GradientStop Color="#FF49FEAC" Offset="0.998"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle x:Name="recentplacesrectangle" Height="83                    " VerticalAlignment="Bottom" Margin="0,0,-0.5,200" Width="70" HorizontalAlignment="Right">
+      <Rectangle.Fill>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+          <GradientStop Color="#FFF19DF3" Offset="0.019"/>
+          <GradientStop Offset="1"/>
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <TextBlock x:Name="norecent" ToolTip = "These are recently opened places. Your last four recently opened pages pop up on here. Your most recent page that was last visited is on the bottom." Margin="0,0,3.5,227" TextWrapping="Wrap" TextAlignment="Center" Height="306" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="62" FontSize="16" FontFamily="Segoe UI Light" FontStyle="Italic" RenderTransformOrigin="0.5,0.5">
+      <Run/>
+      <LineBreak/>
+      <Run/>
+      <LineBreak/>
+      <Run/>
+      <LineBreak/>
+      <Run/>
+      <LineBreak/>
+      <Run FontStyle="Normal" Text="No"/>
+      <LineBreak/>
+      <LineBreak/>
+      <LineBreak/>
+      <Run FontStyle="Normal" Text="Recent"/>
+      <LineBreak/>
+      <LineBreak/>
+      <LineBreak/>
+      <Run FontStyle="Normal" Text="Places"/>
+    </TextBlock>
+    <Button x:Name="recentButton1" Content="r1" HorizontalAlignment="Right" Margin="0,0,2.5,449" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderBrush="#FF4BB7C9" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+    <Button x:Name="recentButton2" Content="r2" HorizontalAlignment="Right" Margin="0,0,2.5,366" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+    <Button x:Name="recentButton3" Content="r3" HorizontalAlignment="Right" Margin="0,0,2.5,283" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+    <Button x:Name="recentButton4" Content="r4" HorizontalAlignment="Right" Margin="0,0,2.5,200" VerticalAlignment="Bottom" Width="66" Height="83" Click="recentPlace_Click" Background="{x:Null}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" FontFamily="Segoe UI Light" Visibility="Collapsed"/>
+    <Grid x:Name="welcomeScreen" HorizontalAlignment="Left" Height="514" VerticalAlignment="Top" Width="1007" Margin="5,0,0,0" d:IsHidden="True">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="317*"/>
+        <RowDefinition Height="198*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="977*"/>
+        <ColumnDefinition Width="0*"/>
+        <ColumnDefinition Width="30*"/>
+      </Grid.ColumnDefinitions>
+      <TextBlock x:Name="welcome" Margin="244,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" HorizontalAlignment="Left" Width="282.115" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light" FontSize="48">
+        <TextBlock.RenderTransform>
+          <TransformGroup>
+            <ScaleTransform/>
+            <SkewTransform/>
+            <RotateTransform/>
+            <TranslateTransform/>
+          </TransformGroup>
+        </TextBlock.RenderTransform>
+        <Run Text="Welcome!"/>
+        <LineBreak/>
+        <LineBreak/>
+        <Run/>
+        <LineBreak/>
+        <Run/>
+        <LineBreak/>
+        <Run/>
+        <LineBreak/>
+        <Run/>
+      </TextBlock>
+      <TextBlock x:Name="message1" Height="147" Margin="310.988,269.384,0,0" TextWrapping="Wrap" Text="There are no currently open tabs. To create a tab, enter something in the bar below." VerticalAlignment="Top" FontSize="18.667" HorizontalAlignment="Left" Width="409.241" RenderTransformOrigin="0.5,0.5" FontFamily="Segoe UI Light"/>
+      <Button x:Name="games" Content="Games" HorizontalAlignment="Left" Margin="-5,107,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" FontSize="14.667" BorderThickness="0" Opacity="0.9" FontFamily="Segoe UI Light" ToolTip="Popular games">
+        <Button.Background>
+          <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FF49FEAC" Offset="1"/>
+          </LinearGradientBrush>
+        </Button.Background>
+      </Button>
+      <Button x:Name="videos" Content="Videos" HorizontalAlignment="Left" Margin="-5,192,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="70" Height="85" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular videos">
+        <Button.Background>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF49FEAC" Offset="0"/>
+            <GradientStop Color="#FF25F5F8" Offset="1"/>
+          </LinearGradientBrush>
+        </Button.Background>
+      </Button>
+      <Button x:Name="music" Content="Music" HorizontalAlignment="Left" Margin="-5,277,0,0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" VerticalAlignment="Top" Width="70" Height="85" Grid.RowSpan="2" FontSize="14" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="Popular music">
+        <Button.Background>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF25F5F8" Offset="0"/>
+            <GradientStop Color="#FFF19DF3" Offset="1"/>
+          </LinearGradientBrush>
+        </Button.Background>
+      </Button>
+      <Button x:Name="learning" Content="Learning" HorizontalAlignment="Left" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Margin="-5,45.616,0,0" VerticalAlignment="Top" Width="70" Height="85" Grid.Row="1" FontSize="14.667" BorderThickness="0" FontFamily="Segoe UI Light" ToolTip="School website and popular learning apps">
+        <Button.Background>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFF19DF3" Offset="0.019"/>
+            <GradientStop Offset="1"/>
+          </LinearGradientBrush>
+        </Button.Background>
+      </Button>
+
+
+    </Grid>
+
+    <WebBrowser x:Name="tab1" HorizontalAlignment="Left" Height="200" Margin="139,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab1_LoadCompleted" />
+    <WebBrowser x:Name="tab2" HorizontalAlignment="Left" Height="200" Margin="546,92,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab2_LoadCompleted" />
+    <WebBrowser x:Name="tab3" HorizontalAlignment="Left" Height="200" Margin="139,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab3_LoadCompleted" />
+    <WebBrowser x:Name="tab4" HorizontalAlignment="Left" Height="200" Margin="546,310,0,0" VerticalAlignment="Top" Width="343" Visibility="Collapsed" LoadCompleted="tab4_LoadCompleted" />
+    <Button x:Name="tab1but" Content="1" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,92,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab1but_Click" MouseEnter="tab1but_MouseEnter" MouseLeave="tab1but_MouseLeave"/>
+    <Button x:Name="tab2but" Content="2" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,91,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab2but_Click" MouseEnter="tab2but_MouseEnter" MouseLeave="tab2but_MouseLeave"/>
+    <Button x:Name="tab3but" Content="3" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="139,317,0,0" Height="200"  Opacity="0" Visibility="Collapsed" Click="tab3but_Click" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" />
+    <Button x:Name="tab4but" Content="4" ToolTip = "This is a tab. Click on it to open it." HorizontalAlignment="Left" VerticalAlignment="Top" Width="343" Margin="546,317,0,0" Height="200" Opacity="0" Visibility="Collapsed" Click="tab4but_Click" MouseEnter="tab4but_MouseEnter" MouseLeave="tab4but_MouseLeave"/>
+    <Button x:Name="tab1X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,73,0,0" Height="19" Visibility="Collapsed" RenderTransformOrigin="0.391,0.078" MouseEnter="tab1X_MouseEnter" MouseLeave="tab1X_MouseLeave" Click="tab1X_Click"/>
+    <Button x:Name="tab2X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,73,0,0" Height="19" Visibility="Collapsed" Click="tab2X_Click" MouseEnter="tab2X_MouseEnter" MouseLeave="tab2X_MouseLeave"/>
+    <Button x:Name="tab3X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="482,292,0,0" Height="19" Visibility="Collapsed" MouseEnter="tab3but_MouseEnter" MouseLeave="tab3but_MouseLeave" Click="tab3X_Click"/>
+    <Button x:Name="tab4X" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Margin="889,292,0,0" Height="19" Visibility="Collapsed" MouseEnter="tab4X_MouseEnter" MouseLeave="tab4X_MouseLeave" Click="tab4X_Click"/>
+
+
+    <Grid x:Name="HeaderGrid" Height="26" VerticalAlignment="Top" Cursor="ScrollAll" Background="#0000D4DC" MouseLeftButtonDown="HeaderGrid_MouseLeftButtonDown" Margin="0,0,0.5,0">
+
+      <Button x:Name="ExitButton" Content="×" HorizontalAlignment="Right" Margin="0,0,0,2" Width="30" Foreground="Black" Background="{x:Null}" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="ExitButton_Click_1" ToolTip="Click this to close the browser."/>
+      <Button x:Name="MinimizeButton" Content="-" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Click this to minimize the browser."/>
+    </Grid>
+    <Button x:Name="settings" Content="Settings" Height="51" ToolTip = "These are the settings. You can find things such as Parental Controls on here." FontSize ="13.333" FontFamily="Segoe UI Light" Margin="0,0,2.5,13" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click"/>
+    <TextBlock Name="settingslabel" HorizontalAlignment="Left" Margin="32,84,0,0" TextWrapping="Wrap" Visibility ="Collapsed" Text="Settings" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="36"/>
+  </Grid>
 </Window>
