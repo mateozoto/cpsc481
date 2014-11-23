@@ -30,6 +30,7 @@ namespace Browser
         String bookmarksFile = "bookmarks.cfg";
         String recentPlacesFile = "recentplaces.cfg";
         ContextMenu menudel;
+        String password = "password";
         ArrayList bookmarks;
 
         System.Uri tab1URL;
@@ -782,11 +783,12 @@ namespace Browser
             settingsGrid.Visibility = Visibility.Visible;
             passwordEntry.Visibility = Visibility.Collapsed;
             settingsRectangle.Visibility = Visibility.Visible;
+            passwordEntryBox.Password = "";
         }
 
         private void passwordEnter_Click(object sender, RoutedEventArgs e)
         {
-            if (passwordEntryBox.Password == "password")
+            if (passwordEntryBox.Password == password)
             {
                 passwordEntry.Visibility = Visibility.Collapsed;
                 parentalControls.Visibility = Visibility.Visible;
@@ -1150,5 +1152,94 @@ namespace Browser
 
             openTabs--;
         }
+
+        private void safeSearchCheckbox_CheckedChanged(object sender, RoutedEventArgs e)
+        {
+            if (safeSearchCheckbox.IsChecked == true)
+            {
+                safeSearchButton.IsEnabled = true;
+            }
+            if (safeSearchCheckbox.IsChecked == false)
+            {
+                safeSearchButton.IsEnabled = false;
+            }
+        }
+
+        private void blockURLTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void blockURLTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (blockURLTextBox.Text == "Enter URL to Block")
+            {
+                blockURLTextBox.Text = "";
+            }
+
+        }
+
+        private void blockedSites_Click(object sender, RoutedEventArgs e)
+        {
+
+            blockedSitesGrid.Visibility = Visibility.Visible;
+        }
+
+        private void addBlockedButton_Click(object sender, RoutedEventArgs e)
+        {
+            blockedSitesGrid.Visibility = Visibility.Collapsed;
+            blockURLGrid.Visibility = Visibility.Visible;
+        }
+
+        private void blockURLAcceptButton_Click(object sender, RoutedEventArgs e)
+        {
+            blockedSitesListbox.Items.Add(blockURLTextBox.Text);
+            blockURLGrid.Visibility = Visibility.Collapsed;
+            blockedSitesGrid.Visibility = Visibility.Visible;
+        }
+
+        private void removeBlockedButton_Click(object sender, RoutedEventArgs e)
+        {
+            blockedSitesListbox.Items.Remove(blockedSitesListbox.SelectedItem);
+        }
+
+        private void acceptBlockedButton_Click(object sender, RoutedEventArgs e)
+        {
+            blockedSitesGrid.Visibility = Visibility.Collapsed;
+        }
+
+        private void cancelPassword_Click(object sender, RoutedEventArgs e)
+        {
+            passwordChangeGrid.Visibility = Visibility.Collapsed;
+            enterOldPassword.Text = "Enter your old password";
+            oldPassword.Password = "";
+            newPassword.Password = "";
+        }
+
+        private void passwordChangeButton_Click(object sender, RoutedEventArgs e)
+        {
+            passwordChangeGrid.Visibility = Visibility.Visible;
+        }
+
+        private void acceptPassword_Click(object sender, RoutedEventArgs e)
+        {
+            if (oldPassword.Password != password)
+            {
+                enterOldPassword.Text = "Password didn't match!";
+            }
+            if (oldPassword.Password == password)
+            {
+                password = newPassword.Password;
+                passwordChangeGrid.Visibility = Visibility.Collapsed;
+                enterOldPassword.Text = "Enter your old password";
+                oldPassword.Password = "";
+                newPassword.Password = "";
+                //password change confirmation here
+            }
+
+
+           
+        }
+
     }
 }

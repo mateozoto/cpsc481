@@ -86,116 +86,116 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy1">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="recentplacesrectangle_Copy2">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle1">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle3">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle4">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle5">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle6">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle7">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle8">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle9">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle10">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle11">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle12">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle13">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle14">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle15">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle16">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle17">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle18">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle19">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle20">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle21">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle22">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle23">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bookmarksrectangle">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="urlmask">
-            	<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-            	<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.5"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
@@ -451,16 +451,39 @@
             <Button x:Name="settingsGridExit" Content="Exit" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="75" Click="settingsGridExit_Click"/>
         </Grid>
         <Grid x:Name ="parentalControls" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="513" Visibility="Collapsed">
-            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,84,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="75" ToolTip="A list of Blocked Sites" Click="blockedSites_Click"/>
             <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
             <Popup>
                 <TextBlock x:Name ="safesearchPopupText" Background="Aquamarine" Foreground="Blue"/>
             </Popup>
-            <CheckBox x:Name="safeSearchCheckbox" Content="Safe Search" HorizontalAlignment="Left" Margin="17,129,0,0" VerticalAlignment="Top" ToolTip="Enables a Search Filter"/>
+            <CheckBox x:Name="safeSearchCheckbox" Content="Safe Search" HorizontalAlignment="Left" Margin="17,129,0,0" VerticalAlignment="Top" ToolTip="Enables a Search Filter" Unchecked="safeSearchCheckbox_CheckedChanged" Checked="safeSearchCheckbox_CheckedChanged"/>
             <TextBox x:Name ="startTime" HorizontalAlignment="Left" Height="23" Margin="17,170,0,0" TextWrapping="Wrap" Text="Start" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
             <TextBox x:Name ="endTime" HorizontalAlignment="Left" Height="23" Margin="103,170,0,0" TextWrapping="Wrap" Text="End" VerticalAlignment="Top" Width="50" IsEnabled="False"/>
             <TextBlock HorizontalAlignment="Left" Margin="76,171,0,0" TextWrapping="Wrap" Text="To" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.501"/>
             <CheckBox x:Name="timeRestrictCheck" Content="Time Restriction" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,150,0,0" Unchecked="CheckBox_CheckedChanged" Checked="CheckBox_CheckedChanged" ToolTip="Sets a time allowed access"/>
+            <Button Name="passwordChangeButton" Content="Password Change" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" Margin="14,89,0,0" ToolTip="Changes the password" Click="passwordChangeButton_Click"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="43" Width="503" FontSize="25" FontWeight="Bold" TextAlignment="Center" Text="Parental Controls"/>
+            <Button Name ="safeSearchButton" Content="Categories..." HorizontalAlignment="Left" Margin="115,126,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+            <Grid Name="blockedSitesGrid" HorizontalAlignment="Left" Height="202" Margin="222,43,0,0" VerticalAlignment="Top" Width="260" Visibility="Collapsed">
+                <ListBox Name="blockedSitesListbox" HorizontalAlignment="Left" Height="202" Margin="110,0,0,0" VerticalAlignment="Top" Width="150"/>
+                <Button Name="addBlockedButton"  Content="Add" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="75" Click="addBlockedButton_Click"/>
+                <Button Name ="removeBlockedButton" Content="Remove" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="75" Click="removeBlockedButton_Click"/>
+                <Button Name ="acceptBlockedButton" Content="Accept" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" Width="75" Click="acceptBlockedButton_Click"/>
+            </Grid>
+            <Grid Name="blockURLGrid" HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="179" Margin="255,79,0,0" Visibility="Collapsed">
+                <TextBox Name="blockURLTextBox" HorizontalAlignment="Left" Height="23" Margin="28,10,0,0" TextWrapping="Wrap" Text="Enter URL to Block" VerticalAlignment="Top" Width="120" GotFocus="blockURLTextBox_GotFocus">
+                </TextBox>
+                <Button Name="blockURLAcceptButton" Content="Accept" HorizontalAlignment="Left" Margin="91,33,0,0" VerticalAlignment="Top" Width="57" Click="blockURLAcceptButton_Click"/>
+            </Grid>
+            <Grid Name="passwordChangeGrid" HorizontalAlignment="Left" Height="169" VerticalAlignment="Top" Width="249" Margin="233,62,0,0" Visibility="Collapsed">
+                <Button Name="cancelPassword" Content="Cancel" HorizontalAlignment="Left" Margin="149,144,0,0" VerticalAlignment="Top" Width="75" Click="cancelPassword_Click"/>
+                <Button Name="acceptPassword" Content="Accept" HorizontalAlignment="Left" Margin="27,144,0,3" Width="75" Click="acceptPassword_Click"/>
+                <PasswordBox Name="oldPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="171" Margin="27,50,0,0" />
+                <PasswordBox Name="newPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" Margin="27,94,0,0"/>
+                <TextBlock Name="enterOldPassword" HorizontalAlignment="Left" Margin="27,20,0,0" TextWrapping="Wrap" Text="Enter your old password" VerticalAlignment="Top" Width="142"/>
+                <TextBlock Name="enterNewPassword" HorizontalAlignment="Left" Margin="27,75,0,0" TextWrapping="Wrap" Text="Enter your new password" VerticalAlignment="Top" Width="142"/>
+
+            </Grid>
         </Grid>
         <Grid x:Name ="passwordEntry" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
 
