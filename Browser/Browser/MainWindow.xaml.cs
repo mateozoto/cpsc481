@@ -906,7 +906,8 @@ namespace Browser
                 passwordEntry.Visibility = Visibility.Collapsed;
                 parentalControls.Visibility = Visibility.Visible;
                 passwordEntryBox.Password = "";
-                settingsEnterPassword.Text = "Enter password to continue...";
+                settingsEnterPassword.Text = "Please enter a valid password to access parental controls.";
+                settingslabel.Text = "Parental Controls";
             }
             else
             {
@@ -916,6 +917,7 @@ namespace Browser
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
+            settingslabel.Text = "Settings";
             settingsRectangle.Visibility = Visibility.Collapsed;
             parentalControls.Visibility = Visibility.Collapsed;
             welcomeScreen.Visibility = Visibility.Visible;
@@ -1060,6 +1062,7 @@ namespace Browser
 
         private void settingsGridExit_Click(object sender, RoutedEventArgs e)
         {
+            settingslabel.Text = "Settings";
             settingsGrid.Visibility = Visibility.Collapsed;
             settingsRectangle.Visibility = Visibility.Collapsed;
             settingslabel.Visibility = Visibility.Collapsed;
@@ -1378,6 +1381,7 @@ namespace Browser
         {
 
             blockedSitesGrid.Visibility = Visibility.Visible;
+            passwordChangeGrid.Visibility = Visibility.Collapsed;
         }
 
         private void addBlockedButton_Click(object sender, RoutedEventArgs e)
@@ -1413,6 +1417,7 @@ namespace Browser
 
         private void passwordChangeButton_Click(object sender, RoutedEventArgs e)
         {
+            blockedSitesGrid.Visibility = Visibility.Collapsed;
             passwordChangeGrid.Visibility = Visibility.Visible;
         }
 
