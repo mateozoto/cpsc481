@@ -508,6 +508,16 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Grid x:Name ="BlockedSites" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
+            <TextBox x:Name ="blocksiteinput" HorizontalAlignment="Left" Height="23" Margin="14,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="356"/>
+            <TextBlock HorizontalAlignment="Left" Margin="14,47,0,0" TextWrapping="Wrap" Text="Enter a website you would like to block access to." VerticalAlignment="Top"/>
+            <Button Name ="addblocksite" Content="Enter" HorizontalAlignment="Left" Margin="406,64,0,0" VerticalAlignment="Top" Width="52" Height="21" Click="addblocksite_Click"/>
+            <Label Content="List of blocked websites" HorizontalAlignment="Left" Margin="12,113,0,0" VerticalAlignment="Top"/>
+            <ScrollViewer Name ="blockedsitescroll" ScrollViewer.VerticalScrollBarVisibility="Auto"  HorizontalAlignment="Left" Height="100" Margin="16,139,0,0" VerticalAlignment="Top" Width="442">
+                <TextBlock Name ="blockedsiteslist" TextWrapping="Wrap" Text=""/>
+            </ScrollViewer>
+            <Button Name ="backtoparental" Content="Back" HorizontalAlignment="Left" Margin="20,239,0,0" VerticalAlignment="Top" Width="75" Click="backtoparental_Click"/>
+        </Grid>
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
         <Button x:Name ="back" Content="←" ToolTip = "This will allow you to go back to the previous page you were on." HorizontalAlignment="Left" Height="51" Margin="69,0,0,13" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Visibility="Collapsed"/>
         <Button x:Name ="refresh" Content="↻" ToolTip ="This will allow you to refresh the page you currently are on." VerticalAlignment="Bottom" Margin="0,0,118.5,13" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Visibility="Collapsed"/>
