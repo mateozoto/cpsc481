@@ -205,6 +205,15 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid x:Name="mainGrid">
+        <Rectangle HorizontalAlignment="Left" Height="295" Margin="33,137,0,0" VerticalAlignment="Top" Width="948" x:Name="settingsRectangle" Visibility="Collapsed">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.998"/>
+                    <GradientStop Color="#FF49FEAC" Offset="0.002"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
         <Rectangle x:Name="rectangle20" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Width="129" Margin="880,524,0,-14">
             <Rectangle.Fill>
                 <RadialGradientBrush>
@@ -415,14 +424,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="268" Margin="247,145,0,0" VerticalAlignment="Top" Width="513" x:Name="settingsRectangle" Visibility="Collapsed">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0.998"/>
-                    <GradientStop Color="#FF49FEAC" Offset="0.002"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+
         <Grid x:Name ="settingsGrid" HorizontalAlignment="Left" Height="267" VerticalAlignment="Top" Width="513" Margin="247,146,0,0" Visibility="Collapsed">
             <Button x:Name ="printButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="75,40,0,0" BorderThickness="0" Opacity="0.9" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <Image Source="Resources/printer.png" Width="65" Height="75"/>
@@ -451,7 +453,9 @@
             <Button x:Name="settingsGridExit" Content="Exit" HorizontalAlignment="Left" Margin="0,247,0,0" VerticalAlignment="Top" Width="75" Click="settingsGridExit_Click"/>
         </Grid>
         <Grid x:Name ="parentalControls" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="513" Visibility="Collapsed">
-            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="75" ToolTip="A list of Blocked Sites" Click="blockedSites_Click"/>
+
+            <Button x:Name="blockedSites" Content="Blocked Sites" HorizontalAlignment="Left" Margin="14,62,0,0" VerticalAlignment="Top" Width="75" ToolTip="A list of Blocked Sites" Click="settingsBlockedSites_Click"/>
+
             <Button x:Name ="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="75" Click="exitButton_Click" RenderTransformOrigin="0.52,2.182"/>
             <Popup>
                 <TextBlock x:Name ="safesearchPopupText" Background="Aquamarine" Foreground="Blue"/>
@@ -485,12 +489,13 @@
 
             </Grid>
         </Grid>
+
         <Grid x:Name ="passwordEntry" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
 
-            <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="268,140.466,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
+            <Button x:Name="passwordEnter" Content="Login" HorizontalAlignment="Left" Margin="300,134,0,0" VerticalAlignment="Top" Width="75" Click="passwordEnter_Click"/>
             <Button x:Name="settingsBack" Content="Cancel" HorizontalAlignment="Left" Margin="0,245.04,0,0" VerticalAlignment="Top" Width="75" Click="settingsBack_Click"/>
-            <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="149,45.05,0,0" TextWrapping="Wrap" Text="Enter Password to Continue..." VerticalAlignment="Top" Height="25.96" Width="181.503" FontSize="13.333"/>
-            <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="149,112.333,0,0" VerticalAlignment="Top" Width="194" Height="23.133"/>
+            <TextBlock x:Name="settingsEnterPassword" HorizontalAlignment="Left" Margin="44,69,0,0" TextWrapping="Wrap" Text="Please enter a valid password to access parental controls." VerticalAlignment="Top" Height="42" Width="386" FontSize="13.333"/>
+            <PasswordBox x:Name="passwordEntryBox" HorizontalAlignment="Left" Margin="48,132,0,0" VerticalAlignment="Top" Width="222" Height="23"/>
         </Grid>
         <Button x:Name="go" Content="Go" Margin="0,0,96.5,13" Height="51" VerticalAlignment="Bottom" Click="go_Click" HorizontalAlignment="Right" Width="52" Background="{x:Null}" BorderThickness="0" FontFamily="Segoe UI Light" FontSize="13.333"/>
         <Rectangle x:Name="urlmask" HorizontalAlignment="Left" Height="36" Margin="10,0,152.5,18" Opacity ="0.5" VerticalAlignment="Bottom" Width="851" Fill="White"/>
@@ -503,6 +508,16 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <Grid x:Name ="BlockedSites" HorizontalAlignment="Left" Height="267" Margin="247,146,0,0" VerticalAlignment="Top" Width="519" Visibility="Collapsed">
+            <TextBox x:Name ="blocksiteinput" HorizontalAlignment="Left" Height="23" Margin="14,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="356"/>
+            <TextBlock HorizontalAlignment="Left" Margin="14,47,0,0" TextWrapping="Wrap" Text="Enter a website you would like to block access to." VerticalAlignment="Top"/>
+            <Button Name ="addblocksite" Content="Enter" HorizontalAlignment="Left" Margin="406,64,0,0" VerticalAlignment="Top" Width="52" Height="21" Click="addblocksite_Click"/>
+            <Label Content="List of blocked websites" HorizontalAlignment="Left" Margin="12,113,0,0" VerticalAlignment="Top"/>
+            <ScrollViewer Name ="blockedsitescroll" ScrollViewer.VerticalScrollBarVisibility="Auto"  HorizontalAlignment="Left" Height="100" Margin="16,139,0,0" VerticalAlignment="Top" Width="442">
+                <TextBlock Name ="blockedsiteslist" TextWrapping="Wrap" Text=""/>
+            </ScrollViewer>
+            <Button Name ="backtoparental" Content="Back" HorizontalAlignment="Left" Margin="20,239,0,0" VerticalAlignment="Top" Width="75" Click="backtoparental_Click"/>
+        </Grid>
         <TextBlock x:Name="nobookmarks" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="No bookmarks" VerticalAlignment="Top" Height="20" Width="120" FontSize="14.667" FontFamily="Segoe UI Light"/>
         <Button x:Name ="back" Content="←" ToolTip = "This will allow you to go back to the previous page you were on." HorizontalAlignment="Left" Height="51" Margin="69,0,0,13" VerticalAlignment="Bottom" Width="52" Click="back_Click" Background="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="36" Visibility="Collapsed"/>
         <Button x:Name ="refresh" Content="↻" ToolTip ="This will allow you to refresh the page you currently are on." VerticalAlignment="Bottom" Margin="0,0,118.5,13" Height="51" HorizontalAlignment="Right" Width="52" Click="refresh_Click" Background="{x:Null}" BorderThickness="0" FontSize="24" Visibility="Collapsed"/>
@@ -607,5 +622,6 @@
             <Button x:Name="MinimizeButton" Content="-" HorizontalAlignment="Right" Margin="0,0,30,2" Width="30" FontWeight="Bold" Background="{x:Null}" FontSize="13.333" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Cursor="Arrow" Click="MinimizeButton_Click" ToolTip="Click this to minimize the browser."/>
         </Grid>
         <Button x:Name="settings" Content="Settings" Height="51" ToolTip = "These are the settings. You can find things such as Parental Controls on here." FontSize ="13.333" FontFamily="Segoe UI Light" Margin="0,0,2.5,13" VerticalAlignment="Bottom" RenderTransformOrigin="0.949,0.522" BorderThickness="0" HorizontalAlignment="Right" Width="52" Background="{x:Null}" Click="settings_Click"/>
+        <TextBlock Name="settingslabel" HorizontalAlignment="Left" Margin="32,84,0,0" TextWrapping="Wrap" Visibility ="Collapsed" Text="Settings" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="36"/>
     </Grid>
 </Window>
