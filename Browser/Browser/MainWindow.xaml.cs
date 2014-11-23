@@ -446,7 +446,6 @@ namespace Browser
         private void home_Click_1(object sender, RoutedEventArgs e)
         {
             welcomeScreen.Visibility = Visibility.Visible;
-            urlbar.Text = "Make a search or enter a website here...";
 
             home.Visibility = Visibility.Collapsed;
             back.Visibility = Visibility.Collapsed;
@@ -518,6 +517,7 @@ namespace Browser
                 string script = "document.body.style.overflow ='hidden'";
                 tab4.InvokeScript("execScript", new Object[] { script, "JavaScript" });
             }
+            urlbar.Text = "Make a search or enter a website here...";
         }
 
         private void browser_Navigating(object sender, NavigatingCancelEventArgs e)
@@ -916,7 +916,6 @@ namespace Browser
             refresh.Visibility = Visibility.Collapsed;
             bookmark.Visibility = Visibility.Visible;
             currentTab = -1;
-
             if (openTabs >= 1)
             {
                 welcome.Visibility = Visibility.Collapsed;
@@ -1075,6 +1074,8 @@ namespace Browser
             {
                 tab1.Visibility = Visibility.Collapsed;
                 tab1but.Visibility = Visibility.Collapsed;
+                welcome.Visibility = Visibility.Visible;
+                message1.Visibility = Visibility.Visible;
             }
             else if (openTabs == 2)
             {
