@@ -254,202 +254,209 @@ namespace Browser
 
         private void go_Click(object sender, RoutedEventArgs e)
         {
-            Boolean parentalblock = false;
-            String query = urlbar.Text;
-            string[] lines = System.IO.File.ReadAllLines(blockedSitesFile);
-            if (lines.Length != 0)
+            if (openTabs >= 4)
             {
-                foreach (string line in lines)
-                {
-                    if (query == line)
-                    {
-                        MessageBox.Show("The website you are trying to enter has been blocked by parental controls.");
-                        parentalblock = true;
-                        break;
-                    }
-
-                }
+                MessageBox.Show("The maximum number of tabs is 4, please close a tab and try again.");
             }
-            if (parentalblock == false)
+            else
             {
-                if (welcomeScreen.IsVisible)
+                Boolean parentalblock = false;
+                String query = urlbar.Text;
+                string[] lines = System.IO.File.ReadAllLines(blockedSitesFile);
+                if (lines.Length != 0)
                 {
-                    welcomeScreen.Visibility = Visibility.Collapsed;
-                    //tab1but.Visibility = Visibility.Collapsed;
-                    //tab1X.Visibility = Visibility.Collapsed;
-                    //tab1.IsEnabled = true;
-                    home.Visibility = Visibility.Visible;
-                    back.Visibility = Visibility.Visible;
-                    forward.Visibility = Visibility.Visible;
-                    refresh.Visibility = Visibility.Visible;
-                    urlbar.Margin = new Thickness(181, 0, 232, 18);
-                    urlmask.Margin = new Thickness(181, 0, 232, 18);
-                    go.Margin = new Thickness(0, 0, 175, 13);
-
-                    openTabs++;
-                    currentTab = openTabs;
-                }
-                //open the tab
-                if (openTabs >= 1)
-                {
-                    if (!(query.Contains(".com") || query.Contains(".ca") || query.Contains(".net") || query.Contains(".org") || query.Contains(".tv")))
+                    foreach (string line in lines)
                     {
-                        query = "https://www.google.ca/#q=" + query;
-                        urlbar.Text = query;
-                    }
-                    else if (!(query.StartsWith("http://") || query.StartsWith("https://")))
-                    {
-                        query = "http://" + query;
-                        urlbar.Text = query;
-                    }
-                    // add recent place
-                    norecent.Text = "";
-                    String recentPlace = urlbar.Text;
-                    if (urlbar.Text.StartsWith("http://www."))
-                        recentPlace = recentPlace.Remove(0, 11);
-                    else if (urlbar.Text.StartsWith("https://www."))
-                        recentPlace = recentPlace.Remove(0, 12);
-                    else if (urlbar.Text.StartsWith("https://"))
-                        recentPlace = recentPlace.Remove(0, 8);
-                    else if (urlbar.Text.StartsWith("http://"))
-                        recentPlace = recentPlace.Remove(0, 7);
-
-                    string[] rlines = System.IO.File.ReadAllLines(recentPlacesFile);
-                    bool skip = false;
-                    for (int i = 0; i < rlines.Length; i++)
-                    {
-                        string line = rlines[i];
-                        if (recentPlace.Equals(line))
+                        if (query == line)
                         {
-                            skip = true;
-                            for (int j = i; j < rlines.Length - 1; j++)
-                            {
-                                string temp = rlines[j + 1];
-                                rlines[j + 1] = rlines[j];
-                                rlines[j] = temp;
-                            }
-                            using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
-                            {
-                                for (int j = 0; j < rlines.Length; j++)
-                                {
-                                    writer.WriteLine(rlines[j]);
-                                }
-                            }
-                            if (rlines.Length >= 1)
-                            {
-                                recentButton1.Content = rlines[0];
-                                recentButton1.ToolTip = rlines[0];
-                            }
-                            if (rlines.Length >= 2)
-                            {
-                                recentButton2.Content = rlines[1];
-                                recentButton2.ToolTip = rlines[1];
-                            }
-                            if (rlines.Length >= 3)
-                            {
-                                recentButton3.Content = rlines[2];
-                                recentButton3.ToolTip = rlines[2];
-                            }
-                            if (rlines.Length >= 4)
-                            {
-                                recentButton4.Content = rlines[3];
-                                recentButton4.ToolTip = rlines[3];
-                            }
+                            MessageBox.Show("The website you are trying to enter has been blocked by parental controls.");
+                            parentalblock = true;
                             break;
                         }
+
                     }
-                    if (!skip)
+                }
+                if (parentalblock == false)
+                {
+                    if (welcomeScreen.IsVisible)
                     {
-                        if (rlines.Length >= 4)
+                        welcomeScreen.Visibility = Visibility.Collapsed;
+                        //tab1but.Visibility = Visibility.Collapsed;
+                        //tab1X.Visibility = Visibility.Collapsed;
+                        //tab1.IsEnabled = true;
+                        home.Visibility = Visibility.Visible;
+                        back.Visibility = Visibility.Visible;
+                        forward.Visibility = Visibility.Visible;
+                        refresh.Visibility = Visibility.Visible;
+                        urlbar.Margin = new Thickness(181, 0, 232, 18);
+                        urlmask.Margin = new Thickness(181, 0, 232, 18);
+                        go.Margin = new Thickness(0, 0, 175, 13);
+
+                        openTabs++;
+                        currentTab = openTabs;
+                    }
+                    //open the tab
+                    if (openTabs >= 1)
+                    {
+                        if (!(query.Contains(".com") || query.Contains(".ca") || query.Contains(".net") || query.Contains(".org") || query.Contains(".tv")))
                         {
-                            rlines[0] = rlines[1];
-                            rlines[1] = rlines[2];
-                            rlines[2] = rlines[3];
-                            rlines[3] = recentPlace;
+                            query = "https://www.google.ca/#q=" + query;
+                            urlbar.Text = query;
+                        }
+                        else if (!(query.StartsWith("http://") || query.StartsWith("https://")))
+                        {
+                            query = "http://" + query;
+                            urlbar.Text = query;
+                        }
+                        // add recent place
+                        norecent.Text = "";
+                        String recentPlace = urlbar.Text;
+                        if (urlbar.Text.StartsWith("http://www."))
+                            recentPlace = recentPlace.Remove(0, 11);
+                        else if (urlbar.Text.StartsWith("https://www."))
+                            recentPlace = recentPlace.Remove(0, 12);
+                        else if (urlbar.Text.StartsWith("https://"))
+                            recentPlace = recentPlace.Remove(0, 8);
+                        else if (urlbar.Text.StartsWith("http://"))
+                            recentPlace = recentPlace.Remove(0, 7);
 
-                            recentButton1.Content = recentButton2.Content;
-                            recentButton1.ToolTip = recentButton2.Content;
-                            recentButton2.Content = recentButton3.Content;
-                            recentButton2.ToolTip = recentButton3.Content;
-                            recentButton3.Content = recentButton4.Content;
-                            recentButton3.ToolTip = recentButton4.Content;
-                            recentButton4.Content = recentPlace;
-                            recentButton4.ToolTip = recentPlace;
-
-                            using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
+                        string[] rlines = System.IO.File.ReadAllLines(recentPlacesFile);
+                        bool skip = false;
+                        for (int i = 0; i < rlines.Length; i++)
+                        {
+                            string line = rlines[i];
+                            if (recentPlace.Equals(line))
                             {
-                                for (int i = 0; i < rlines.Length; i++)
+                                skip = true;
+                                for (int j = i; j < rlines.Length - 1; j++)
                                 {
-                                    writer.WriteLine(rlines[i]);
+                                    string temp = rlines[j + 1];
+                                    rlines[j + 1] = rlines[j];
+                                    rlines[j] = temp;
+                                }
+                                using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
+                                {
+                                    for (int j = 0; j < rlines.Length; j++)
+                                    {
+                                        writer.WriteLine(rlines[j]);
+                                    }
+                                }
+                                if (rlines.Length >= 1)
+                                {
+                                    recentButton1.Content = rlines[0];
+                                    recentButton1.ToolTip = rlines[0];
+                                }
+                                if (rlines.Length >= 2)
+                                {
+                                    recentButton2.Content = rlines[1];
+                                    recentButton2.ToolTip = rlines[1];
+                                }
+                                if (rlines.Length >= 3)
+                                {
+                                    recentButton3.Content = rlines[2];
+                                    recentButton3.ToolTip = rlines[2];
+                                }
+                                if (rlines.Length >= 4)
+                                {
+                                    recentButton4.Content = rlines[3];
+                                    recentButton4.ToolTip = rlines[3];
+                                }
+                                break;
+                            }
+                        }
+                        if (!skip)
+                        {
+                            if (rlines.Length >= 4)
+                            {
+                                rlines[0] = rlines[1];
+                                rlines[1] = rlines[2];
+                                rlines[2] = rlines[3];
+                                rlines[3] = recentPlace;
+
+                                recentButton1.Content = recentButton2.Content;
+                                recentButton1.ToolTip = recentButton2.Content;
+                                recentButton2.Content = recentButton3.Content;
+                                recentButton2.ToolTip = recentButton3.Content;
+                                recentButton3.Content = recentButton4.Content;
+                                recentButton3.ToolTip = recentButton4.Content;
+                                recentButton4.Content = recentPlace;
+                                recentButton4.ToolTip = recentPlace;
+
+                                using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
+                                {
+                                    for (int i = 0; i < rlines.Length; i++)
+                                    {
+                                        writer.WriteLine(rlines[i]);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (rlines.Length == 0)
+                                {
+                                    recentButton1.Content = recentPlace;
+                                    recentButton1.ToolTip = recentPlace;
+                                    recentButton1.Visibility = Visibility.Visible;
+                                }
+                                else if (rlines.Length == 1)
+                                {
+                                    recentButton2.Content = recentPlace;
+                                    recentButton2.ToolTip = recentPlace;
+                                    recentButton2.Visibility = Visibility.Visible;
+                                }
+                                else if (rlines.Length == 2)
+                                {
+                                    recentButton3.Content = recentPlace;
+                                    recentButton3.ToolTip = recentPlace;
+                                    recentButton3.Visibility = Visibility.Visible;
+                                }
+                                else if (rlines.Length == 3)
+                                {
+                                    recentButton4.Content = recentPlace;
+                                    recentButton4.ToolTip = recentPlace;
+                                    recentButton4.Visibility = Visibility.Visible;
+                                }
+
+                                using (StreamWriter writer = new StreamWriter(recentPlacesFile, true))
+                                {
+                                    writer.WriteLine(recentPlace);
                                 }
                             }
                         }
-                        else
+
+                        // navigate
+                        if (currentTab == 1)
                         {
-                            if (rlines.Length == 0)
-                            {
-                                recentButton1.Content = recentPlace;
-                                recentButton1.ToolTip = recentPlace;
-                                recentButton1.Visibility = Visibility.Visible;
-                            }
-                            else if (rlines.Length == 1)
-                            {
-                                recentButton2.Content = recentPlace;
-                                recentButton2.ToolTip = recentPlace;
-                                recentButton2.Visibility = Visibility.Visible;
-                            }
-                            else if (rlines.Length == 2)
-                            {
-                                recentButton3.Content = recentPlace;
-                                recentButton3.ToolTip = recentPlace;
-                                recentButton3.Visibility = Visibility.Visible;
-                            }
-                            else if (rlines.Length == 3)
-                            {
-                                recentButton4.Content = recentPlace;
-                                recentButton4.ToolTip = recentPlace;
-                                recentButton4.Visibility = Visibility.Visible;
-                            }
-
-                            using (StreamWriter writer = new StreamWriter(recentPlacesFile, true))
-                            {
-                                writer.WriteLine(recentPlace);
-                            }
+                            tab1.Visibility = Visibility.Visible;
+                            tab1.Navigate(urlbar.Text);
+                            tab1.Width = 1015;
+                            tab1.Height = 500;
+                            tab1.Margin = new Thickness(0, 65, 0, 0);
                         }
-                    }
-
-                    // navigate
-                    if (currentTab == 1)
-                    {
-                        tab1.Visibility = Visibility.Visible;
-                        tab1.Navigate(urlbar.Text);
-                        tab1.Width = 1015;
-                        tab1.Height = 500;
-                        tab1.Margin = new Thickness(0, 65, 0, 0);
-                    }
-                    else if (currentTab == 2)
-                    {
-                        tab2.Visibility = Visibility.Visible;
-                        tab2.Navigate(urlbar.Text);
-                        tab2.Width = 1015;
-                        tab2.Height = 500;
-                        tab2.Margin = new Thickness(0, 65, 0, 0);
-                    }
-                    else if (currentTab == 3)
-                    {
-                        tab3.Visibility = Visibility.Visible;
-                        tab3.Navigate(urlbar.Text);
-                        tab3.Width = 1015;
-                        tab3.Height = 500;
-                        tab3.Margin = new Thickness(0, 65, 0, 0);
-                    }
-                    else if (currentTab == 4)
-                    {
-                        tab4.Visibility = Visibility.Visible;
-                        tab4.Navigate(urlbar.Text);
-                        tab4.Width = 1015;
-                        tab4.Height = 500;
-                        tab4.Margin = new Thickness(0, 65, 0, 0);
+                        else if (currentTab == 2)
+                        {
+                            tab2.Visibility = Visibility.Visible;
+                            tab2.Navigate(urlbar.Text);
+                            tab2.Width = 1015;
+                            tab2.Height = 500;
+                            tab2.Margin = new Thickness(0, 65, 0, 0);
+                        }
+                        else if (currentTab == 3)
+                        {
+                            tab3.Visibility = Visibility.Visible;
+                            tab3.Navigate(urlbar.Text);
+                            tab3.Width = 1015;
+                            tab3.Height = 500;
+                            tab3.Margin = new Thickness(0, 65, 0, 0);
+                        }
+                        else if (currentTab == 4)
+                        {
+                            tab4.Visibility = Visibility.Visible;
+                            tab4.Navigate(urlbar.Text);
+                            tab4.Width = 1015;
+                            tab4.Height = 500;
+                            tab4.Margin = new Thickness(0, 65, 0, 0);
+                        }
                     }
                 }
             }
