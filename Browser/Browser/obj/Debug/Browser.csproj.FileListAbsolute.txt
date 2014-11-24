@@ -114,3 +114,16 @@ C:\Users\Mateo\Desktop\New folder\trunk\Browser\Browser\obj\Debug\Browser_Markup
 C:\Users\Mateo\Desktop\New folder\trunk\Browser\Browser\obj\Debug\Browser.g.resources
 C:\Users\Mateo\Desktop\New folder\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
 C:\Users\Mateo\Desktop\New folder\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\bin\Debug\Browser.exe.config
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.exe
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.pdb
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\bin\Debug\Browser.exe
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\bin\Debug\Browser.pdb
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.csprojResolveAssemblyReference.cache
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\MainWindow.baml
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\MainWindow.g.cs
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\App.g.cs
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser_MarkupCompile.cache
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.g.resources
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
+C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache

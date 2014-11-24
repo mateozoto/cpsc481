@@ -63,35 +63,9 @@ namespace Browser
                     nobookmarks.Text = "";
                     foreach (string line in lines)
                     {
-                        if (bookmarkcount == 9)
+                        if (bookmarkcount > 8)
                         {
-                            Button more = new Button();
-                            more.Height = 30;
-                            more.Width = 30;
-                            SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                            mySolidColorBrush.Opacity = 0.0;
-                            more.Background = mySolidColorBrush;
-                            more.BorderThickness = new Thickness(0, 0, 0, 0);
-                            more.Content = ">>";
-                            more.MouseLeftButtonDown += more_MouseLeftButtonDown;
-                            more.MouseRightButtonUp += more_MouseRightButtonUp;
-                            more.VerticalAlignment = VerticalAlignment.Top;
-                            more.HorizontalAlignment = HorizontalAlignment.Left;
-                            more.ContextMenu = morebookmarks;
-                            more.Margin = new Thickness(929, 30, 0, 0);
-                            MenuItem menubookmark = new MenuItem();
-                            menubookmark.Header = line;
-                            menubookmark.Click += menubookmark_Click;
-                            morebookmarks.Items.Add(menubookmark);
-                            mainGrid.Children.Add(more);
-
-                        }
-                        else if (bookmarkcount > 9)
-                        {
-                            MenuItem menubookmark = new MenuItem();
-                            menubookmark.Header = line;
-                            menubookmark.Click += menubookmark_Click;
-                            morebookmarks.Items.Add(menubookmark);
+                            //do nothing
                         }
                         else
                         {
@@ -761,43 +735,9 @@ namespace Browser
 
             if (!skip)
             {
-                if (bookmarkcount == 9)
+                if (bookmarkcount >= 9)
                 {
-                    Button more = new Button();
-                    more.Height = 30;
-                    more.Width = 30;
-                    SolidColorBrush mySolidColorBrush = new SolidColorBrush(Colors.Gray);
-                    mySolidColorBrush.Opacity = 0.0;
-                    more.Background = mySolidColorBrush;
-                    more.BorderThickness = new Thickness(0, 0, 0, 0);
-                    more.Content = ">>";
-                    more.MouseLeftButtonDown += more_MouseLeftButtonDown;
-                    more.MouseRightButtonUp += more_MouseRightButtonUp;
-                    more.VerticalAlignment = VerticalAlignment.Top;
-                    more.HorizontalAlignment = HorizontalAlignment.Left;
-                    more.ContextMenu = morebookmarks;
-                    more.Margin = new Thickness(929, 30, 0, 0);
-                    MenuItem menubookmark = new MenuItem();
-                    menubookmark.Header = bookmark;
-                    menubookmark.Click += menubookmark_Click;
-                    morebookmarks.Items.Add(menubookmark);
-                    bookmarks.Add(more);
-                    using (StreamWriter writer = new StreamWriter(bookmarksFile, true))
-                    {
-                        writer.WriteLine(menubookmark.Header);
-                    }
-
-                }
-                else if (bookmarkcount > 9)
-                {
-                    MenuItem menubookmark = new MenuItem();
-                    menubookmark.Header = bookmark;
-                    menubookmark.Click += menubookmark_Click;
-                    morebookmarks.Items.Add(menubookmark);
-                    using (StreamWriter writer = new StreamWriter(bookmarksFile, true))
-                    {
-                        writer.WriteLine(menubookmark.Header);
-                    }
+                    MessageBox.Show("Can't add more bookmarks. Maximum bookmarks is 9");
                 }
                 else
                 {
@@ -880,6 +820,7 @@ namespace Browser
             settings.Visibility = Visibility.Collapsed;
             settingsXBut.Visibility = Visibility.Visible;
             settingsGrid.Visibility = Visibility.Visible;
+            norecent.Visibility = Visibility.Collapsed;
             settingsRectangle.Visibility = Visibility.Visible;
             settingslabel.Visibility = Visibility.Visible;
             welcomeScreen.Visibility = Visibility.Collapsed;
@@ -1210,6 +1151,11 @@ namespace Browser
 
                     recentPlaceNum++;
                 }
+            }
+            else
+            {
+                norecent.Visibility = Visibility.Visible;
+
             }
 
         }
