@@ -340,57 +340,58 @@ namespace Browser
                     else if (urlbar.Text.StartsWith("http://"))
                         recentPlace = recentPlace.Remove(0, 7);
 
+                    string[] rlines = System.IO.File.ReadAllLines(recentPlacesFile);
                     bool skip = false;
-                    for (int i = 0; i < lines.Length; i++)
+                    for (int i = 0; i < rlines.Length; i++)
                     {
-                        string line = lines[i];
+                        string line = rlines[i];
                         if (recentPlace.Equals(line))
                         {
                             skip = true;
-                            for (int j = i; j < lines.Length - 1; j++)
+                            for (int j = i; j < rlines.Length - 1; j++)
                             {
-                                string temp = lines[j + 1];
-                                lines[j + 1] = lines[j];
-                                lines[j] = temp;
+                                string temp = rlines[j + 1];
+                                rlines[j + 1] = rlines[j];
+                                rlines[j] = temp;
                             }
                             using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
                             {
-                                for (int j = 0; j < lines.Length; j++)
+                                for (int j = 0; j < rlines.Length; j++)
                                 {
-                                    writer.WriteLine(lines[j]);
+                                    writer.WriteLine(rlines[j]);
                                 }
                             }
-                            if (lines.Length >= 1)
+                            if (rlines.Length >= 1)
                             {
-                                recentButton1.Content = lines[0];
-                                recentButton1.ToolTip = lines[0];
+                                recentButton1.Content = rlines[0];
+                                recentButton1.ToolTip = rlines[0];
                             }
-                            if (lines.Length >= 2)
+                            if (rlines.Length >= 2)
                             {
-                                recentButton2.Content = lines[1];
-                                recentButton2.ToolTip = lines[1];
+                                recentButton2.Content = rlines[1];
+                                recentButton2.ToolTip = rlines[1];
                             }
-                            if (lines.Length >= 3)
+                            if (rlines.Length >= 3)
                             {
-                                recentButton3.Content = lines[2];
-                                recentButton3.ToolTip = lines[2];
+                                recentButton3.Content = rlines[2];
+                                recentButton3.ToolTip = rlines[2];
                             }
-                            if (lines.Length >= 4)
+                            if (rlines.Length >= 4)
                             {
-                                recentButton4.Content = lines[3];
-                                recentButton4.ToolTip = lines[3];
+                                recentButton4.Content = rlines[3];
+                                recentButton4.ToolTip = rlines[3];
                             }
                             break;
                         }
                     }
                     if (!skip)
                     {
-                        if (lines.Length >= 4)
+                        if (rlines.Length >= 4)
                         {
-                            lines[0] = lines[1];
-                            lines[1] = lines[2];
-                            lines[2] = lines[3];
-                            lines[3] = recentPlace;
+                            rlines[0] = rlines[1];
+                            rlines[1] = rlines[2];
+                            rlines[2] = rlines[3];
+                            rlines[3] = recentPlace;
 
                             recentButton1.Content = recentButton2.Content;
                             recentButton1.ToolTip = recentButton2.Content;
@@ -403,33 +404,33 @@ namespace Browser
 
                             using (StreamWriter writer = new StreamWriter(recentPlacesFile, false))
                             {
-                                for (int i = 0; i < lines.Length; i++)
+                                for (int i = 0; i < rlines.Length; i++)
                                 {
-                                    writer.WriteLine(lines[i]);
+                                    writer.WriteLine(rlines[i]);
                                 }
                             }
                         }
                         else
                         {
-                            if (lines.Length == 0)
+                            if (rlines.Length == 0)
                             {
                                 recentButton1.Content = recentPlace;
                                 recentButton1.ToolTip = recentPlace;
                                 recentButton1.Visibility = Visibility.Visible;
                             }
-                            else if (lines.Length == 1)
+                            else if (rlines.Length == 1)
                             {
                                 recentButton2.Content = recentPlace;
                                 recentButton2.ToolTip = recentPlace;
                                 recentButton2.Visibility = Visibility.Visible;
                             }
-                            else if (lines.Length == 2)
+                            else if (rlines.Length == 2)
                             {
                                 recentButton3.Content = recentPlace;
                                 recentButton3.ToolTip = recentPlace;
                                 recentButton3.Visibility = Visibility.Visible;
                             }
-                            else if (lines.Length == 3)
+                            else if (rlines.Length == 3)
                             {
                                 recentButton4.Content = recentPlace;
                                 recentButton4.ToolTip = recentPlace;
