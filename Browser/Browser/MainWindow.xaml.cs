@@ -857,7 +857,7 @@ namespace Browser
             tab1rec.Visibility = Visibility.Collapsed;
             tab2.Visibility = Visibility.Collapsed;
             tab2but.Visibility = Visibility.Collapsed;
-            tab3rec.Visibility = Visibility.Collapsed;
+            tab2rec.Visibility = Visibility.Collapsed;
             tab3.Visibility = Visibility.Collapsed;
             tab3but.Visibility = Visibility.Collapsed;
             tab3rec.Visibility = Visibility.Collapsed;

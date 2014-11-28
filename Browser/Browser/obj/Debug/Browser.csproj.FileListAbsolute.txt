@@ -127,3 +127,6 @@ C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debu
 C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.g.resources
 C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.Properties.Resources.resources
 C:\Users\Mateo\Downloads\Kid Friendly Web Browser\trunk\Browser\Browser\obj\Debug\Browser.csproj.GenerateResource.Cache
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\New folder (4)\trunk\Browser\Browser\bin\Debug\Browser.exe.config
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\New folder (4)\trunk\Browser\Browser\obj\Debug\Browser.exe
+\\cs-fs01\Profiles\ug\ekpitout\Desktop\New folder (4)\trunk\Browser\Browser\obj\Debug\Browser.pdb
